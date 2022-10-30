@@ -1,26 +1,26 @@
 import React from 'react'
-import { FaUserCog } from 'react-icons/fa'
+import { VscGraphLine } from 'react-icons/vsc'
 import { Menu } from '@headlessui/react'
 import Link from 'next/link'
 
-const Settings = () => {
+const Billing = () => {
   return (
     <>
         <Menu>
             <Menu.Button>
                 <i>
-                    <FaUserCog size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
+                    <VscGraphLine size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
                 </i>
             </Menu.Button>
-            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl" style={{top: '21rem'}}>
-                <Menu.Item>
+            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl" style={{top: '18rem'}}>
+            <Menu.Item>
                     {({ active }) => (
                         <a
                             className={`${active && 'bg-base-100'} p-2`}
                         >   
-                            <Link href={'/settings/shipping'} legacyBehavior>
+                            <Link href={'/billings/details'} legacyBehavior>
                                 
-                                    Shipping Settings
+                                    Details & Invoices
                                 
                             </Link>
                         </a>
@@ -31,9 +31,9 @@ const Settings = () => {
                         <a
                             className={`${active && 'bg-base-100'} p-2`}
                         >   
-                            <Link href={'/settings/wallet'} legacyBehavior>
+                            <Link href={'/billings/subscription'} legacyBehavior>
                                 
-                                    Store Wallet
+                                    My Subscription
                                 
                             </Link>
                         </a>    
@@ -45,4 +45,4 @@ const Settings = () => {
   )
 }
 
-export default Settings
+export default Billing

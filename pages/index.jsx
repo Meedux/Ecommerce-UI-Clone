@@ -3,7 +3,9 @@
 export default function Home() {
   return (
     <>
-      <h1>HEY!!</h1>
+      <main className="p-5">
+    
+      </main>
     </>
   )
 }

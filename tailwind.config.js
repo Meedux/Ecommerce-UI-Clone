@@ -5,7 +5,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        navbg: "#E9EEF5",
+      }
+    },
   },
   plugins: [require("daisyui"), require('tw-elements/dist/plugin')],
   daisyui: {

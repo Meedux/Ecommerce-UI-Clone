@@ -5,6 +5,7 @@ import { CgProfile } from 'react-icons/cg'
 import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { Menu } from '@headlessui/react'
 import { GoTriangleDown, GoTriangleUp } from 'react-icons/go'
+import Link from 'next/link'
 
 const Navbar = ({ open, setStatus }) => {
     const [ MenuOpen, setOpen ] = useState(false)
@@ -46,7 +47,9 @@ const Navbar = ({ open, setStatus }) => {
                             <a
                                 className={`${active && 'bg-base-100'} p-2`}
                             >
-                            Account settings
+                                <Link href={'/profile'} legacyBehavior>
+                                    Profile
+                                </Link>
                             </a>
                         )}
                         </Menu.Item>
@@ -55,7 +58,7 @@ const Navbar = ({ open, setStatus }) => {
                             <a
                                 className={`${active && 'bg-base-100'} p-2`}
                             >
-                            Documentation
+                            Logout
                             </a>
                         )}
                     </Menu.Item>
