@@ -41,11 +41,7 @@ const Sidebar = ({ open }) => {
                 <FaStoreAlt size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
               </i>
             </Link>
-
-            {/* TODO make this shit dropdown onHover */}
             <Billing />
-
-            {/* TODO make this shit dropdown onHover */}
             <Settings />
           </span>
           <span className={`${open ? '' : 'hidden'} flex flex-col justify-between items-start`}>
