@@ -5,7 +5,7 @@ import {  BsFillBasketFill } from 'react-icons/bs'
 import Link from 'next/link'
 
 import MyProducts  from './sidebar/MyProducts'
-import Billing from './sidebar/billing'
+import Billing from './sidebar/Billing'
 import Settings from './sidebar/Settings'
 
 const Sidebar = ({ open }) => {
