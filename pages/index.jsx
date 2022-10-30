@@ -227,9 +227,11 @@ export default function Home() {
             </div>
             <div className="col-span-2">
               <div className="card bg-white shadow-lg">
+                <div className="card-body">
                   <div className="w-full flex justify-between mb-3">
                     <span className=" text-gray-500 font-semibold">Contact Us</span>
                   </div>
+                </div>
               </div>
             </div>
           </div>
