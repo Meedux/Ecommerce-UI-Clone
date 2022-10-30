@@ -50,28 +50,28 @@ const Sidebar = ({ open }) => {
           </span>
           <span className={`${open ? '' : 'hidden'} flex flex-col justify-between items-start`}>
             <Link href={'/'}>
-              <span className="flex items-center p-7 pr-28 hover:bg-navbg py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
+              <span className="flex items-center p-7 pr-24 hover:bg-navbg py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
                 <MdDashboard size={30} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
-                <span className="text-xl">Dashboard</span>
+                <span className="text-md text-start">Dashboard</span>
               </span>
             </Link>
             <Link href={'/catalog'}>
               <span className="flex items-center p-7 pr-20 hover:bg-navbg py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
                 <FaBoxes size={30} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
-                <span className="text-xl">Product Catalog</span>
+                <span className="text-md text-start">Product Catalog</span>
               </span>
             </Link>
 
             <Link href={'/orders'}>
-              <span className="flex items-center p-7 pr-36 hover:bg-navbg py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
+              <span className="flex items-center p-7 pr-32 hover:bg-navbg py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
                 <BsFillBasketFill size={30} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
-                <span className="text-xl">Orders</span>
+                <span className="text-md text-start">Orders</span>
               </span>
             </Link>
             <Link href={'/catalog'}>
               <span className="flex items-center p-7 pr-28 hover:bg-navbg py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
                 <FaStoreAlt size={30} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
-                <span className="text-xl">My Stores</span>
+                <span className="text-md text-start">My Stores</span>
               </span>
             </Link>
           </span>
