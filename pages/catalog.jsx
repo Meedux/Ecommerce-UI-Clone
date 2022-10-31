@@ -13,6 +13,7 @@ const catalog = () => {
       { name: "category 5", id: 5 },
   ]
 
+  
   const countries = [
     { name: "Country 1" },
     { name: "Country 2" },
