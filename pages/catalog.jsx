@@ -4,7 +4,7 @@ import { useState, Fragment } from 'react'
 import { FaShippingFast } from 'react-icons/fa'
 import { BsFillFlagFill } from 'react-icons/bs'
 
-const catalog = () => {
+const Catalog = () => {
   const categories = [
       { name: "category 1", id: 1 },
       { name: "category 2", id: 2 },
@@ -13,7 +13,7 @@ const catalog = () => {
       { name: "category 5", id: 5 },
   ]
 
-  
+
   const countries = [
     { name: "Country 1" },
     { name: "Country 2" },
@@ -534,4 +534,4 @@ const catalog = () => {
   )
 }
 
-export default catalog
+export default Catalog
