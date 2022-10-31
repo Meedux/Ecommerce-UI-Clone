@@ -29,9 +29,9 @@ const catalog = () => {
     { name: "Supplier 5" },
   ]
 
-  const Cat = { name: "Categories" }
+  const defcat = { name: "Categories" }
   const count = { name: "Set Country" }
-  const [ cat, setCat ] = useState(Cat)
+  const [ cat, setCat ] = useState(defcat)
 
   return (
     <>
