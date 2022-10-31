@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const mystores = () => {
+const Mystores = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
@@ -51,4 +51,4 @@ const mystores = () => {
   )
 }
 
-export default mystores
+export default Mystores
