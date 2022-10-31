@@ -12,7 +12,7 @@ const Settings = () => {
                     <FaUserCog size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
                 </i>
             </Menu.Button>
-            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl" style={{top: '21rem'}}>
+            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl" style={{top: '16rem'}}>
                 <Menu.Item>
                     {({ active }) => (
                         <a

@@ -12,7 +12,7 @@ const MyProducts = () => {
                     <BsFillTagFill size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
                 </i>
             </Menu.Button>
-            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl top-40">
+            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl top-24">
                 <Menu.Item>
                     {({ active }) => (
                         <a
