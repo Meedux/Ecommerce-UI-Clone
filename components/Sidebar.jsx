@@ -11,7 +11,7 @@ import Settings from './sidebar/Settings'
 const Sidebar = ({ open }) => {
   return (
     <>
-     <div className={`${open ? 'w-1/6' : 'w-16'} p-2 bg-white smooth fixed mt-16 z-50`} style={{height: "93.5vh"}}>
+     <div className={`${open ? 'w-1/6' : 'w-16'} p-2 bg-white smooth fixed mt-16 z-40`} style={{height: "93.5vh"}}>
         <div>
           <span className={`${open ? 'hidden' : ''} flex flex-col justify-between items-center`}>
             {/* Short Icons */}

@@ -11,7 +11,7 @@ const Navbar = ({ open, setStatus }) => {
     const [ MenuOpen, setOpen ] = useState(false)
 
   return (
-    <div className='navbar justify-between bg-primary p-0 shadow-xl z-50 fixed'>
+    <div className='navbar justify-between bg-primary p-0 shadow-2xl fixed z-50'>
         <div className='navbar-start w-1/6 flex justify-between bg-white p-2 px-5'>
             <a className="btn btn-ghost normal-case text-xl">LOGO</a>
             <button onClick={() => setStatus(!open)}>
