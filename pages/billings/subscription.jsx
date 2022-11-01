@@ -3,7 +3,7 @@ import { BsEmojiHeartEyes } from 'react-icons/bs'
 import { FaUser, FaUserCog } from 'react-icons/fa'
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im'
 
-const subscription = () => {
+const Subscription = () => {
   const [ btn, setBtn ] = useState("m")
   const [ show, setShow ] = useState(false)
   return (
@@ -194,4 +194,4 @@ const subscription = () => {
   )
 }
 
-export default subscription
+export default Subscription
