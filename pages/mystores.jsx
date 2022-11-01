@@ -26,17 +26,17 @@ const Mystores = () => {
               <table className="table w-full">
                 <thead>
                   <tr>
-                    <td>NAME</td>
-                    <td>PLATFORM</td>
-                    <td>STORE URL</td>
-                    <td>STATUS</td>
-                    <td>NO. OF PRODUCTS</td>
-                    <td>STORE CURRENCY</td>
-                    <td>WALLET BALANCE</td>
-                    <td>SYNC STATUS</td>
-                    <td>AUTO-FUNDING</td>
-                    <td>AUTO-PUSH</td>
-                    <td>ACTIONS</td>
+                    <th className="bg-navbg">NAME</th>
+                    <th className="bg-navbg">PLATFORM</th>
+                    <th className="bg-navbg">STORE URL</th>
+                    <th className="bg-navbg">STATUS</th>
+                    <th className="bg-navbg">NO. OF PRODUCTS</th>
+                    <th className="bg-navbg">STORE CURRENCY</th>
+                    <th className="bg-navbg">WALLET BALANCE</th>
+                    <th className="bg-navbg">SYNC STATUS</th>
+                    <th className="bg-navbg">AUTO-FUNDING</th>
+                    <th className="bg-navbg">AUTO-PUSH</th>
+                    <th className="bg-navbg">ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>

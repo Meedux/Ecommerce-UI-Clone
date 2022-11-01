@@ -62,17 +62,17 @@ const Orders = () => {
               <table className="table w-full">
                 <thead>
                   <tr>
-                    <td>ORDER DETAILS</td>
-                    <td>QTY</td>
-                    <td>COST</td>
-                    <td>FEE</td>
-                    <td>TOTAL</td>
-                    <td>PROFIT</td>
-                    <td>PAYMENT</td>
-                    <td>TRACKING NO.</td>
-                    <td>STATUS</td>
-                    <td>INVOICES</td>
-                    <td>ACTIONS</td>
+                    <th className="bg-navbg">ORDER DETAILS</th>
+                    <th className="bg-navbg">QTY</th>
+                    <th className="bg-navbg">COST</th>
+                    <th className="bg-navbg">FEE</th>
+                    <th className="bg-navbg">TOTAL</th>
+                    <th className="bg-navbg">PROFIT</th>
+                    <th className="bg-navbg">PAYMENT</th>
+                    <th className="bg-navbg">TRACKING NO.</th>
+                    <th className="bg-navbg">STATUS</th>
+                    <th className="bg-navbg">INVOICES</th>
+                    <th className="bg-navbg">ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>

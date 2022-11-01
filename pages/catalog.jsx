@@ -76,7 +76,7 @@ const Catalog = () => {
                 <input type="text" placeholder='Search' className='outline-none p-1 rounded-r-lg border border-slate-400 w-4/5'/>
               </div>
 
-              <div className='grid grid-cols-12 gap-4 items-center justify-items-center mb-5' style={{width: '90vw'}}>
+              <div className='grid grid-cols-12 gap-4 items-center justify-items-center mb-5 w-full max-w-full' style={{width: '90vw'}}>
                   <div className="col-span-2 dropdown justify-self-center border border-slate-400 p-2 rounded-xl">
                     <label tabIndex={0} className="p-2 px-4  text-md text-gray-500 rounded-lg cursor-pointer">Select a Country</label>
                     <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0} style={{width: '13rem'}}>
