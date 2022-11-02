@@ -24,8 +24,8 @@ const One = () => {
 
                 <div className="card-body justify-center bg-cardgray">
                   <div className="mt-10 text-center items-center mb-5">
-                        <h1 className="text-4xl mb-3 font-bold">Right, here we go, let's add a new store!</h1>
-                        <p>Select below your store's platform to integrate it with AppScenic</p>
+                        <h1 className="text-4xl mb-3 font-bold">{"Right, here we go, let's add a new store!"}</h1>
+                        <p>{"Select below your store's platform to integrate it with AppScenic"}</p>
                   </div>
 
                   <div className="w-full max-w-full grid grid-cols-8 gap-4 mb-5 self-center">
@@ -73,8 +73,8 @@ const One = () => {
                         <Image src="/ebay.png" width={80} height={100}/>
                       </figure>
                       <div className="card-body">
-                        <h2 className="card-title">The world's online marketplace</h2>
-                        <p className='mb-5'>With eBay, it's easy to set up a store that tells a story and represents your brand.</p>
+                        <h2 className="card-title">{"The world's online marketplace"}</h2>
+                        <p className='mb-5'>{"With eBay, it's easy to set up a store that tells a story and represents your brand."}</p>
                         <div className="card-actions">
                           <button className="btn btn-primary btn-outline">Get Notified</button>
                         </div>
@@ -151,7 +151,7 @@ const One = () => {
                         <Image src="/walmart.png" width={130} height={100}/>
                       </figure>
                       <div className="card-body">
-                        <p className='mb-5'>The world's largest omnichannel has big ideas and a bright future.</p>
+                        <p className='mb-5'>{"The world's largest omnichannel has big ideas and a bright future."}</p>
                         <div className="card-actions">
                           <button className="btn btn-primary btn-outline">Get Notified</button>
                         </div>
@@ -198,7 +198,7 @@ const One = () => {
                         <Image src="/ecwid.png" width={40} height={100}/>
                       </figure>
                       <div className="card-body">
-                        <p className='mb-5'>Ecwid offers free ecommerce solutions to unlock your store's potential in a matter of minutes.</p>
+                        <p className='mb-5'>{"Ecwid offers free ecommerce solutions to unlock your store's potential in a matter of minutes."}</p>
                         <div className="card-actions">
                           <button className="btn btn-primary btn-outline">Get Notified</button>
                         </div>
@@ -228,7 +228,7 @@ const One = () => {
                         <Image src="/volusion.png" width={45} height={100}/>
                       </figure>
                       <div className="card-body">
-                        <p className='mb-5'>Volusion's ecommerce solution lets you easily create, manage and expand your store.</p>
+                        <p className='mb-5'>{"Volusion's ecommerce solution lets you easily create, manage and expand your store."}</p>
                         <div className="card-actions">
                           <button className="btn btn-primary btn-outline">Get Notified</button>
                         </div>
