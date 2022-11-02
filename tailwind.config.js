@@ -10,6 +10,8 @@ module.exports = {
         navbg: "#E9EEF5",
         violetish: "#5D41E6",
         ecomgray: "#5C6389",
+        cardgray: "#F7FAFF",
+        grey: "#9F9F9F"
       }
     },
   },
