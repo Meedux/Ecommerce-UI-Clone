@@ -188,4 +188,4 @@ const Myproducts = () => {
   )
 }
 
-export default mMproducts
+export default Myproducts
