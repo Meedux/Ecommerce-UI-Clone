@@ -12,24 +12,24 @@ const Orders = () => {
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}
-              <span className={`tab tab-lifted smooth ${tab === 1 && "tab-active text-primary"}`} onClick={() => setTab(1)}>All</span>
-              <span className={`tab tab-lifted smooth ${tab === 2 && "tab-active text-primary"}`} onClick={() => setTab(2)}>On Hold</span>
-              <span className={`tab tab-lifted smooth ${tab === 3 && "tab-active text-primary"}`} onClick={() => setTab(3)}>To Be Shipped</span>
-              <span className={`tab tab-lifted smooth ${tab === 4 && "tab-active text-primary"}`} onClick={() => setTab(4)}>Processing</span>
-              <span className={`tab tab-lifted smooth ${tab === 5 && "tab-active text-primary"}`} onClick={() => setTab(5)}>Partially Shipped</span>
-              <span className={`tab tab-lifted smooth ${tab === 6 && "tab-active text-primary"}`} onClick={() => setTab(6)}>Shipped</span>
-              <span className={`tab tab-lifted smooth ${tab === 7 && "tab-active text-primary"}`} onClick={() => setTab(7)}>Return Requested</span>
-              <span className={`tab tab-lifted smooth ${tab === 8 && "tab-active text-primary"}`} onClick={() => setTab(8)}>Return Completed</span>
-              <span className={`tab tab-lifted smooth ${tab === 9 && "tab-active text-primary"}`} onClick={() => setTab(9)}>Cancelled</span>
-              <span className={`tab tab-lifted smooth ${tab === 10 && "tab-active text-primary"}`} onClick={() => setTab(10)}>Completed</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 1 && "tab-active text-primary"}`} onClick={() => setTab(1)}>All</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 2 && "tab-active text-primary"}`} onClick={() => setTab(2)}>On Hold</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 3 && "tab-active text-primary"}`} onClick={() => setTab(3)}>To Be Shipped</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 4 && "tab-active text-primary"}`} onClick={() => setTab(4)}>Processing</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 5 && "tab-active text-primary"}`} onClick={() => setTab(5)}>Partially Shipped</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 6 && "tab-active text-primary"}`} onClick={() => setTab(6)}>Shipped</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 7 && "tab-active text-primary"}`} onClick={() => setTab(7)}>Return Requested</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 8 && "tab-active text-primary"}`} onClick={() => setTab(8)}>Return Completed</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 9 && "tab-active text-primary"}`} onClick={() => setTab(9)}>Cancelled</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 10 && "tab-active text-primary"}`} onClick={() => setTab(10)}>Completed</span>
             </div>
 
             <div className='flex mb-5 justify-between items-center'>
               {/* input stuffs */}
-              <input type="text" className='input border-gray-400 outline-none p-1 bg-white max-w-xl' placeholder='Search'/>
+              <input type="text" className='p-2 border-gray-400 outline-none border rounded-md bg-white max-w-xl' placeholder='Search'/>
               <span className="dropdown">
-                <label tabIndex={0} className="p-3 px-8 border-1 border border-gray-500 rounded-xl cursor-pointer">Supplier</label>
-                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                <label tabIndex={0} className="p-2 px-8 border-1 border border-gray-500 rounded-md cursor-pointer">Supplier</label>
+                <ul tabIndex={0} className="dropdown-content menu p-1 shadow bg-base-100 rounded-box w-52">
                   <li><a>Supplier 1</a></li>
                   <li><a>Supplier 2</a></li>
                   <li><a>Supplier 3</a></li>
@@ -37,8 +37,8 @@ const Orders = () => {
               </span>
 
               <span className="dropdown">
-                <label tabIndex={0} className="p-3 px-8 border-1 border border-gray-500 rounded-xl cursor-pointer">Payment</label>
-                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                <label tabIndex={0} className="p-2 px-8 border-1 border border-gray-500 rounded-md cursor-pointer">Payment</label>
+                <ul tabIndex={0} className="dropdown-content menu p-1 shadow bg-base-100 rounded-box w-52">
                   <li><a>Unpaid & Scheduled</a></li>
                   <li><a>Failed</a></li>
                   <li><a>Failed Partially</a></li>

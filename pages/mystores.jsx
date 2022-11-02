@@ -13,12 +13,12 @@ const Mystores = () => {
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}
-              <span className={`tab tab-lifted smooth ${tab === 1 && "tab-active text-primary"}`} onClick={() => setTab(1)}>All</span>
-              <span className={`tab tab-lifted smooth ${tab === 2 && "tab-active text-primary"}`} onClick={() => setTab(2)}>Connecting</span>
-              <span className={`tab tab-lifted smooth ${tab === 3 && "tab-active text-primary"}`} onClick={() => setTab(3)}>Connected</span>
-              <span className={`tab tab-lifted smooth ${tab === 4 && "tab-active text-primary"}`} onClick={() => setTab(4)}>Offline</span>
-              <span className={`tab tab-lifted smooth ${tab === 5 && "tab-active text-primary"}`} onClick={() => setTab(5)}>Disconnecting</span>
-              <span className={`tab tab-lifted smooth ${tab === 6 && "tab-active text-primary"}`} onClick={() => setTab(6)}>Failed</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 1 && "tab-active text-primary"}`} onClick={() => setTab(1)}>All</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 2 && "tab-active text-primary"}`} onClick={() => setTab(2)}>Connecting</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 3 && "tab-active text-primary"}`} onClick={() => setTab(3)}>Connected</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 4 && "tab-active text-primary"}`} onClick={() => setTab(4)}>Offline</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 5 && "tab-active text-primary"}`} onClick={() => setTab(5)}>Disconnecting</span>
+              <span className={`tab tab-lifted smooth font-bold ${tab === 6 && "tab-active text-primary"}`} onClick={() => setTab(6)}>Failed</span>
              </div>
 
              <div className='overflow-x-scroll'>
