@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const priceformulas = () => {
+const Priceformulas = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
@@ -49,4 +49,4 @@ const priceformulas = () => {
   )
 }
 
-export default priceformulas
+export default Priceformulas

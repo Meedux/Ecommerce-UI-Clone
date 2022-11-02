@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const myproducts = () => {
+const Myproducts = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
@@ -188,4 +188,4 @@ const myproducts = () => {
   )
 }
 
-export default myproducts
+export default mMproducts
