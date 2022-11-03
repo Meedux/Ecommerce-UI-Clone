@@ -6,41 +6,13 @@ import Link from 'next/link'
 const Billing = () => {
   return (
     <>
-        <Menu>
-            <Menu.Button>
-                <i>
-                    <VscGraphLine size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
-                </i>
-            </Menu.Button>
-            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl" style={{top: '14rem'}}>
-            <Menu.Item>
-                    {({ active }) => (
-                        <a
-                            className={`${active && 'bg-base-100'} p-2`}
-                        >   
-                            <Link href={'/billings/details'} legacyBehavior>
-                                
-                                    Details & Invoices
-                                
-                            </Link>
-                        </a>
-                    )}
-                </Menu.Item>
-                <Menu.Item>
-                    {({ active }) => (
-                        <a
-                            className={`${active && 'bg-base-100'} p-2`}
-                        >   
-                            <Link href={'/billings/subscription'} legacyBehavior>
-                                
-                                    My Subscription
-                                
-                            </Link>
-                        </a>    
-                    )}
-                </Menu.Item>
-            </Menu.Items>
-        </Menu>
+        <div className="dropdown dropdown-right">
+            <label tabIndex={0}><VscGraphLine size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/></label>
+            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-md left-10 w-52">
+                <li><Link href={'/billings/details'} legacyBehavior>Details & Invoices</Link></li>
+                <li><Link href={'/billings/subscription'} legacyBehavior>My Subscription</Link></li>
+            </ul>
+        </div>
     </>
   )
 }

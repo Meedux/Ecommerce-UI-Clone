@@ -3,8 +3,12 @@ import { Listbox, Transition, Menu } from '@headlessui/react'
 import { useState, Fragment } from 'react'
 import { FaShippingFast } from 'react-icons/fa'
 import { BsFillFlagFill } from 'react-icons/bs'
+import { AiFillEye } from 'react-icons/ai'
+import Dialogue from '../components/Dialog'
 
 const Catalog = () => {
+  const [ hover, setHover ] = useState(false)
+
   const categories = [
       { name: "category 1", id: 1 },
       { name: "category 2", id: 2 },
@@ -30,9 +34,20 @@ const Catalog = () => {
     { name: "Supplier 5" },
   ]
 
+  const item = {
+    img: "/img.jpg",
+    name: "Shoes!",
+    supplierID: "",
+    status: "In Stock",
+    price: "$10.00",
+    discountedPrice: "$7.00",
+    hovered: false
+  }
+
   const defcat = { name: "Categories" }
   const count = { name: "Set Country" }
   const [ cat, setCat ] = useState(defcat)
+  const [ open, setOpen ] = useState(false)
 
   return (
     <>
@@ -45,20 +60,14 @@ const Catalog = () => {
               <div className='w-full p-2 mb-5'>
                 <Listbox value={cat} onChange={setCat}> 
                   <div className="relative inline">
-                    <Listbox.Button className=" bg-slate-200 border border-slate-400 w-1/6 p-1 rounded-l-lg">
+                    <Listbox.Button className=" bg-slate-200 border text-start pl-2 border-slate-400 w-1/6 p-1 rounded-l-lg">
                         {cat.name}
                     </Listbox.Button>
-                    <Transition
-                      as={Fragment}
-                      leave="transition ease-in duration-100"
-                      leaveFrom="opacity-100"
-                      leaveTo="opacity-0"
-                    >
-                      <Listbox.Options as="div" className="absolute block  w-1/6 text-center bg-white" style={{width: '14.2vw'}}>
+                      <Listbox.Options as="div" className="absolute block z-30 shadow-2xl w-1/6 text-center bg-white" style={{width: '14.2vw'}}>
                         {categories.map(item => (
                           <Listbox.Option
                             key={item.id}
-                            className="hover:bg-slate-300 cursor-pointer list-none"
+                            className="hover:bg-slate-300 text-start bg-white p-2 cursor-pointer list-none"
                             style={{width: '14.2vw'}}
                             value={item}
                           >
@@ -70,15 +79,14 @@ const Catalog = () => {
                           </Listbox.Option>
                         ))}
                       </Listbox.Options>
-                    </Transition>
                   </div>
                 </Listbox>
                 <input type="text" placeholder='Search' className='outline-none p-1 rounded-r-lg border border-slate-400 w-4/5'/>
               </div>
 
               <div className='grid grid-cols-12 gap-4 items-center justify-items-center mb-5 w-full max-w-full' style={{width: '90vw'}}>
-                  <div className="col-span-2 dropdown justify-self-center border border-slate-400 p-2 rounded-xl">
-                    <label tabIndex={0} className="p-2 px-4  text-md text-gray-500 rounded-lg cursor-pointer">Select a Country</label>
+                  <div className="col-span-2 dropdown max-w-full w-full  border border-slate-400 rounded-xl px-4 py-1">
+                    <label tabIndex={0} className="block text-md w-full text-gray-500 rounded-lg cursor-pointer">Select a Country</label>
                     <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0} style={{width: '13rem'}}>
                       {countries.map((item, index) => (
                         <li key={index}>
@@ -93,8 +101,8 @@ const Catalog = () => {
                     </ul>
                   </div>
 
-                  <div className="col-span-2 dropdown justify-self-center border border-slate-400 p-2 rounded-xl">
-                    <label tabIndex={0} className="p-2 px-4  text-md text-gray-500 rounded-lg w-full cursor-pointer">Ships to</label>
+                  <div className="col-span-2 dropdown max-w-full w-full border border-slate-400 p-1 rounded-xl">
+                    <label tabIndex={0} className=" px-4 block text-md text-gray-500 rounded-lg max-w-full w-full cursor-pointer">Ships to</label>
                     <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0} style={{width: '13rem'}}>
                       {countries.map((item, index) => (
                         <li key={index}>
@@ -109,13 +117,13 @@ const Catalog = () => {
                     </ul>
                   </div>
 
-                  <div className="col-span-2">
-                    <input type="number" placeholder='Max Time Delivery(Days)' className='input input-bordered'/>
+                  <div className="col-span-2 max-w-full w-full">
+                    <input type="number" placeholder='Max Time Delivery(Days)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
                   </div>
 
-                  <div className="col-span-2 dropdown justify-self-center border border-slate-400 p-1 rounded-xl">
-                    <label tabIndex={0} className="p-2 px-4  text-md text-gray-500 rounded-lg w-full cursor-pointer">Supplier</label>
-                    <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0} style={{width: '13rem'}}>
+                  <div className="col-span-2 max-w-full w-full dropdown border border-slate-400 p-1 rounded-xl">
+                    <label tabIndex={0} className="block px-4  text-md text-gray-500 rounded-lg w-full cursor-pointer">Supplier</label>
+                    <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0}>
                       {supplier.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
@@ -129,12 +137,12 @@ const Catalog = () => {
                     </ul>
                   </div>
 
-                  <div className="col-span-2">
-                    <input type="number" placeholder='Min Price ($)' className='input input-bordered input-md' style={{width: '10rem'}}/>
+                  <div className="col-span-2 max-w-full w-full">
+                    <input type="number" placeholder='Min Price ($)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
                   </div>
 
-                  <div className="col-span-2">
-                    <input type="number" placeholder='Max Price ($)' className='input input-bordered input-md mr-10' style={{width: '8.5rem'}}/>
+                  <div className="col-span-2 max-w-full w-full">
+                    <input type="number" placeholder='Max Price ($)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]' />
                   </div>
               </div>
 
@@ -174,21 +182,81 @@ const Catalog = () => {
                     <span className="label-text">Exclude already imported products</span> 
                   </label>
               </div>
+
+              <div className="w-full max-w-full grid grid-cols-6 gap-4">
+                <div className="col-span-2 card bg-base-100 shadow-xl image-full">
+                  <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                  <div className="card-body">
+                    <h2 className="card-title">Furniture</h2>
+                  </div>
+                </div>
+
+                <div className="col-span-2">
+                  <div className="max-w-full w-full grid grid-cols-4 gap-4 mb-5">
+                    <div className="col-span-2 card bg-base-100 shadow-xl image-full">
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                      <div className="card-body items-center text-center">
+                        <h2 className="card-title">Home, Tools & Garden</h2>
+                      </div>
+                    </div>
+                    <div className="col-span-2 card bg-base-100 shadow-xl image-full">
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                      <div className="card-body items-end text-end">
+                        <h2 className="card-title">Pets</h2>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="max-w-full w-full card bg-base-100 shadow-xl image-full">
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                      <div className="card-body items-center text-center">
+                        <h2 className="card-title">Fashion</h2>
+                      </div>
+                  </div>
+                </div>
+
+                <div className="col-span-2">
+                  <div className="max-w-full w-full card bg-base-100 shadow-xl image-full  mb-5">
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                      <div className="card-body items-end text-end">
+                        <h2 className="card-title">Jewelry and Watches</h2>
+                      </div>
+                  </div>
+
+                  <div className="max-w-full w-full grid grid-cols-4 gap-4">
+                    <div className="col-span-2 card bg-base-100 shadow-xl image-full">
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                      <div className="card-body items-center text-center">
+                        <h2 className="card-title">Premium</h2>
+                      </div>
+                    </div>
+                    <div className="col-span-2 card bg-base-100 shadow-xl image-full">
+                      <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+                      <div className="card-body items-center justify-end">
+                        <h2 className="card-title">Show More</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div style={{width: '90vw'}} className="grid grid-cols-8 gap-4">
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
+              <div htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
+                  <figure htmlFor="modal" onClick={() => setOpen(!open)}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><img src={`${item.img}`}/></figure>
+                  
+                  <div className="card-body bg-white z-30 ">
+                    <span className={`top-[15%] right-[40%] ${hover ? "" : 'hidden'} absolute text-white`}><AiFillEye size={100} className="text-primary"/></span>
+                    
+                    <h2 className="card-title mb-3">{item.name}</h2>
                     <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
+                        <span className='text-md text-gray-500'>{item.supplierID}</span>
+                        <div className="badge badge-success p-4 text-white">{item.status}</div>
                     </div>
                     <div className='flex flex-col justify-start mb-3'>
                         <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
+                        <h1 className="text-xl font-bold">{item.discountedPrice}</h1>
                     </div>  
                     <div className='flex justify-between'>
                         <span>
@@ -198,337 +266,12 @@ const Catalog = () => {
                         <BsFillFlagFill size={25}/>
                     </div>
                   </div>
-              </div>
-              
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
 
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-              
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-              
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
-              </div>
-
-              <div className='col-span-2 card bg-white shadow-xl card-compact'>
-                  <figure><img src="/img.jpg"/></figure>
-                  <div className="card-body">
-                    <h2 className="card-title mb-3">Shoes!</h2>
-                    <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>Generic Supplier ID</span>
-                        <div className="badge badge-success p-4 text-white">In Stock</div>
-                    </div>
-                    <div className='flex flex-col justify-start mb-3'>
-                        <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">$10.00</h1>
-                    </div>  
-                    <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
-                          <p className='text-xs text-gray-500'>2 - 7 Days</p>
-                        </span>
-                        <BsFillFlagFill size={25}/>
-                    </div>
-                  </div>
+                  <div className={`bg-primary absolute z-10 max-w-full w-full smooth ${hover ? "top-[98%]" : "top-[65%]"} p-5 rounded-b-lg`}></div>
               </div>
           </div>
+
+          <Dialogue item={item} isOpen={open} setOpen={setOpen} />
       </main>
     </>
   )

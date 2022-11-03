@@ -1,4 +1,8 @@
 import Link from "next/link"
+import Image from "next/image"
+import { GrMail } from 'react-icons/gr'
+import { RiBillFill } from 'react-icons/ri'
+import { FaHandshake } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -195,6 +199,32 @@ export default function Home() {
 
                   <div>
                     {/* Blog Items Goes Here */}
+                    <div className=" flex">
+                      <Image src={"/img.jpg"} width={100} height={100} className={"mr-3"}/>
+                      <Link href={'#'} legacyBehavior>
+                        <span className="hover:text-primary cursor-pointer ">
+                          <p className=" text-lg font-bold ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
+                        </span>
+                      </Link>
+                    </div>
+
+                    <div className="flex">
+                      <Image src={"/img.jpg"} width={100} height={100} className={"mr-3"}/>
+                      <Link href={'#'} legacyBehavior>
+                        <span className="hover:text-primary cursor-pointer ">
+                          <p className=" text-lg font-bold ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
+                        </span>
+                      </Link>
+                    </div>
+
+                    <div className="flex">
+                      <Image src={"/img.jpg"} width={100} height={100} className={"mr-3"}/>
+                      <Link href={'#'} legacyBehavior>
+                        <span className="hover:text-primary cursor-pointer ">
+                          <p className=" text-lg font-bold ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -203,10 +233,10 @@ export default function Home() {
               <div className="card bg-white shadow-lg">
                 <div className="card-body">
                   <div className="w-full flex justify-between mb-3">
-                    <span className=" text-gray-500 font-semibold">BLOG</span>
+                    <span className=" text-gray-500 font-semibold">FAQ</span>
                     <span className="text-end text-primary">
                       <Link href={'#'}>
-                        Go to Blog
+                        View All
                       </Link>
                     </span>
                   </div>
@@ -228,8 +258,30 @@ export default function Home() {
             <div className="col-span-2">
               <div className="card bg-white shadow-lg">
                 <div className="card-body">
-                  <div className="w-full flex justify-between mb-3">
-                    <span className=" text-gray-500 font-semibold">Contact Us</span>
+                  <div className="w-full flex flex-col mb-5">
+                    <span className=" text-gray-500 font-semibold mb-5">Contact Us</span>
+                    <span className="flex items-center mb-3">
+                      <GrMail className="mr-3 text-primary"/>
+                      <p>General: <span className="text-primary">support@appscenic.com</span></p> 
+                    </span>
+
+                    <span className="flex items-center mb-3">
+                      <RiBillFill className="mr-3 text-primary"/>
+                      <p>Billing: <span className="text-primary">billing@appscenic.com</span></p> 
+                    </span>
+
+                    <span className="flex items-center mb-3">
+                      <FaHandshake className="mr-3 text-primary"/>
+                      <p>Sales: <span className="text-primary">sales@appscenic.com</span></p> 
+                    </span>
+                  </div>
+
+                  <div>
+                    <span className=" text-gray-500 font-semibold mb-5">Ask us anything. Anytime</span>
+                    <div className="flex">
+                      <button className="btn btn-primary mr-4 font-bold text-white">Send Email</button>
+                      <button className="btn btn-success font-bold text-white">Live Chat</button>
+                    </div>
                   </div>
                 </div>
               </div>

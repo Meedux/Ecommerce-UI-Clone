@@ -6,41 +6,13 @@ import Link from 'next/link'
 const Settings = () => {
   return (
     <>
-        <Menu>
-            <Menu.Button>
-                <i>
-                    <FaUserCog size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/>
-                </i>
-            </Menu.Button>
-            <Menu.Items as="div" className="absolute bg-white left-16  text-center flex flex-col rounded-md shadow-xl" style={{top: '16rem'}}>
-                <Menu.Item>
-                    {({ active }) => (
-                        <a
-                            className={`${active && 'bg-base-100'} p-2`}
-                        >   
-                            <Link href={'/settings/shipping'} legacyBehavior>
-                                
-                                    Shipping Settings
-                                
-                            </Link>
-                        </a>
-                    )}
-                </Menu.Item>
-                <Menu.Item>
-                    {({ active }) => (
-                        <a
-                            className={`${active && 'bg-base-100'} p-2`}
-                        >   
-                            <Link href={'/settings/wallet'} legacyBehavior>
-                                
-                                    Store Wallet
-                                
-                            </Link>
-                        </a>    
-                    )}
-                </Menu.Item>
-            </Menu.Items>
-        </Menu>
+        <div className="dropdown dropdown-right">
+            <label tabIndex={0}><FaUserCog size={30} className="cursor-pointer text-secondary hover:text-primary mb-3"/></label>
+            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-md left-10 w-52">
+                <li><Link href={'/settings/shipping'} legacyBehavior>Shipping Settings</Link></li>
+                <li><Link href={'/settings/wallet'} legacyBehavior>Store Wallet</Link></li>
+            </ul>
+        </div>
     </>
   )
 }
