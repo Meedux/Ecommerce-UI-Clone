@@ -90,7 +90,7 @@ const Sidebar = ({ open }) => {
         <div className='mb-10 absolute left-2 bottom-0'>
           <span className={``}>
             <Link href={'/quickstart'}>
-              <button className="hover:w-[120%] w-[30%] align-middle flex-col-reverse flex justify-center overflow-hidden btn btn-info px-3  smooth" onMouseEnter={() => setHoverOne(true)} onMouseLeave={() => setHoverOne(false)}><BsFillLightbulbFill size={15} style={{color: "white"}} className="inline-block"/><span className={`p-2 text-sm text-center`}>Quickstart</span></button>
+              <button className={`${open ? "w-[120%]" : "hover:w-[120%] w-[30%]"} align-middle flex-col-reverse flex justify-center overflow-hidden btn btn-info px-3  smooth`} onMouseEnter={() => setHoverOne(true)} onMouseLeave={() => setHoverOne(false)}><BsFillLightbulbFill size={15} style={{color: "white"}} className="inline-block"/><span className={`p-2 text-sm text-center`}>Quickstart</span></button>
             </Link>
           </span>
           {/* <span className={`${open ? '' : 'hidden'} text-center`}>
