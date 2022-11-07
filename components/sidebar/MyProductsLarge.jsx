@@ -10,10 +10,10 @@ const MyProductsLarge = () => {
   return (
     <>
       <Menu>
-        <Menu.Button className=" cursor-pointer flex items-center justify-between p-7 max-w-full w-full hover:bg-navbg py-2 rounded-r-lg hover:text-primary" onClick={() => {setLocalOpen(!localOpen)}} style={{transition: "300ms"}}>
+        <Menu.Button className=" cursor-pointer flex items-center justify-between p-7 max-w-full w-[95%] text-[#626A92]  hover:bg-navbg py-2 rounded-r-lg hover:text-primary" onClick={() => {setLocalOpen(!localOpen)}} style={{transition: "300ms"}}>
           <span className="flex items-center">
               <BsFillTagFill size={22} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
-              <span className="text-sm text-start">My Products</span>
+              <span className="text-sm text-start font-bold">My Products</span>
           </span>
           {localOpen ? <IoMdArrowDropdown className="fill-current" /> : <IoMdArrowDropleft className='swap-on fill-current' />}
         </Menu.Button>

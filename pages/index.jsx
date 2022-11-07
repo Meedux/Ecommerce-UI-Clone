@@ -2,12 +2,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { GrMail } from 'react-icons/gr'
 import { RiBillFill } from 'react-icons/ri'
-import { FaHandshake } from 'react-icons/fa'
+import { FaHandshake, FaQuestionCircle } from 'react-icons/fa'
 
 export default function Home() {
   return (
     <>
-      <main className="p-5">
+      <main className="p-2">
         {/* First Four Cards */}
           <span className="text-start font-bold mb-5">Dashboard</span>
           <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5" style={{width: "90vw"}}>
@@ -203,7 +203,7 @@ export default function Home() {
                       <Image src={"/img.jpg"} width={100} height={100} className={"mr-3"}/>
                       <Link href={'#'} legacyBehavior>
                         <span className="hover:text-primary cursor-pointer ">
-                          <p className=" text-lg font-bold ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
+                          <p className=" text-base ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
                         </span>
                       </Link>
                     </div>
@@ -212,7 +212,7 @@ export default function Home() {
                       <Image src={"/img.jpg"} width={100} height={100} className={"mr-3"}/>
                       <Link href={'#'} legacyBehavior>
                         <span className="hover:text-primary cursor-pointer ">
-                          <p className=" text-lg font-bold ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
+                          <p className=" text-base ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
                         </span>
                       </Link>
                     </div>
@@ -221,7 +221,7 @@ export default function Home() {
                       <Image src={"/img.jpg"} width={100} height={100} className={"mr-3"}/>
                       <Link href={'#'} legacyBehavior>
                         <span className="hover:text-primary cursor-pointer ">
-                          <p className=" text-lg font-bold ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
+                          <p className=" text-base ">A Very Very Long And Generic Blog Title<p className="text-primary text-sm ml-3 inline">{"Read More >"}</p></p>
                         </span>
                       </Link>
                     </div>
@@ -240,17 +240,29 @@ export default function Home() {
                       </Link>
                     </span>
                   </div>
-                  <div className=" mb-5 border-x-0 border border-t-0 border-b-gray-500">
-                    <span>Question?</span>
+                  <div className=" mb-2 flex items-center">
+                    <FaQuestionCircle size={20} className="mr-3 text-primary" />
+                    <span className="hover:text-primary cursor-pointer">Question?</span>
+                  </div >
+                  <div className=" mb-2 flex items-center">
+                    <FaQuestionCircle size={20} className="mr-3 text-primary" />
+                    <span className="hover:text-primary cursor-pointer">Question?</span>
+                  </div >
+                  <div className=" mb-2 flex items-center">
+                    <FaQuestionCircle size={20} className="mr-3 text-primary" />
+                    <span className="hover:text-primary cursor-pointer">Question?</span>
                   </div>
-                  <div className=" mb-5 border-x-0 border border-t-0 border-b-gray-500">
-                    <span>Question?</span>
+                  <div className=" mb-2 flex items-center">
+                    <FaQuestionCircle size={20} className="mr-3 text-primary" />
+                    <span className="hover:text-primary cursor-pointer">Question?</span>
                   </div>
-                  <div className=" mb-5 border-x-0 border border-t-0 border-b-gray-500">
-                    <span>Question?</span>
+                  <div className=" mb-2 flex items-center">
+                    <FaQuestionCircle size={20} className="mr-3 text-primary" />
+                    <span className="hover:text-primary cursor-pointer">Question?</span>
                   </div>
-                  <div className=" mb-5 border-x-0 border border-t-0 border-b-gray-500">
-                    <span>Question?</span>
+                  <div className=" flex items-center">
+                    <FaQuestionCircle size={20} className="mr-3 text-primary" />
+                    <span className="hover:text-primary cursor-pointer">Question?</span>
                   </div>
                 </div>
               </div>

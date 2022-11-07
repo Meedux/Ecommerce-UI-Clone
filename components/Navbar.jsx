@@ -5,14 +5,15 @@ import { CgProfile } from 'react-icons/cg'
 import { BsFillArrowDownCircleFill, BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { Menu } from '@headlessui/react'
 import { GoTriangleDown, GoTriangleUp } from 'react-icons/go'
+import { HiUserCircle } from 'react-icons/hi2'
 import Link from 'next/link'
 
 const Navbar = ({ open, setStatus }) => {
     const [ MenuOpen, setOpen ] = useState(false)
 
   return (
-    <div className='navbar justify-between bg-primary p-0 shadow-2xl fixed z-50'>
-        <div className='navbar-start w-1/6 flex justify-between bg-white p-2 px-5'>
+    <div className='navbar min-h-0 justify-between bg-primary p-0 shadow-2xl fixed z-50'>
+        <div className='navbar-start w-1/6 flex justify-between bg-white p-1 px-5'>
             <a className="btn btn-ghost normal-case text-xl">LOGO</a>
             <button onClick={() => setStatus(!open)}>
                 <i>
@@ -22,23 +23,23 @@ const Navbar = ({ open, setStatus }) => {
         </div>
 
 
-        <div className="flex items-center navbar-end p-2">
-            <button className='mr-7'>
+        <div className="flex items-center navbar-end p-1">
+            <button className='p-2'>
                 <i>
                     <AiFillBell size={27} style={{color: 'white'}}/>
                 </i>
             </button>
             <Menu>
-                <Menu.Button className='flex items-center' onClick={() => setOpen(!MenuOpen)}>
+                <Menu.Button className='flex items-center pr-6' onClick={() => setOpen(!MenuOpen)}>
                     <i className='mr-2'>
-                        <CgProfile size={38} style={{color: 'white'}}/>
+                        <HiUserCircle size={38} style={{color: 'white'}}/>
                     </i>
                     <div className='flex flex-col mr-2'>
-                        <span className="font-bold text-white text-left">Name goes here</span>
-                        <span className='text-white text-left'>Nickname Goes here</span>
+                        <span className="font-bold text-white text-left text-sm ">Name goes here</span>
+                        <span className='text-white text-left text-xs'>Nickname Goes here</span>
                     </div>
                     <i>
-                        { MenuOpen ? <GoTriangleUp size={25} style={{color: 'white', transition: '300ms'}}/> : <GoTriangleDown size={25} style={{color: 'white', transition: '300ms'}}/> }
+                        { MenuOpen ? <GoTriangleUp  style={{color: 'white', transition: '300ms'}}/> : <GoTriangleDown  style={{color: 'white', transition: '300ms'}}/> }
                     </i>
                 </Menu.Button>
                 <Menu.Items as='div' className='absolute bg-white -bottom-20 w-1/6 text-center flex flex-col rounded-md shadow-xl'>
