@@ -13,7 +13,7 @@ const Navbar = ({ open, setStatus }) => {
 
   return (
     <div className='navbar min-h-0 justify-between bg-primary p-0 shadow-2xl fixed z-50'>
-        <div className='navbar-start w-1/6 flex justify-between bg-white p-1 px-5'>
+        <div className='navbar-start w-[270px] flex justify-between bg-white p-1 px-5'>
             <a className="btn btn-ghost normal-case text-xl">LOGO</a>
             <button onClick={() => setStatus(!open)}>
                 <i>

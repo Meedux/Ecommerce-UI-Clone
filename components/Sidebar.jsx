@@ -16,7 +16,7 @@ const Sidebar = ({ open }) => {
   const [hoverOne, setHoverOne] = useState(false)
   return (
     <>
-     <div className={`${open ? 'w-1/6' : ' w-[3.3rem]'} shadow-xl pt-2 flex flex-col justify-between bg-white smooth fixed mt-14 z-40`} style={{height: "93.5vh"}}>
+     <div className={`${open ? 'w-[270px]' : ' w-[3.3rem]'} shadow-xl pt-2 flex flex-col justify-between bg-white smooth fixed mt-14 z-40`} style={{height: "93.5vh"}}>
         <div>
           <span className={`${open ? 'hidden' : ''} flex flex-col justify-between items-center`}>
             {/* Short Icons */}
@@ -54,15 +54,15 @@ const Sidebar = ({ open }) => {
           <span className={`${open ? '' : 'hidden'} max-w-full w-full flex flex-col justify-between items-start`}>
             <Profile />
             <Link href={'/'} className="w-[95%]">
-              <span className="flex items-center p-7 pr-20 hover:bg-navbg text-[#626A92]  py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
-                <MdDashboard size={21} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
+              <span className="flex items-center p-7 pr-20 hover:bg-navbg text-[#626A92]  py-2 rounded-r-2xl hover:text-primary" style={{transition: "300ms"}}>
+                <MdDashboard size={21} className="cursor-pointer text-secondary hover:text-primary  mr-[16px]"/>
                 <span className="text-sm text-start font-bold ">Dashboard</span>
               </span>
             </Link>
             <Link href={'/catalog'} legacyBehavior className="w-[95%]">
               <a className="w-[95%]">
-                <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
-                  <FaBoxes size={25} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
+                <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-2xl hover:text-primary" style={{transition: "300ms"}}>
+                  <FaBoxes size={27} className="cursor-pointer text-secondary hover:text-primary  mr-[16px]"/>
                   <span className="text-sm w-full text-start font-bold  ">Product Catalog</span>
                 </span>
               </a>
@@ -71,15 +71,15 @@ const Sidebar = ({ open }) => {
             <MyProductsLarge />
 
             <Link href={'/orders'} className="w-[95%]">
-                <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
-                  <BsFillBasketFill size={25} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
+                <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-2xl hover:text-primary" style={{transition: "300ms"}}>
+                  <BsFillBasketFill size={27} className="cursor-pointer text-secondary hover:text-primary  mr-[16px]"/>
                   <span className="text-sm w-full text-start font-bold ">Orders</span>
                 </span>
               
             </Link>
             <Link href={'/catalog'} className="w-[95%]">
-              <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-lg hover:text-primary" style={{transition: "300ms"}}>
-                <FaStoreAlt size={28} className="cursor-pointer text-secondary hover:text-primary  mr-3"/>
+              <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-2xl hover:text-primary" style={{transition: "300ms"}}>
+                <FaStoreAlt size={28} className="cursor-pointer text-secondary hover:text-primary  mr-[16px]"/>
                 <span className="text-sm w-full text-start font-bold ">My Stores</span>
               </span>
             </Link>
@@ -87,10 +87,10 @@ const Sidebar = ({ open }) => {
             <SettingsLarge />
           </span>
         </div>
-        <div className='mb-10 absolute left-2 bottom-0'>
+        <div className='mb-10 absolute left-[0.35rem] bottom-0'>
           <span className={``}>
             <Link href={'/quickstart'}>
-              <button className={`${open ? "w-[120%]" : "hover:w-[120%] w-[30%]"} align-middle flex-col-reverse flex justify-center overflow-hidden btn btn-info px-3  smooth`} onMouseEnter={() => setHoverOne(true)} onMouseLeave={() => setHoverOne(false)}><BsFillLightbulbFill size={15} style={{color: "white"}} className="inline-block"/><span className={`p-2 text-sm text-center`}>Quickstart</span></button>
+              <button className={`${open ? "w-[120%]" : "hover:w-[120%] w-[30%]"} min-h-[2rem] shadow-xl align-middle flex-col-reverse flex justify-center overflow-hidden btn btn-info py-0 h-[1rem] px-3  smooth`} onMouseEnter={() => setHoverOne(true)} onMouseLeave={() => setHoverOne(false)}><BsFillLightbulbFill size={15} style={{color: "white"}} className="inline-block mr-3"/><span className={`p-2 text-sm text-center`}>Quickstart</span></button>
             </Link>
           </span>
           {/* <span className={`${open ? '' : 'hidden'} text-center`}>
