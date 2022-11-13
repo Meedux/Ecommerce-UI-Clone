@@ -7,8 +7,9 @@ import { AiFillEye } from 'react-icons/ai'
 import Dialogue from '../components/Dialog'
 
 const Catalog = () => {
-  const [ hover, setHover ] = useState(false)
-
+  const [ hover, setHover ] = useState(0)
+  const [ id, setId] = useState(0)
+  
   const categories = [
       { name: "category 1", id: 1 },
       { name: "category 2", id: 2 },
@@ -34,15 +35,47 @@ const Catalog = () => {
     { name: "Supplier 5" },
   ]
 
-  const item = {
-    img: "/img.jpg",
-    name: "Shoes!",
-    supplierID: "",
-    status: "In Stock",
-    price: "$10.00",
-    discountedPrice: "$7.00",
-    hovered: false
-  }
+  const items = [
+    {
+      id: 1,
+      img: "/img.jpg",
+      name: "Shoes!",
+      supplierID: "12345-67890",
+      status: "In Stock",
+      discountedPrice: "$7.00",
+      originalPrice: "$14.00",
+    },
+
+    {
+      id: 2,
+      img: "/img.jpg",
+      name: "Totally Legit Shoes",
+      supplierID: "12345-67890",
+      status: "In Stock",
+      discountedPrice: "$7.00",
+      originalPrice: "$14.00",
+    },
+
+    {
+      id: 3,
+      img: "/img.jpg",
+      name: "Very Expensive Shoe",
+      supplierID: "12345-67890",
+      status: "In Stock",
+      discountedPrice: "$99.9",
+      originalPrice: "$500.00",
+    },
+  ]
+
+  // const item = {
+  //   img: "/img.jpg",
+  //   name: "Shoes!",
+  //   supplierID: "",
+  //   status: "In Stock",
+  //   price: "$10.00",
+  //   discountedPrice: "$7.00",
+  //   hovered: false
+  // }
 
   const defcat = { name: "Categories" }
   const count = { name: "Set Country" }
@@ -118,7 +151,7 @@ const Catalog = () => {
                   </div>
 
                   <div className="col-span-2 max-w-full w-full">
-                    <input type="number" placeholder='Max Time Delivery(Days)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
+                    <input type="number" placeholder='Max Time Delivery(Days)' className='input w-full rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
                   </div>
 
                   <div className="col-span-2 max-w-full w-full dropdown border border-slate-400 p-1 rounded-xl">
@@ -138,11 +171,11 @@ const Catalog = () => {
                   </div>
 
                   <div className="col-span-2 max-w-full w-full">
-                    <input type="number" placeholder='Min Price ($)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
+                    <input type="number" placeholder='Min Price ($)' className='input rounded-xl w-full bg-white border border-slate-400 px-2 h-[2rem]'/>
                   </div>
 
                   <div className="col-span-2 max-w-full w-full">
-                    <input type="number" placeholder='Max Price ($)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]' />
+                    <input type="number" placeholder='Max Price ($)' className='input rounded-xl w-full bg-white border border-slate-400 px-2 h-[2rem]' />
                   </div>
               </div>
 
@@ -243,11 +276,13 @@ const Catalog = () => {
           </div>
 
           <div style={{width: '90vw'}} className="grid grid-cols-8 gap-4">
-              <div htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
-                  <figure htmlFor="modal" onClick={() => setOpen(!open)}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><img src={`${item.img}`}/></figure>
+              {items.map(item => (
+                <div key={item.id} htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
+                  <span className={`left-[50%] top-[20%] ${hover == item.id ? "" : 'hidden'} absolute`}><AiFillEye size={100} className="text-primary relative left-[-50%] top-[-20%]"/></span>
+                  <figure htmlFor="modal" onClick={() => {setOpen(!open) 
+                  setId(item.id)}}  onMouseEnter={() => setHover(item.id)} onMouseLeave={() => setHover(0)}><img src={`${item.img}`}/></figure>
                   
                   <div className="card-body bg-white z-30 ">
-                    <span className={`top-[15%] right-[40%] ${hover ? "" : 'hidden'} absolute text-white`}><AiFillEye size={100} className="text-primary"/></span>
                     
                     <h2 className="card-title mb-3">{item.name}</h2>
                     <div className='flex justify-between'>
@@ -267,11 +302,12 @@ const Catalog = () => {
                     </div>
                   </div>
 
-                  <div className={`bg-primary absolute z-10 max-w-full w-full smooth ${hover ? "top-[98%]" : "top-[65%]"} p-5 rounded-b-lg`}></div>
-              </div>
+                  <div className={`bg-primary absolute z-10 max-w-full w-full smooth ${hover == item.id ? "top-[98%]" : "top-[65%]"} p-5 rounded-b-lg text-center font-bold text-white`}>IMPORT NOW</div>
+                </div>
+              ))}
           </div>
 
-          <Dialogue item={item} isOpen={open} setOpen={setOpen} />
+          <Dialogue items={items} id={id} isOpen={open} setOpen={setOpen} />
       </main>
     </>
   )
