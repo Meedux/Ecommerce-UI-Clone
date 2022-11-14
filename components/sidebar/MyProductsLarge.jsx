@@ -17,10 +17,10 @@ const MyProductsLarge = () => {
           </span>
           {localOpen ? <IoMdArrowDropdown className="fill-current" /> : <IoMdArrowDropleft className='swap-on fill-current' />}
         </Menu.Button>
-        <Menu.Items as="div" className="max-w-full w-full text-center flex flex-col" style={{transition: "300ms"}}>
+        <Menu.Items as="div" className="max-w-full w-full ml-[4.1rem] flex flex-col" style={{transition: "300ms"}}>
           <Menu.Item className="mb-3">
               <Link href={'/billings/details'}>
-                <span className="mb-3 text-secondary hover:text-primary">View My Products</span>
+                <span className="mb-3 text-secondary text-start hover:text-primary">View My Products</span>
               </Link>
           </Menu.Item>
 

@@ -17,16 +17,16 @@ const BillingLarge = () => {
           </span>
           {localOpen ? <IoMdArrowDropdown className="fill-current" /> : <IoMdArrowDropleft className='swap-on fill-current' />}
         </Menu.Button>
-        <Menu.Items as="div" className="max-w-full mt-3 w-full text-center flex flex-col" style={{transition: "300ms"}}>
+        <Menu.Items as="div" className="max-w-full mt-3 w-full text-start ml-[4.3rem] flex flex-col" style={{transition: "300ms"}}>
           <Menu.Item className="mb-3">
               <Link href={'/billings/details'}>
-                <span className="mb-3 text-secondary hover:text-primary">Details & Invoices</span>
+                <span className="mb-3 text-secondary text-start hover:text-primary">Details & Invoices</span>
               </Link>
           </Menu.Item>
 
           <Menu.Item className="mb-3">
               <Link href={'/billings/subscription'}>
-                <span className="mb-3 text-secondary hover:text-primary">My Subscriptions</span>
+                <span className="mb-3 text-secondary text-start hover:text-primary">My Subscriptions</span>
               </Link>
           </Menu.Item>
         </Menu.Items>

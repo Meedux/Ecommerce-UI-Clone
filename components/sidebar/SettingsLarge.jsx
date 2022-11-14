@@ -16,16 +16,16 @@ const SettingsLarge = () => {
           </span>
           {localOpen ? <IoMdArrowDropdown className="fill-current" /> : <IoMdArrowDropleft className='swap-on fill-current' />}
         </Menu.Button>
-        <Menu.Items as="div" className="max-w-full mt-3 w-full text-center flex flex-col" style={{transition: "300ms"}}>
+        <Menu.Items as="div" className="max-w-full mt-3 w-full text-start ml-[4.3rem] flex flex-col" style={{transition: "300ms"}}>
           <Menu.Item className="mb-3">
               <Link href={'/settings/shipping'}>
-                <span className="mb-3 text-secondary hover:text-primary">Shipping Settings</span>
+                <span className="mb-3 text-secondary text-start hover:text-primary">Shipping Settings</span>
               </Link>
           </Menu.Item>
 
           <Menu.Item className="mb-3">
               <Link href={'/settings/wallet'}>
-                <span className="mb-3 text-secondary hover:text-primary">Store Wallet</span>
+                <span className="mb-3 text-secondary text-start hover:text-primary">Store Wallet</span>
               </Link>
           </Menu.Item>
         </Menu.Items>
