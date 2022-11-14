@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="card bg-white shadow-lg">
                   <div className="card-body mt-4">
                     <div className="text-center flex flex-col">
-                      <span className="text-xl">Total Sales Today</span>
+                      <span className="text-sm font-bold text-gray-500 mb-4">TOTAL SALES TODAY</span>
                       <span className="text-4xl font-bold">$ 0.00</span>
                     </div>
                   </div>
@@ -54,7 +54,7 @@ export default function Home() {
                       </Link>
                     </span>
                     <div className="text-center flex flex-col">
-                      <span className="text-xl">Wallet Funds</span>
+                      <span className="text-sm font-bold text-gray-500">WALLET FUNDS</span>
                       <span className="text-4xl font-bold text-green-400">$ 0.00</span>
                     </div>
                   </div>
@@ -68,7 +68,7 @@ export default function Home() {
                       </Link>
                     </span>
                     <div className="text-center flex flex-col">
-                      <span className="text-xl">Orders Today</span>
+                      <span className="text-sm font-bold text-gray-500">ORDERS TODAY</span>
                       <span className="text-4xl font-bold">0</span>
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export default function Home() {
                 <div className="card bg-white shadow-lg">
                   <div className="card-body mt-4">
                     <div className="text-center flex flex-col">
-                      <span className="text-xl">Opened Returned Request</span>
+                      <span className="text-sm font-bold text-gray-500 mb-4">OPENED RETURNED REQUESTS</span>
                       <span className="text-4xl font-bold">0</span>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ export default function Home() {
               <div className="card bg-white shadow-lg">
                 <div className="card-body">
                   <div className="mb-4 flex flex-col">
-                    <span className="">TOTAL SALES (LAST 30 DAYS)</span>
+                    <span className="text-sm font-bold text-gray-500 mb-4">TOTAL SALES (LAST 30 DAYS)</span>
                     <span className="text-xl font-extrabold">$ 0.00</span>
                   </div>
 
@@ -104,7 +104,7 @@ export default function Home() {
               <div className="card bg-white shadow-lg">
               <div className="card-body">
                 <div className="mb-4 flex flex-col">
-                    <span className="">TOTAL ORDERS (LAST 30 DAYS)</span>
+                    <span className="text-sm font-bold text-gray-500 mb-4">TOTAL ORDERS (LAST 30 DAYS)</span>
                     <span className="text-xl font-extrabold">0</span>
                   </div>
 
@@ -121,7 +121,7 @@ export default function Home() {
               <div className="card bg-white shadow-lg">
                 <div className="card-body">
                   <div className="w-full flex justify-between">
-                    <span className=" text-gray-500 font-semibold">RECENT ORDERS</span>
+                    <span className=" text-sm font-semibold text-gray-500">RECENT ORDERS</span>
                     <span className="text-end text-primary">
                       <Link href={'/orders'}>
                         View Orders
@@ -153,30 +153,30 @@ export default function Home() {
               <div className="card bg-white shadow-lg">
                 <div className="card-body">
                   <div>
-                    <span className=" text-gray-500 font-semibold">STORE STATISTICS</span>
+                    <span className=" text-gray-500 font-semibold text-sm">STORE STATISTICS</span>
                   </div>
                   <div className="flex flex-col mb-5">
-                    <span className=" text-gray-700 font-semibold">Orders</span>
+                    <span className=" text-gray-500 font-semibold text-sm">Orders</span>
                     <span className="text-2xl text-primary font-bold">0</span>
                   </div>
                   <div className="flex flex-col mb-5">
-                    <span className=" text-gray-700 font-semibold">Total Sales (in store currency)</span>
+                    <span className=" text-gray-500 font-semibold text-sm">Total Sales (in store currency)</span>
                     <span className="text-2xl text-primary font-bold">$ 0.00</span>
                   </div>
                   <div className="flex flex-col mb-5">
-                    <span className=" text-gray-700 font-semibold">Products connected</span>
+                    <span className=" text-gray-500 font-semibold text-sm">Products connected</span>
                     <span className="text-2xl text-primary font-bold">0</span>
                   </div>
                   <div className="flex flex-col mb-5">
-                    <span className=" text-gray-700 font-semibold">Products sold</span>
+                    <span className=" text-gray-500 font-semibold text-sm">Products sold</span>
                     <span className="text-2xl text-primary font-bold">0</span>
                   </div>
                   <div className="flex flex-col mb-5">
-                    <span className=" text-gray-700 font-semibold">Returns</span>
+                    <span className=" text-gray-500 font-semibold text-sm">Returns</span>
                     <span className="text-2xl text-primary font-bold">0</span>
                   </div>
                   <div className="flex flex-col mb-5">
-                    <span className=" text-gray-700 font-semibold">Return rate</span>
+                    <span className=" text-gray-500 font-semibold text-sm">Return rate</span>
                     <span className="text-2xl text-primary font-bold">0%</span>
                   </div>
                 </div>

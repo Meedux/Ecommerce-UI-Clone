@@ -94,8 +94,13 @@ const Subscription = () => {
                     <span className="text-3xl text-gray-500">$<span className='text-6xl font-extrabold'>{ btn === "m" ? 24 : btn === "a" && 19.08 }</span>/mo</span>
                   </div>
 
+                  <div className={`mb-5 flex flex-col justify-center items-center ${btn === "m" ? "hidden" : ""}`}>
+                    <span className="text-base text-ecomgray">$229 billed yearly</span>
+                    <span className="text-base text-ecomgray font-extrabold">{"(20% off)"}</span>
+                  </div>
+
                   <div className='flex flex-col justify-center items-center mb-5'>
-                    <button className="btn bg-ecomgray border-none py-1 shadow-lg mb-2">START 7 DAY FREE TRIAL</button>
+                    <button className="btn bg-ecomgray border-none py-1 shadow-lg mb-2 text-sm">START 7 DAY FREE TRIAL</button>
                     <span className='text-sm text-ecomgray'>You will get charged only when the trial expires.</span>
                   </div>
 
@@ -126,8 +131,13 @@ const Subscription = () => {
                     <span className="text-3xl text-primary">$<span className='text-6xl font-extrabold'>{ btn === "m" ? 47 : btn === "a" && 35.25 }</span>/mo</span>
                   </div>
 
+                  <div className={`mb-5 flex flex-col justify-center items-center ${btn === "m" ? "hidden" : ""}`}>
+                    <span className="text-base text-primary">$423 billed yearly</span>
+                    <span className="text-base text-primary font-extrabold">{"(25% off)"}</span>
+                  </div>
+
                   <div className='flex flex-col justify-center items-center mb-5'>
-                    <button className="btn btn-primary border-none py-1 shadow-lg mb-2">START 7 DAY FREE TRIAL</button>
+                    <button className="btn btn-primary border-none py-1 shadow-lg mb-2 text-sm">START 7 DAY FREE TRIAL</button>
                     <span className='text-sm text-ecomgray'>You will get charged only when the trial expires.</span>
                   </div>
 
@@ -158,8 +168,13 @@ const Subscription = () => {
                     <span className="text-3xl text-violetish">$<span className='text-6xl font-extrabold'>{ btn === "m" ? 78 : btn === "a" && 54.67 }</span>/mo</span>
                   </div>
 
+                  <div className={`mb-5 flex flex-col justify-center items-center ${btn === "m" ? "hidden" : ""}`}>
+                    <span className="text-base text-primary">$656 billed yearly</span>
+                    <span className="text-base text-primary font-extrabold">{"(33% off)"}</span>
+                  </div>
+
                   <div className='flex flex-col justify-center items-center mb-5'>
-                    <button className="btn bg-violetish border-none py-1 shadow-lg mb-2">START 7 DAY FREE TRIAL</button>
+                    <button className="btn bg-violetish border-none py-1 shadow-lg mb-2 text-sm">START 7 DAY FREE TRIAL</button>
                     <span className='text-sm text-ecomgray'>You will get charged only when the trial expires.</span>
                   </div>
 

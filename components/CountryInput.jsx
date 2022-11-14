@@ -2,7 +2,7 @@ import React from 'react'
 
 const CountryInput = () => {
   return (
-    <select name="country" id="country" className='outline-none input mb-4'>
+    <select name="country" id="country" className='outline-none input h-auto p-2 px-1 rounded-sm bg-white border border-gray-400 w-[60%] mb-4'>
         <option value="0" label="Select a country ... " selected="selected">Select a country ... </option>
         <optgroup id="country-optgroup-Africa" label="Africa">
             <option value="DZ" label="Algeria">Algeria</option>

@@ -17,13 +17,13 @@ const details = () => {
                 </p>
 
                 <div className="w-full max-w-full flex justify-between mb-5">
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='First Name'/>
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Last Name'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='First Name'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Last Name'/>
                 </div>
 
                 <div className="w-full max-w-full flex justify-between">
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Company'/>
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='VAT Number/TAX ID'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Company'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='VAT Number/TAX ID'/>
                 </div>
               </div>
 
@@ -33,23 +33,23 @@ const details = () => {
                 </p>
 
                 <div className="w-full max-w-full flex justify-between mb-5">
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Address 1'/>
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Address 2'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Address 1'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Address 2'/>
                 </div>
 
                 <div className="w-full max-w-full flex justify-between mb-5">
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='City'/>
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Region'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='City'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Region'/>
                 </div>
 
                 <div className="w-full max-w-full flex justify-between">
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Postal Code/ZIP'/>
-                  <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Country'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Postal Code/ZIP'/>
+                  <input type="text" className='input rounded-sm outline-none border border-gray-400 bg-white h-[2rem] w-[47%]' placeholder='Country'/>
                 </div>
               </div>
 
               <div className='text-end'>
-                <button className="btn btn-error mr-3 btn-md">Cancel</button>
+                <button className="btn btn-error btn-outline mr-3 p-2 btn-md hover:text-white">Cancel</button>
                 <button className="btn btn-primary btn-md">Save</button>
               </div>
             </div>
