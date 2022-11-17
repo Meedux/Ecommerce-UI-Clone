@@ -17,70 +17,63 @@ const Two = () => {
                 </p>
             </div>
 
-            <div className='card shadow-lg rounded-lg bg-white' style={{width: "90vw"}}>
-                <div className="card-body p-5 max-w-full w-full">
-                    <ul className="steps">
-                        <li data-content="1" className="step step-primary font-extrabold">Connect Your Store</li>
-                        <li data-content="2" className="step step-primary font-extrabold">$ Select Plan</li>
-                        <li data-content="3" className="step font-extrabold"></li>
-                    </ul>
+          <div className="grid grid-cols-6 gap-4 mb-5">
+          <div className="col-span-2 card bg-primary shadow-lg">
+            <div className="card-body">
+              <div className="w-full max-w-full flex justify-between items-center mb-5">
+                <span className='text-white font-bold'>
+                  Active Subscription
+                </span>
+
+                <span className='text-white font-extrabold text-2xl'>
+                  Free
+                </span>
+              </div>
+
+              <div className='pl-3 mb-5'>
+                <ul>
+                  <li className='text-white text-sm list-disc'>Support: <span className='font-bold text-white'>Tickets and Chat</span></li>
+                  <li className="text-white text-sm list-disc">Price & Stock sync every 24h</li>
+                  <li className="text-white text-sm list-disc">Integrations available: <span className='font-bold text-white'>All</span></li>
+                  <li className="text-white text-sm list-disc">Premium Products: <span className='font-bold text-white'>NO</span></li>
+                </ul>
+              </div>
+
+              <div className="w-full max-w-full flex justify-center">
+                <BsEmojiHeartEyes size={40} style={{color: 'white'}}/>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-4 grid grid-cols-4 gap-4">
+            <div className="col-span-4 card-compact card bg-white shadow-lg">
+                <div className="card-body flex justify-center flex-col items-center">
+                    <span className='text-xl font-bold'><span className='text-3xl text-success font-extrabold'>0</span>/500</span>
+                    <span className='text-xl'>Products Imported</span>
                 </div>
+            </div>
+            <div className="col-span-2 card-compact card bg-white shadow-lg">
+              <div className="card-body flex flex-row justify-around items-center">
+                <span className='text-xl font-bold'><span className='text-3xl font-extrabold text-primary'>1</span>/1</span>
+                <span className='text-xl'>Store(s) Available</span>
+              </div>
+            </div>
+            <div className="col-span-2 card bg-white shadow-lg">
+              <div className="card-body flex flex-row justify-around items-center">
+                <FaUserCog size={40} style={{color: '#45C939'}}/>
+                <span className='text-xl flex flex-col'>
+                  <span className='text-xl'>Support SLA: <span className='font-bold'>24 Hours</span></span>
+                  <span className='text-xl font-bold'>24x7</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <div className="card-body bg-cardgray">
-                      <div className="grid grid-cols-6 gap-4 mb-5" style={{width: '75vw'}}>
-                        <div className="col-span-2 card bg-primary shadow-lg">
-                          <div className="card-body">
-                            <div className="w-full max-w-full flex justify-between items-center mb-5">
-                              <span className='text-white font-bold'>
-                                Active Subscription
-                              </span>
 
-                              <span className='text-white font-extrabold text-2xl'>
-                                Free
-                              </span>
-                            </div>
-
-                            <div className='pl-3 mb-5'>
-                              <ul>
-                                <li className='text-white text-sm list-disc'>Support: <span className='font-bold text-white'>Tickets and Chat</span></li>
-                                <li className="text-white text-sm list-disc">Price & Stock sync every 24h</li>
-                                <li className="text-white text-sm list-disc">Integrations available: <span className='font-bold text-white'>All</span></li>
-                                <li className="text-white text-sm list-disc">Premium Products: <span className='font-bold text-white'>NO</span></li>
-                              </ul>
-                            </div>
-
-                            <div className="w-full max-w-full flex justify-center">
-                              <BsEmojiHeartEyes size={40} style={{color: 'white'}}/>
-                            </div>
-                          </div>
-                        </div>
-
-                    <div className="col-span-4 row-span-2 grid grid-cols-4 gap-4">
-                      <div className="col-span-4 card-compact card bg-white shadow-lg">
-                          <div className="card-body flex justify-center flex-col items-center">
-                              <span className='text-xl font-bold'><span className='text-3xl text-success font-extrabold'>0</span>/500</span>
-                              <span className='text-xl'>Products Imported</span>
-                          </div>
-                      </div>
-                      <div className="col-span-2 card-compact card bg-white shadow-lg">
-                        <div className="card-body flex flex-row justify-around items-center">
-                          <span className='text-xl font-bold'><span className='text-3xl font-extrabold text-primary'>1</span>/1</span>
-                          <span className='text-xl'>Store(s) Available</span>
-                        </div>
-                      </div>
-                      <div className="col-span-2 card bg-white shadow-lg">
-                        <div className="card-body flex flex-row justify-around items-center">
-                          <FaUserCog size={40} style={{color: '#45C939'}}/>
-                          <span className='text-xl flex flex-col'>
-                            <span className='text-xl'>Support SLA: <span className='font-bold'>24 Hours</span></span>
-                            <span className='text-xl font-bold'>24x7</span>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="w-full max-w-full mb-8 flex flex-col justify-center items-center">
+        <div className="card bg-white shadow-lg" style={{widht: '75vw'}}>
+          <div className="card-body">
+            <div className="w-full max-w-full mb-8 flex flex-col justify-center items-center">
               <span className='text-3xl font-extrabold mb-3'>Select a plan and Start your 7-day FREE trial</span>
               <span className='text-lg'>Choose Elite to get a 15% discount on over 1 million products</span>
             </div>
@@ -105,8 +98,13 @@ const Two = () => {
                     <span className="text-3xl text-gray-500">$<span className='text-6xl font-extrabold'>{ btn === "m" ? 24 : btn === "a" && 19.08 }</span>/mo</span>
                   </div>
 
+                  <div className={`mb-5 flex flex-col justify-center items-center ${btn === "m" ? "hidden" : ""}`}>
+                    <span className="text-base text-ecomgray">$229 billed yearly</span>
+                    <span className="text-base text-ecomgray font-extrabold">{"(20% off)"}</span>
+                  </div>
+
                   <div className='flex flex-col justify-center items-center mb-5'>
-                    <button className="btn bg-ecomgray border-none py-1 shadow-lg mb-2">START 7 DAY FREE TRIAL</button>
+                    <button className="btn bg-ecomgray border-none py-1 shadow-lg mb-2 text-sm">START 7 DAY FREE TRIAL</button>
                     <span className='text-sm text-ecomgray'>You will get charged only when the trial expires.</span>
                   </div>
 
@@ -137,8 +135,13 @@ const Two = () => {
                     <span className="text-3xl text-primary">$<span className='text-6xl font-extrabold'>{ btn === "m" ? 47 : btn === "a" && 35.25 }</span>/mo</span>
                   </div>
 
+                  <div className={`mb-5 flex flex-col justify-center items-center ${btn === "m" ? "hidden" : ""}`}>
+                    <span className="text-base text-primary">$423 billed yearly</span>
+                    <span className="text-base text-primary font-extrabold">{"(25% off)"}</span>
+                  </div>
+
                   <div className='flex flex-col justify-center items-center mb-5'>
-                    <button className="btn btn-primary border-none py-1 shadow-lg mb-2">START 7 DAY FREE TRIAL</button>
+                    <button className="btn btn-primary border-none py-1 shadow-lg mb-2 text-sm">START 7 DAY FREE TRIAL</button>
                     <span className='text-sm text-ecomgray'>You will get charged only when the trial expires.</span>
                   </div>
 
@@ -169,8 +172,13 @@ const Two = () => {
                     <span className="text-3xl text-violetish">$<span className='text-6xl font-extrabold'>{ btn === "m" ? 78 : btn === "a" && 54.67 }</span>/mo</span>
                   </div>
 
+                  <div className={`mb-5 flex flex-col justify-center items-center ${btn === "m" ? "hidden" : ""}`}>
+                    <span className="text-base text-primary">$656 billed yearly</span>
+                    <span className="text-base text-primary font-extrabold">{"(33% off)"}</span>
+                  </div>
+
                   <div className='flex flex-col justify-center items-center mb-5'>
-                    <button className="btn bg-violetish border-none py-1 shadow-lg mb-2">START 7 DAY FREE TRIAL</button>
+                    <button className="btn bg-violetish border-none py-1 shadow-lg mb-2 text-sm">START 7 DAY FREE TRIAL</button>
                     <span className='text-sm text-ecomgray'>You will get charged only when the trial expires.</span>
                   </div>
 
@@ -195,25 +203,17 @@ const Two = () => {
               </div>
             </div>
 
-            <div className="w-full max-w-full flex justify-center mb-5">
+            <div className="w-full max-w-full flex justify-center">
               <button className='btn btn-outline' onClick={() => { setShow(!show) }}>{show ? "Show less" : "Show More"}</button>
             </div>
 
-            <div className="w-full max-w-full flex flex-col items-center justify-center mb-10">
-              <h1 className='text-2xl'>Want a Custom Plan?</h1>
-              <button className="btn btn-base-100 btn-outline">Contact Us</button>
-            </div>
-
-            <div className="w-full max-w-full flex justify-between">
-              <Link href={'/quickstart/1'}>
-                <button className="btn btn-outline btn-primary">Back</button>
-              </Link>
+            <div className="w-full max-w-full flex justify-end">
               <Link href={'/quickstart/3'}>
                 <button className="btn btn-primary">Next</button>
               </Link>
             </div>
-                </div>
-            </div>
+          </div>
+        </div>
         </main>
     </>
   )

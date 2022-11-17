@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { IoInformation, IoInformationCircle } from 'react-icons/io5'
 
 const Orders = () => {
   const [ tab, setTab ] = useState(1)
@@ -91,21 +92,102 @@ const Orders = () => {
               </span>
             </div> */}
 
-            <div className='overflow-x-scroll'>
+            <div className='overflow-visible'>
               {/* Table */}
-              <table className="table w-full">
+              <table className="table w-full overflow-x-scroll ">
                 <thead>
                   <tr>
-                    <th className="bg-navbg">ORDER DETAILS</th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        ORDER DETAILS
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
                     <th className="bg-navbg">QTY</th>
-                    <th className="bg-navbg">COST</th>
-                    <th className="bg-navbg">FEE</th>
-                    <th className="bg-navbg">TOTAL</th>
-                    <th className="bg-navbg">PROFIT</th>
-                    <th className="bg-navbg">PAYMENT</th>
-                    <th className="bg-navbg">TRACKING NO.</th>
-                    <th className="bg-navbg">STATUS</th>
-                    <th className="bg-navbg">INVOICES</th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        COST
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        FEE
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                    <div className="relative flex">
+                        TOTAL
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                    <div className="relative flex">
+                        PROFIT
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                     <div className="relative flex">
+                        PAYMENT
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        TRACKING NO.
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        STATUS
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        INVOICES
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
                     <th className="bg-navbg">ACTIONS</th>
                   </tr>
                 </thead>

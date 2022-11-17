@@ -46,13 +46,13 @@ const Five = () => {
                     </p>
 
                     <div className="w-full max-w-full flex justify-between mb-5">
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='First Name'/>
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Last Name'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='First Name'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Last Name'/>
                     </div>
 
                     <div className="w-full max-w-full flex justify-between">
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Company'/>
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='VAT Number/TAX ID'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Company'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='VAT Number/TAX ID'/>
                     </div>
                   </div>
 
@@ -62,18 +62,18 @@ const Five = () => {
                     </p>
 
                     <div className="w-full max-w-full flex justify-between mb-5">
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Address 1'/>
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Address 2'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Address 1'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Address 2'/>
                     </div>
 
                     <div className="w-full max-w-full flex justify-between mb-5">
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='City'/>
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Region'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='City'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Region'/>
                     </div>
 
                     <div className="w-full max-w-full flex justify-between">
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Postal Code/ZIP'/>
-                      <input type="text" className='input px-6 h-[2rem] w-[47%]' placeholder='Country'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Postal Code/ZIP'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Country'/>
                     </div>
                   </div>
 

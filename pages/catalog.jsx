@@ -3,7 +3,7 @@ import { Listbox, Transition, Menu } from '@headlessui/react'
 import { useState, Fragment } from 'react'
 import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
 import { FaShippingFast } from 'react-icons/fa'
-import { BsFillFlagFill, BsHouseDoor, BsWatch } from 'react-icons/bs'
+import { BsFillFlagFill, BsHouseDoor, BsStarFill, BsWatch } from 'react-icons/bs'
 import { AiFillEye } from 'react-icons/ai'
 import { VscTriangleDown } from 'react-icons/vsc'
 import { IoShirtOutline,  } from 'react-icons/io5'
@@ -50,6 +50,19 @@ const Catalog = () => {
       status: "In Stock",
       discountedPrice: "$7.00",
       originalPrice: "$14.00",
+      description: (
+        <>
+          <p className="text-base mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi blanditiis suscipit minus animi quisquam id culpa illum adipisci, tenetur neque? Maxime molestiae, modi natus qui repudiandae, <span class="font-bold">doloremque tempora numquam cumque reprehenderit nemo laboriosam nostrum culpa placeat, optio reiciendis ipsam quam.</span></p>
+
+          <ul className="font-bold pl-3">
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+          </ul>
+        </>
+      ),
+      isPremium: false,
+      shipsTo: ["United States"]
     },
 
     {
@@ -60,6 +73,19 @@ const Catalog = () => {
       status: "In Stock",
       discountedPrice: "$7.00",
       originalPrice: "$14.00",
+      description: (
+        <>
+          <p className="text-base mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi blanditiis suscipit minus animi quisquam id culpa illum adipisci, tenetur neque? Maxime molestiae, modi natus qui repudiandae, <span class="font-bold">doloremque tempora numquam cumque reprehenderit nemo laboriosam nostrum culpa placeat, optio reiciendis ipsam quam.</span></p>
+
+          <ul className="font-bold pl-3">
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+          </ul>
+        </>
+      ),
+      isPremium: true,
+      shipsTo: ["United States", "Spain", "China", "Europe"]
     },
 
     {
@@ -70,18 +96,23 @@ const Catalog = () => {
       status: "In Stock",
       discountedPrice: "$99.9",
       originalPrice: "$500.00",
-    },
-  ]
+      description: (
+        <>
+          <p className="text-base mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi blanditiis suscipit minus animi quisquam id culpa illum adipisci, tenetur neque? Maxime molestiae, modi natus qui repudiandae, <span class="font-bold">doloremque tempora numquam cumque reprehenderit nemo laboriosam nostrum culpa placeat, optio reiciendis ipsam quam.</span></p>
 
-  // const item = {
-  //   img: "/img.jpg",
-  //   name: "Shoes!",
-  //   supplierID: "",
-  //   status: "In Stock",
-  //   price: "$10.00",
-  //   discountedPrice: "$7.00",
-  //   hovered: false
-  // }
+          <ul className="font-bold pl-3">
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+          </ul>
+        </>
+      ),
+      isPremium: false,
+      shipsTo: ["United States", "Spain"]
+    },
+
+    
+  ]
 
   const defcat = { name: "Categories", icon: <GiHamburgerMenu className='mr-2'/> }
   const count = { name: "Set Country" }
@@ -90,11 +121,11 @@ const Catalog = () => {
 
   return (
     <>
-      <main className='p-5'>
+      <main className='container p-5'>
           <span className='text-xl font-bold mb-5'>
             Products
           </span>
-          <div className="card card-compact bg-white shadow-lg overflow-visible mb-6" style={{width: '90vw'}}>
+          <div className="card card-compact bg-white shadow-lg overflow-visible mb-6">
             <div className="card-body justify-center">
               <div className='max-w-full w-full mb-5 flex items-center'>
                 <Listbox value={cat} onChange={setCat}> 
@@ -135,6 +166,9 @@ const Catalog = () => {
                   <div className="col-span-2 dropdown max-w-full w-full  border border-slate-400 rounded-sm px-4 py-1">
                     <label tabIndex={0} className="block text-md w-full text-gray-500 rounded-sm cursor-pointer">Select a Country</label>
                     <ul className="dropdown-content menu w-full left-1 top-8 shadow rounded-sm bg-white" tabIndex={0} style={{width: '13rem'}}>
+                      <li className='p-3'>
+                        <input type="text" placeholder='Search Country' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                      </li>
                       {countries.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
@@ -151,6 +185,9 @@ const Catalog = () => {
                   <div className="col-span-2 dropdown max-w-full w-full border border-slate-400 p-1 rounded-sm">
                     <label tabIndex={0} className=" px-4 block text-md text-gray-500 rounded-sm max-w-full w-full cursor-pointer">Ships to</label>
                     <ul className="dropdown-content menu p-2 top-8 shadow rounded-sm bg-white" tabIndex={0} style={{width: '13rem'}}>
+                      <li className='p-3'>
+                        <input type="text" placeholder='Search Country' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                      </li>
                       {countries.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
@@ -171,6 +208,9 @@ const Catalog = () => {
                   <div className="col-span-2 max-w-full w-full dropdown border border-slate-400 p-1 rounded-sm">
                     <label tabIndex={0} className="block px-4  text-md text-gray-500 rounded-lg w-full cursor-pointer">Supplier</label>
                     <ul className="dropdown-content menu top-8 shadow rounded-sm w-full bg-white" tabIndex={0}>
+                      <li className='p-3'>
+                        <input type="text" placeholder='Search Supplier' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                      </li>
                       {supplier.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
@@ -289,12 +329,20 @@ const Catalog = () => {
             </div>
           </div>
 
-          <div style={{width: '90vw'}} className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-8 gap-4">
               {items.map(item => (
                 <div key={item.id} htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
                   <span className={`left-[50%] top-[20%] ${hover == item.id ? "" : 'hidden'} absolute`}><AiFillEye size={100} className="text-primary relative left-[-50%] top-[-20%]"/></span>
-                  <figure htmlFor="modal" onClick={() => {setOpen(!open) 
-                  setId(item.id)}}  onMouseEnter={() => setHover(item.id)} onMouseLeave={() => setHover(0)}><img src={`${item.img}`}/></figure>
+                  <span className={`left-[3%] top-[44%] ${item.isPremium ? "" : 'hidden'} absolute bg-yellow-500 p-1 text-xs px-3 flex rounded-box items-center`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-white">PREMIUM</h1></span>
+                  
+                  <figure 
+                  htmlFor="modal" 
+                  onClick={() => {setOpen(!open) 
+                                  setId(item.id)}}  
+                  onMouseEnter={() => setHover(item.id)} 
+                  onMouseLeave={() => setHover(0)}>
+                          <img src={`${item.img}`}/>
+                  </figure>
                   
                   <div className="card-body bg-white z-30 ">
                     

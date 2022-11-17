@@ -41,7 +41,7 @@ const Subscription = () => {
             </div>
           </div>
 
-          <div className="col-span-4 row-span-2 grid grid-cols-4 gap-4">
+          <div className="col-span-4 grid grid-cols-4 gap-4">
             <div className="col-span-4 card-compact card bg-white shadow-lg">
                 <div className="card-body flex justify-center flex-col items-center">
                     <span className='text-xl font-bold'><span className='text-3xl text-success font-extrabold'>0</span>/500</span>

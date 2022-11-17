@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { VscTriangleDown } from 'react-icons/vsc'
+import { IoInformation, IoInformationCircle } from 'react-icons/io5'
 
 const Myproducts = () => {
   const [ tab, setTab ] = useState(1)
@@ -170,9 +171,36 @@ const Myproducts = () => {
                     <th className="bg-navbg">VARIANTS</th>
                     <th className="bg-navbg">STATUS</th>
                     <th className="bg-navbg">STOCK</th>
-                    <th className="bg-navbg">{"ITEM COST(from)"}</th>
-                    <th className="bg-navbg">{"PRICE(from)"}</th>
-                    <th className="bg-navbg">{"PROFIT(from)"}</th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        {"ITEM COST(from)"}
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[80%] top-[-30%] tooltip-top opacity-100" data-tip="The Item Price which is paid to the supplier">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                          {"Price(from)"}
+                            <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[80%] top-[-30%] tooltip-top opacity-100" data-tip="Price that will be pushed to your store">
+                                <i>
+                                    <IoInformationCircle size={25} className="relative"/>
+                                </i>
+                            </div>
+                        </div>
+                    </th>
+                    <th className="bg-navbg">
+                      <div className="relative flex">
+                        {"ITEM COST(from)"}
+                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[80%] top-[-30%] tooltip-top opacity-100" data-tip="Your Profit">
+                              <i>
+                                  <IoInformationCircle size={25} className="relative"/>
+                              </i>
+                          </div>
+                      </div>
+                    </th>
                     <th className="bg-navbg">PRICE FORMULA</th>
                     <th className="bg-navbg">BOARDS</th>
                     <th className="bg-navbg">SUPPLIER</th>

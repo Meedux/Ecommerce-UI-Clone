@@ -7,10 +7,10 @@ import { FaHandshake, FaQuestionCircle } from 'react-icons/fa'
 export default function Home() {
   return (
     <>
-      <main className="p-2">
+      <main className="container p-2">
         {/* First Four Cards */}
           <span className="text-start font-bold mb-5">Dashboard</span>
-          <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5" style={{width: "90vw"}}>
+          <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5">
             <div className="grid col-span-3 gap-4">
               <div className="card col-span-6 rounded-lg bg-white inline-flex shadow-lg">
                 <div className="w-full bg-primary p-10">
