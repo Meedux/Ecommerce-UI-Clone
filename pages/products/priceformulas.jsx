@@ -16,9 +16,9 @@ const Priceformulas = () => {
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}
-              <span className={`tab tab-lifted smooth font-bold ${tab === 1 && "tab-active text-primary"}`} onClick={() => setTab(1)}>All</span>
-              <span className={`tab tab-lifted smooth font-bold ${tab === 2 && "tab-active text-primary"}`} onClick={() => setTab(2)}>Active</span>
-              <span className={`tab tab-lifted smooth font-bold ${tab === 3 && "tab-active text-primary"}`} onClick={() => setTab(3)}>Draft</span>
+              <span className={`tab tab-bordered smooth font-bold ${tab === 1 && "tab-active text-primary"}`} onClick={() => setTab(1)}>All</span>
+              <span className={`tab tab-bordered smooth font-bold ${tab === 2 && "tab-active text-primary"}`} onClick={() => setTab(2)}>Active</span>
+              <span className={`tab tab-bordered smooth font-bold ${tab === 3 && "tab-active text-primary"}`} onClick={() => setTab(3)}>Draft</span>
              </div>
 
              <div className="mb-5">

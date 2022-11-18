@@ -9,8 +9,8 @@ const Billing = () => {
         <div className="dropdown dropdown-right">
             <label tabIndex={0}><VscGraphLine size={20} className="font-extrabold cursor-pointer text-secondary hover:text-primary mb-3"/></label>
             <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-md left-10 w-52">
-                <li><Link href={'/billings/details'} legacyBehavior>Details & Invoices</Link></li>
-                <li><Link href={'/billings/subscription'} legacyBehavior>My Subscription</Link></li>
+                <li><Link href={'/billings/details'} className="hover:text-primary">Details & Invoices</Link></li>
+                <li><Link href={'/billings/subscription'} className="hover:text-primary">My Subscription</Link></li>
             </ul>
         </div>
     </>

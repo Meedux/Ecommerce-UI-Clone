@@ -14,7 +14,7 @@ const board = () => {
             </div>
 
             <div className='w-full max-w-full flex justify-between mb-5'>
-              <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl">Add new Board</button>
+              <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl">+ Add new Board</button>
 
               <span>
                 <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl mr-3">Delete</button>

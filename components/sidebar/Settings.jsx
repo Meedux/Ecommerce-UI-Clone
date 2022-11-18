@@ -9,8 +9,8 @@ const Settings = () => {
         <div className="dropdown dropdown-right">
             <label tabIndex={0}><FaUserCog size={23} className="cursor-pointer text-secondary hover:text-primary mb-3"/></label>
             <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-white rounded-md left-10 w-52">
-                <li><Link href={'/settings/shipping'} legacyBehavior>Shipping Settings</Link></li>
-                <li><Link href={'/settings/wallet'} legacyBehavior>Store Wallet</Link></li>
+                <li><Link href={'/settings/shipping'} className="hover:text-primary">Shipping Settings</Link></li>
+                <li><Link href={'/settings/wallet'} className="hover:text-primary">Store Wallet</Link></li>
             </ul>
         </div>
     </>

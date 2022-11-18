@@ -43,7 +43,7 @@ const Shipping = () => {
               <h1 className='text-lg font-bold'>Please add a default phone number for your orders.</h1>
               <p>{"This number will be sent to the shipping company only if the end customer doesn't fill in the phone field and the order can not be delivered."}</p>
               <p>We recommend making the phone number mandatory in your store to avoid situations when the shipping company can not reach the end customer.</p>
-              <input type="text" className='input py-1 px-4 ' placeholder='Default Phone Number'/>
+              <input type="text" className='input py-1 w-[35%] rounded-sm bg-white mt-1 border border-gray-400 px-1 h-auto' placeholder='Default Phone Number'/>
             </div>
 
             <div className='text-end'>
