@@ -42,7 +42,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
             </div>
             <div className='relative'>
             <span className={`left-[13%] top-[3%] ${data.isPremium ? "" : 'hidden'} bg-yellow-500 p-1 px-3 flex rounded-box text-sm items-center absolute z-50`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-xs]'/ text-white">PREMIUM</h1></span>
-                <div className="grid grid-cols-4 h-[60%] gap-4">
+                <div className="grid grid-cols-4 gap-4 max-h-[40%]">
                     <div className="col-span-2 max-h-[40%] h-full grid grid-cols-4 gap-4">
                         <div className="col-span-1 flex flex-col justify-center items-stretch">
                             <a href="#img-1" className='mb-3'><img src="https://placeimg.com/400/225/arch" alt="Shoes" width={100} height={100}/></a> 
@@ -57,7 +57,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                             <figure className='h-full mr-0 mb-3 rounded-lg carousel-item' id='img-4'><img src="/img.jpg" alt="Shoes" /></figure>
                         </div>
                     </div>
-                    <div className="col-span-2">
+                    <div className="col-span-2 max-h-[40%]">
                         <p className="text-xl font-bold mb-5">{data.name}</p>
                         <div className='flex justify-between mb-5'>
                             <span className='flex flex-col'>
@@ -105,7 +105,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                     </div>
                 </div>
 
-                <div className='mt-[2rem]'>
+                <div className='mt-[-35rem]'>
                     <div className='tabs mb-5 max-w-full justify-between w-full'>
                     {/* Tabs */}
                         <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 1 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(1)}>Description</span>
