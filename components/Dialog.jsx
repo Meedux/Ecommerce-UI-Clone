@@ -116,8 +116,6 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                         <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 6 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(6)}>Shipping</span>
 
                     </div>
-
-
                     <div className={`p-2 ${tab === 1 ? "" : "hidden"}`}>
                         {data.description}
                     </div>
@@ -297,39 +295,6 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                             </thead>
                         </table>
                     </div>
-                </div>
-            </div>
-
-            <div className='mt-[8rem]'>
-                <div className='tabs mb-5 max-w-full justify-between w-full'>
-                {/* Tabs */}
-                    <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 1 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(1)}>Description</span>
-                    <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 2 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(2)}>Specifications</span>
-                    <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 3 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(3)}>Product Variants</span>
-                    <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 4 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(4)}>Return Policy</span>
-                    <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 5 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(5)}>Supplier Policy</span>
-                    <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 6 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(6)}>Shipping</span>
-
-                </div>
-
-
-                <div className={`p-2 ${tab === 1 ? "" : "hidden"}`}>
-                    <h1>Description</h1>
-                </div>
-                <div className={`p-2 ${tab === 2 ? "" : "hidden"}`}>
-                    <h1>Specifications</h1>
-                </div>
-                <div className={`p-2 ${tab === 3 ? "" : "hidden"}`}>
-                    <h1>Product Variants</h1>
-                </div>
-                <div className={`p-2 ${tab === 4 ? "" : "hidden"}`}>
-                    <h1>Return Policy</h1>
-                </div>
-                <div className={`p-2 ${tab === 5 ? "" : "hidden"}`}>
-                    <h1>Supplier Policy</h1>
-                </div>
-                <div className={`p-2 ${tab === 6 ? "" : "hidden"}`}>
-                    <h1>Shipping</h1>
                 </div>
             </div>
         </div>
