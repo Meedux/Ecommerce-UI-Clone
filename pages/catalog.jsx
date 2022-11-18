@@ -1,20 +1,27 @@
 import React from 'react'
 import { Listbox, Transition, Menu } from '@headlessui/react'
 import { useState, Fragment } from 'react'
+import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
 import { FaShippingFast } from 'react-icons/fa'
-import { BsFillFlagFill } from 'react-icons/bs'
+import { BsFillFlagFill, BsHouseDoor, BsStarFill, BsWatch } from 'react-icons/bs'
 import { AiFillEye } from 'react-icons/ai'
+import { VscTriangleDown } from 'react-icons/vsc'
+import { IoShirtOutline,  } from 'react-icons/io5'
+import { IoIosArrowForward } from 'react-icons/io'
+import { TbSofa } from 'react-icons/tb'
 import Dialogue from '../components/Dialog'
 
 const Catalog = () => {
-  const [ hover, setHover ] = useState(false)
-
+  const [ hover, setHover ] = useState(0)
+  const [ id, setId] = useState(0)
+  
   const categories = [
-      { name: "category 1", id: 1 },
-      { name: "category 2", id: 2 },
-      { name: "category 3", id: 3 },
-      { name: "category 4", id: 4 },
-      { name: "category 5", id: 5 },
+      { name: "Categories", icon: <GiHamburgerMenu className='mr-2'/>, id: 0 },
+      { name: "Fashion", id: 1, icon: <IoShirtOutline className="mr-2"/> },
+      { name: "Furniture", id: 2, icon: <TbSofa className='mr-2'/> },
+      { name: "Home, Tools & Garden", id: 3, icon: <BsHouseDoor className="mr-2"/> },
+      { name: "Beauty, Health & Hair", id: 4, icon: <GiLipstick className='mr-2' /> },
+      { name: "Jewelry & Watches", id: 5, icon: <BsWatch className="mr-2"/> },
   ]
 
 
@@ -34,65 +41,139 @@ const Catalog = () => {
     { name: "Supplier 5" },
   ]
 
-  const item = {
-    img: "/img.jpg",
-    name: "Shoes!",
-    supplierID: "",
-    status: "In Stock",
-    price: "$10.00",
-    discountedPrice: "$7.00",
-    hovered: false
-  }
+  const items = [
+    {
+      id: 1,
+      img: "/img.jpg",
+      name: "Shoes!",
+      supplierID: "12345-67890",
+      status: "In Stock",
+      discountedPrice: "$7.00",
+      originalPrice: "$14.00",
+      description: (
+        <>
+          <p className="text-base mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi blanditiis suscipit minus animi quisquam id culpa illum adipisci, tenetur neque? Maxime molestiae, modi natus qui repudiandae, <span class="font-bold">doloremque tempora numquam cumque reprehenderit nemo laboriosam nostrum culpa placeat, optio reiciendis ipsam quam.</span></p>
 
-  const defcat = { name: "Categories" }
+          <ul className="font-bold pl-3">
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+          </ul>
+        </>
+      ),
+      isPremium: false,
+      shipsTo: ["United States"]
+    },
+
+    {
+      id: 2,
+      img: "/img.jpg",
+      name: "Totally Legit Shoes",
+      supplierID: "12345-67890",
+      status: "In Stock",
+      discountedPrice: "$7.00",
+      originalPrice: "$14.00",
+      description: (
+        <>
+          <p className="text-base mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi blanditiis suscipit minus animi quisquam id culpa illum adipisci, tenetur neque? Maxime molestiae, modi natus qui repudiandae, <span class="font-bold">doloremque tempora numquam cumque reprehenderit nemo laboriosam nostrum culpa placeat, optio reiciendis ipsam quam.</span></p>
+
+          <ul className="font-bold pl-3">
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+          </ul>
+        </>
+      ),
+      isPremium: true,
+      shipsTo: ["United States", "Spain", "China", "Europe"]
+    },
+
+    {
+      id: 3,
+      img: "/img.jpg",
+      name: "Very Expensive Shoe",
+      supplierID: "12345-67890",
+      status: "In Stock",
+      discountedPrice: "$99.9",
+      originalPrice: "$500.00",
+      description: (
+        <>
+          <p className="text-base mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi blanditiis suscipit minus animi quisquam id culpa illum adipisci, tenetur neque? Maxime molestiae, modi natus qui repudiandae, <span class="font-bold">doloremque tempora numquam cumque reprehenderit nemo laboriosam nostrum culpa placeat, optio reiciendis ipsam quam.</span></p>
+
+          <ul className="font-bold pl-3">
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+            <li className="list-disc">Lorem</li>
+          </ul>
+        </>
+      ),
+      isPremium: false,
+      shipsTo: ["United States", "Spain"]
+    },
+
+    
+  ]
+
+  const defcat = { name: "Categories", icon: <GiHamburgerMenu className='mr-2'/> }
   const count = { name: "Set Country" }
   const [ cat, setCat ] = useState(defcat)
   const [ open, setOpen ] = useState(false)
 
   return (
     <>
-      <main className='p-5'>
+      <main className='container p-5'>
           <span className='text-xl font-bold mb-5'>
             Products
           </span>
-          <div className="card bg-white shadow-lg overflow-visible mb-6" style={{width: '90vw'}}>
+          <div className="card card-compact bg-white shadow-lg overflow-visible mb-6">
             <div className="card-body justify-center">
-              <div className='w-full p-2 mb-5'>
+              <div className='max-w-full w-full mb-5 flex items-center'>
                 <Listbox value={cat} onChange={setCat}> 
-                  <div className="relative inline">
-                    <Listbox.Button className=" bg-slate-200 border text-start pl-2 border-slate-400 w-1/6 p-1 rounded-l-lg">
-                        {cat.name}
+                  <div className="relative w-[18%] inline">
+                    <Listbox.Button className=" bg-slate-200 border inline-flex items-center justify-between h-auto text-start pl-2 border-slate-400 w-full p-1 rounded-l-lg">
+                        <span className='flex items-center'>
+                          {cat.icon}
+                          {cat.name}
+                        </span>
+
+                        <VscTriangleDown />
                     </Listbox.Button>
-                      <Listbox.Options as="div" className="absolute block z-30 shadow-2xl w-1/6 text-center bg-white" style={{width: '14.2vw'}}>
+                      <Listbox.Options as="div" className="w-full absolute block z-30 shadow-2xl text-center bg-white">
                         {categories.map(item => (
                           <Listbox.Option
                             key={item.id}
-                            className="hover:bg-slate-300 text-start bg-white p-2 cursor-pointer list-none"
-                            style={{width: '14.2vw'}}
+                            className="hover:bg-slate-300 text-start w-full flex justify-between items-center bg-white p-2 cursor-pointer list-none"
                             value={item}
                           >
                             {({ active, selected }) => (
-                              <span className={`p-2 w-full text-center`}>
-                                {item.name}
-                              </span>
+                              <>
+                                <span className={`w-full flex items-center`}>
+                                  {item.icon}
+                                  {item.name}
+                                </span>
+                                {!(item.name === "Categories") && <IoIosArrowForward />}
+                              </>
                             )}
                           </Listbox.Option>
                         ))}
                       </Listbox.Options>
                   </div>
                 </Listbox>
-                <input type="text" placeholder='Search' className='outline-none p-1 rounded-r-lg border border-slate-400 w-4/5'/>
+                <input type="text" placeholder='Search' className='outline-none p-1 rounded-r-lg border border-slate-400 w-[82%]'/>
               </div>
 
-              <div className='grid grid-cols-12 gap-4 items-center justify-items-center mb-5 w-full max-w-full' style={{width: '90vw'}}>
-                  <div className="col-span-2 dropdown max-w-full w-full  border border-slate-400 rounded-xl px-4 py-1">
-                    <label tabIndex={0} className="block text-md w-full text-gray-500 rounded-lg cursor-pointer">Select a Country</label>
-                    <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0} style={{width: '13rem'}}>
+              <div className='grid grid-cols-12 gap-4 items-center justify-items-center mb-1 w-full max-w-full' style={{width: '90vw'}}>
+                  <div className="col-span-2 dropdown max-w-full w-full  border border-slate-400 rounded-sm px-4 py-1">
+                    <label tabIndex={0} className="block text-md w-full text-gray-500 rounded-sm cursor-pointer">Select a Country</label>
+                    <ul className="dropdown-content menu w-full left-1 top-8 shadow rounded-sm bg-white" tabIndex={0} style={{width: '13rem'}}>
+                      <li className='p-3'>
+                        <input type="text" placeholder='Search Country' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                      </li>
                       {countries.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
                             <label className="label cursor-pointer">
-                              <input type="checkbox" className="checkbox mr-4" />
+                              <input type="checkbox" className="checkbox mr-2" />
                               <span className="label-text font-bold">{item.name}</span> 
                             </label>
                           </div>
@@ -101,9 +182,12 @@ const Catalog = () => {
                     </ul>
                   </div>
 
-                  <div className="col-span-2 dropdown max-w-full w-full border border-slate-400 p-1 rounded-xl">
-                    <label tabIndex={0} className=" px-4 block text-md text-gray-500 rounded-lg max-w-full w-full cursor-pointer">Ships to</label>
-                    <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0} style={{width: '13rem'}}>
+                  <div className="col-span-2 dropdown max-w-full w-full border border-slate-400 p-1 rounded-sm">
+                    <label tabIndex={0} className=" px-4 block text-md text-gray-500 rounded-sm max-w-full w-full cursor-pointer">Ships to</label>
+                    <ul className="dropdown-content menu p-2 top-8 shadow rounded-sm bg-white" tabIndex={0} style={{width: '13rem'}}>
+                      <li className='p-3'>
+                        <input type="text" placeholder='Search Country' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                      </li>
                       {countries.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
@@ -118,12 +202,15 @@ const Catalog = () => {
                   </div>
 
                   <div className="col-span-2 max-w-full w-full">
-                    <input type="number" placeholder='Max Time Delivery(Days)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
+                    <input type="number" placeholder='Max Time Delivery(Days)' className='input w-full rounded-sm bg-white border border-slate-400 px-2 h-[2rem]'/>
                   </div>
 
-                  <div className="col-span-2 max-w-full w-full dropdown border border-slate-400 p-1 rounded-xl">
+                  <div className="col-span-2 max-w-full w-full dropdown border border-slate-400 p-1 rounded-sm">
                     <label tabIndex={0} className="block px-4  text-md text-gray-500 rounded-lg w-full cursor-pointer">Supplier</label>
-                    <ul className="dropdown-content menu p-2 top-8 shadow rounded-box bg-white" tabIndex={0}>
+                    <ul className="dropdown-content menu top-8 shadow rounded-sm w-full bg-white" tabIndex={0}>
+                      <li className='p-3'>
+                        <input type="text" placeholder='Search Supplier' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                      </li>
                       {supplier.map((item, index) => (
                         <li key={index}>
                           <div className="form-control">
@@ -138,11 +225,11 @@ const Catalog = () => {
                   </div>
 
                   <div className="col-span-2 max-w-full w-full">
-                    <input type="number" placeholder='Min Price ($)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]'/>
+                    <input type="number" placeholder='Min Price ($)' className='input rounded-sm w-full bg-white border border-slate-400 px-2 h-[2rem]'/>
                   </div>
 
                   <div className="col-span-2 max-w-full w-full">
-                    <input type="number" placeholder='Max Price ($)' className='input rounded-xl bg-white border border-slate-400 px-2 h-[2rem]' />
+                    <input type="number" placeholder='Max Price ($)' className='input rounded-sm w-full bg-white border border-slate-400 px-2 h-[2rem]' />
                   </div>
               </div>
 
@@ -242,12 +329,22 @@ const Catalog = () => {
             </div>
           </div>
 
-          <div style={{width: '90vw'}} className="grid grid-cols-8 gap-4">
-              <div htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
-                  <figure htmlFor="modal" onClick={() => setOpen(!open)}  onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}><img src={`${item.img}`}/></figure>
+          <div className="grid grid-cols-8 gap-4">
+              {items.map(item => (
+                <div key={item.id} htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
+                  <span className={`left-[50%] top-[20%] ${hover == item.id ? "" : 'hidden'} absolute`}><AiFillEye size={100} className="text-primary relative left-[-50%] top-[-20%]"/></span>
+                  <span className={`left-[3%] top-[44%] ${item.isPremium ? "" : 'hidden'} absolute bg-yellow-500 p-1 text-xs px-3 flex rounded-box items-center`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-white">PREMIUM</h1></span>
+                  
+                  <figure 
+                  htmlFor="modal" 
+                  onClick={() => {setOpen(!open) 
+                                  setId(item.id)}}  
+                  onMouseEnter={() => setHover(item.id)} 
+                  onMouseLeave={() => setHover(0)}>
+                          <img src={`${item.img}`}/>
+                  </figure>
                   
                   <div className="card-body bg-white z-30 ">
-                    <span className={`top-[15%] right-[40%] ${hover ? "" : 'hidden'} absolute text-white`}><AiFillEye size={100} className="text-primary"/></span>
                     
                     <h2 className="card-title mb-3">{item.name}</h2>
                     <div className='flex justify-between'>
@@ -256,22 +353,30 @@ const Catalog = () => {
                     </div>
                     <div className='flex flex-col justify-start mb-3'>
                         <span className='text-sm text-gray-500'>Item Cost</span>
-                        <h1 className="text-xl font-bold">{item.discountedPrice}</h1>
+                        <span className="flex">
+                          <h1 className="text-xl font-bold mr-2">{item.discountedPrice}</h1>
+                          <span className="text-white bg-violetish p-1 rounded-lg text-sm font-extrabold">15%</span>
+                        </span>
+                        <h1 className="text-sm text-gray-400 line-through">{item.originalPrice}</h1>
                     </div>  
                     <div className='flex justify-between'>
-                        <span>
-                          <FaShippingFast />
+                        <span className='flex items-center'>
+                          <FaShippingFast className='mr-2' size={20}/>
                           <p className='text-xs text-gray-500'>2 - 7 Days</p>
                         </span>
-                        <BsFillFlagFill size={25}/>
+                        <span className="flex items-center">
+                          <span className="text-sm text-gray-400 mr-2">From: </span>
+                          <BsFillFlagFill size={25}/>
+                        </span>
                     </div>
                   </div>
 
-                  <div className={`bg-primary absolute z-10 max-w-full w-full smooth ${hover ? "top-[98%]" : "top-[65%]"} p-5 rounded-b-lg`}></div>
-              </div>
+                  <div className={`bg-primary absolute z-10 max-w-full w-full smooth ${hover == item.id ? "top-[98%]" : "top-[65%]"} p-5 rounded-b-lg text-center font-bold text-white`}>IMPORT NOW</div>
+                </div>
+              ))}
           </div>
 
-          <Dialogue item={item} isOpen={open} setOpen={setOpen} />
+          <Dialogue items={items} id={id} isOpen={open} setOpen={setOpen} />
       </main>
     </>
   )
