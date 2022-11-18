@@ -3,7 +3,14 @@ import { Listbox, Transition, Menu } from '@headlessui/react'
 import { useState, Fragment } from 'react'
 import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
 import { FaShippingFast } from 'react-icons/fa'
+import { BsFillFlagFill, BsHouseDoor, BsStarFill, BsWatch } from 'react-icons/bs'
+import { AiFillEye } from 'react-icons/ai'
+import { VscTriangleDown } from 'react-icons/vsc'
+import { IoShirtOutline,  } from 'react-icons/io5'
+import { IoIosArrowForward } from 'react-icons/io'
+import { TbSofa } from 'react-icons/tb'
 import Dialogue from '../components/Dialog'
+
 const Catalog = () => {
   const [ hover, setHover ] = useState(0)
   const [ id, setId] = useState(0)
@@ -101,19 +108,11 @@ const Catalog = () => {
         </>
       ),
       isPremium: false,
-      shipsTo: ["United States", "Spain", "China", "Europe"]
+      shipsTo: ["United States", "Spain"]
     },
-  ]
 
-  // const item = {
-  //   img: "/img.jpg",
-  //   name: "Shoes!",
-  //   supplierID: "",
-  //   status: "In Stock",
-  //   price: "$10.00",
-  //   discountedPrice: "$7.00",
-  //   hovered: false
-  // }
+    
+  ]
 
   const defcat = { name: "Categories", icon: <GiHamburgerMenu className='mr-2'/> }
   const count = { name: "Set Country" }
