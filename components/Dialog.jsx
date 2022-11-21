@@ -105,7 +105,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                     </div>
                 </div>
 
-                <div className='mt-[2rem]'>
+                <div className='mt-[-500px]'>
                     <div className='tabs mb-5 max-w-full justify-between w-full'>
                     {/* Tabs */}
                         <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 1 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(1)}>Description</span>
