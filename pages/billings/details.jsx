@@ -49,7 +49,7 @@ const details = () => {
               </div>
 
               <div className='text-end'>
-                <button className="btn btn-error btn-outline mr-3 p-2 btn-md hover:text-white">Cancel</button>
+                <button className="btn btn-accent btn-outline mr-3 p-2 btn-md hover:text-white">Cancel</button>
                 <button className="btn btn-primary btn-md">Save</button>
               </div>
             </div>

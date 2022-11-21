@@ -27,8 +27,8 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
         <input type="checkbox" ref={checkbox} id="my-modal" className="modal-toggle" />
         <div className="modal overflow-y-scroll">
 
-        <div className="modal-box overflow-visible bg-white max-w-full w-[80%] indicator block top-[6rem] absolute" style={{maxHeight: "none"}}>
-        <span className="indicator-item badge badge-primary rounded-full p-2 py-2 cursor-pointer fixed" onClick={() => setOpen(false)}>X</span> 
+        <div className="modal-box overflow-visible bg-white max-w-full w-[60%] indicator block top-[6rem] absolute" style={{maxHeight: "none"}}>
+        <span className="indicator-item badge badge-primary rounded-full h-6 p-[10px] w-6 text-xs flex justify-center items-center cursor-pointer fixed" onClick={() => setOpen(false)}>X</span> 
             <div className="flex justify-between mb-5">
                 <span className="text-sm breadcrumbs">
                     <ul>
@@ -42,7 +42,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
             </div>
             <div className='relative'>
             <span className={`left-[13%] top-[3%] ${data.isPremium ? "" : 'hidden'} bg-yellow-500 p-1 px-3 flex rounded-box text-sm items-center absolute z-50`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-xs]'/ text-white">PREMIUM</h1></span>
-                <div className="grid grid-cols-4 gap-4 max-h-[40%]">
+                <div className="grid grid-cols-4 h-[60%] gap-4">
                     <div className="col-span-2 max-h-[40%] h-full grid grid-cols-4 gap-4">
                         <div className="col-span-1 flex flex-col justify-center items-stretch">
                             <a href="#img-1" className='mb-3'><img src="https://placeimg.com/400/225/arch" alt="Shoes" width={100} height={100}/></a> 
@@ -57,7 +57,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                             <figure className='h-full mr-0 mb-3 rounded-lg carousel-item' id='img-4'><img src="/img.jpg" alt="Shoes" /></figure>
                         </div>
                     </div>
-                    <div className="col-span-2 max-h-[40%]">
+                    <div className="col-span-2">
                         <p className="text-xl font-bold mb-5">{data.name}</p>
                         <div className='flex justify-between mb-5'>
                             <span className='flex flex-col'>
@@ -105,7 +105,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                     </div>
                 </div>
 
-                <div className='mt-[-35rem]'>
+                <div className='mt-[2rem]'>
                     <div className='tabs mb-5 max-w-full justify-between w-full'>
                     {/* Tabs */}
                         <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 1 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(1)}>Description</span>
@@ -116,6 +116,8 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                         <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 6 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(6)}>Shipping</span>
 
                     </div>
+
+
                     <div className={`p-2 ${tab === 1 ? "" : "hidden"}`}>
                         {data.description}
                     </div>
@@ -158,7 +160,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <td className='bg-white'>
                                         <div className="flex justify-start">
                                             <img src="/img.jpg" width={120} height={120} className="mr-2"/>
-                                            <h1 className="font-extrabold text-lg">Original</h1>
+                                            <h1 className="font-extrabold text-md">Original</h1>
                                         </div>
                                     </td>
                                     <td className='bg-white'>
@@ -180,7 +182,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <td className='bg-white'>
                                         <div className="flex justify-start">
                                             <img src="/img.jpg" width={120} height={120} className="mr-2"/>
-                                            <h1 className="font-extrabold text-lg">Large</h1>
+                                            <h1 className="font-extrabold text-md">Large</h1>
                                         </div>
                                     </td>
                                     <td className='bg-white'>
@@ -202,7 +204,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <td className='bg-white'>
                                         <div className="flex justify-start">
                                             <img src="/img.jpg" width={120} height={120} className="mr-2"/>
-                                            <h1 className="font-extrabold text-lg">Extra Large</h1>
+                                            <h1 className="font-extrabold text-md">Extra Large</h1>
                                         </div>
                                     </td>
                                     <td className='bg-white'>
@@ -236,6 +238,14 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <BsCheckLg className='text-green-500 mr-2'/>
                                     <p>I am happy to offer replacement</p>
                                 </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>I am happy to offer refund</p>
+                                </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>Images Required</p>
+                                </span>
                             </div>
 
                             <div className="col-span-2 mb-10">
@@ -243,6 +253,14 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                 <span className="flex items-center">
                                     <BsCheckLg className='text-green-500 mr-2'/>
                                     <p>I am happy to offer replacement</p>
+                                </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>I am happy to offer refund</p>
+                                </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>Images Required</p>
                                 </span>
                             </div>
 
@@ -252,6 +270,14 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <BsCheckLg className='text-green-500 mr-2'/>
                                     <p>I am happy to offer replacement</p>
                                 </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>I am happy to offer refund</p>
+                                </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>Images Required</p>
+                                </span>
                             </div>
 
                             <div className="col-span-2">
@@ -259,6 +285,14 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                 <span className="flex items-center">
                                     <BsCheckLg className='text-green-500 mr-2'/>
                                     <p>I am happy to offer replacement</p>
+                                </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>I am happy to offer refund</p>
+                                </span>
+                                <span className="flex items-center">
+                                    <BsCheckLg className='text-green-500 mr-2'/>
+                                    <p>Images Required</p>
                                 </span>
                             </div>
                         </div>
@@ -271,22 +305,20 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                             <thead>
                                 <tr>
                                     <th className=' bg-slate-200'>SHIPS TO</th>
-                                    <th className=' bg-slate-200'>
-                                        <div className="relative flex">
+                                    <th className=' bg-slate-200 relative'>
+                                        <div className="relative flex items-center">
                                             DELIVERY TIME
-                                            <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[25%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
-                                                <i>
-                                                    <IoInformationCircle size={25} className="relative left-[-20%]"/>
-                                                </i>
-                                            </div>
+                                            <span className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Text">
+                                                    <IoInformationCircle size={25}/>
+                                            </span>
                                         </div>
                                     </th>
-                                    <th className=' bg-slate-200'>
-                                        <div className="relative flex">
+                                    <th className=' bg-slate-200 relative'>
+                                        <div className="relative flex items-center">
                                             SHIPPING COST 
-                                            <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[25%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Text">
                                                 <i>
-                                                    <IoInformationCircle size={25} className="relative left-[-20%]"/>
+                                                    <IoInformationCircle size={25}/>
                                                 </i>
                                             </div>
                                         </div>

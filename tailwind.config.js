@@ -36,7 +36,7 @@ module.exports = {
                   
           "warning": "#FBBD23",
                   
-          "error": "#F87272",
+          "error": "#3ABFF8",
         },
       },
     ],

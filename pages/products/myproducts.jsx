@@ -172,9 +172,9 @@ const Myproducts = () => {
                     <th className="bg-navbg">STATUS</th>
                     <th className="bg-navbg">STOCK</th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         {"ITEM COST(from)"}
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[80%] top-[-30%] tooltip-top opacity-100" data-tip="The Item Price which is paid to the supplier">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The Item Price which is paid to the supplier">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -182,9 +182,9 @@ const Myproducts = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                           {"Price(from)"}
-                            <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[80%] top-[-30%] tooltip-top opacity-100" data-tip="Price that will be pushed to your store">
+                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Price that will be pushed to your store">
                                 <i>
                                     <IoInformationCircle size={25} className="relative"/>
                                 </i>
@@ -192,9 +192,9 @@ const Myproducts = () => {
                         </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         {"ITEM COST(from)"}
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[80%] top-[-30%] tooltip-top opacity-100" data-tip="Your Profit">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Your Profit">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>

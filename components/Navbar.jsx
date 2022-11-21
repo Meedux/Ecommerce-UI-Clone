@@ -13,7 +13,7 @@ const Navbar = ({ open, setStatus }) => {
 
   return (
     <div className='navbar min-h-0 justify-between bg-primary p-0 shadow-2xl fixed z-50'>
-        <div className='navbar-start w-[270px] flex justify-between bg-white p-1 px-5'>
+        <div className='navbar-start w-80 flex justify-between bg-white p-1 px-5'>
             <a className="btn btn-ghost normal-case text-xl">LOGO</a>
             <button onClick={() => setStatus(!open)}>
                 <i>
@@ -22,8 +22,13 @@ const Navbar = ({ open, setStatus }) => {
             </button>
         </div>
 
+        <div className="navbar-center flex flex-col">
+            <h1 className="text-lg text-white font-bold">Store Integration Progress</h1>
+            <progress className="progress progress-error w-56 h-[20px]" value={50} max={100}>1 out of 10</progress>
+        </div>
 
-        <div className="flex items-center navbar-end p-1">
+
+        <div className="flex items-center navbar-end p-1 w-[270px]">
             <button className='p-2'>
                 <i>
                     <AiFillBell size={27} style={{color: 'white'}}/>
