@@ -98,9 +98,9 @@ const Orders = () => {
                 <thead>
                   <tr>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         ORDER DETAILS
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -109,9 +109,9 @@ const Orders = () => {
                     </th>
                     <th className="bg-navbg">QTY</th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         COST
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -119,9 +119,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         FEE
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -129,9 +129,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                    <div className="relative flex">
+                    <div className="relative flex items-center">
                         TOTAL
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -139,9 +139,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                    <div className="relative flex">
+                    <div className="relative flex items-center">
                         PROFIT
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -149,9 +149,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                     <div className="relative flex">
+                     <div className="relative flex items-center">
                         PAYMENT
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -159,9 +159,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         TRACKING NO.
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -169,9 +169,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         STATUS
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -179,9 +179,9 @@ const Orders = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex">
+                      <div className="relative flex items-center">
                         INVOICES
-                          <div className="tooltip table-cell before:whitespace-pre before:content-[attr(data-tip)] left-[53%] top-[-30%] tooltip-top opacity-100" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
