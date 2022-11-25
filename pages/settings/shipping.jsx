@@ -4,12 +4,12 @@ import CountryInput from '../../components/CountryInput'
 const Shipping = () => {
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
           Shipping Settings
         </p>
 
-        <div className="card bg-white shadow-lg rounded-lg" style={{width: "75vw"}}>
+        <div className="card bg-white shadow-lg rounded-lg">
           <div className="card-body">
             <span className="text-xl font-bold mb-5">Main Location</span>
             <div className="mb-5">

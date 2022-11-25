@@ -4,14 +4,14 @@ import Link from 'next/link'
 const Five = () => {
   return (
     <>
-        <main className="p-5 flex flex-col justify-center items-center" style={{width: "96vw"}}>
+        <main className="p-5 container">
             <div className="mb-5 max-w-full w-full">
                 <p className="text-xl font-bold">
                     QUICK START
                 </p>
             </div>
 
-            <div className='card shadow-lg rounded-lg bg-white' style={{width: "90vw"}}>
+            <div className='card shadow-lg rounded-lg bg-white'>
                 <div className="card-body p-5 max-w-full w-full">
                     <ul className="steps">
                         <li data-content="4" className="step step-primary font-extrabold">Price Formula</li>
@@ -40,40 +40,40 @@ const Five = () => {
                     </select>
                   </div>
 
-                  <div className='mb-3' style={{width: "70vw"}}>
+                  <div className='mb-3' style={{width: "70%"}}>
                     <p className='text-lg font-bold mb-5'>
                       Billing Info
                     </p>
 
                     <div className="w-full max-w-full flex justify-between mb-5">
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='First Name'/>
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Last Name'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='First Name'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='Last Name'/>
                     </div>
 
                     <div className="w-full max-w-full flex justify-between">
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Company'/>
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='VAT Number/TAX ID'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='Company'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='VAT Number/TAX ID'/>
                     </div>
                   </div>
 
-                  <div className='mb-10' style={{width: "70vw"}}>
+                  <div className='mb-10' style={{width: "70%"}}>
                     <p className='text-lg font-bold mb-5'>
                       Billing Address
                     </p>
 
                     <div className="w-full max-w-full flex justify-between mb-5">
                       <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Address 1'/>
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Address 2'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='Address 2'/>
                     </div>
 
                     <div className="w-full max-w-full flex justify-between mb-5">
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='City'/>
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Region'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='City'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='Region'/>
                     </div>
 
                     <div className="w-full max-w-full flex justify-between">
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Postal Code/ZIP'/>
-                      <input type="text" className='input border border-gray-500 bg-white rounded-md px-6 h-[2rem] w-[47%]' placeholder='Country'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='Postal Code/ZIP'/>
+                      <input type="text" className='input border border-gray-500 bg-white rounded-sm px-6 h-[2rem] w-[47%]' placeholder='Country'/>
                     </div>
                   </div>
 

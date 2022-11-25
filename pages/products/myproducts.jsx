@@ -6,12 +6,12 @@ const Myproducts = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
           Products
         </p>
 
-        <div className="card bg-white rounded-lg shadow-lg overflow-visible mb-5" style={{width: "90vw"}}>
+        <div className="card bg-white rounded-lg shadow-lg overflow-visible mb-5">
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}
@@ -97,7 +97,7 @@ const Myproducts = () => {
           </div>
         </div>
 
-        <div className="card bg-white shadow-lg rounded-lg overflow-visible" style={{width: "90vw"}}>
+        <div className="card bg-white shadow-lg rounded-lg overflow-visible">
           <div className="card-body">
             <div className="flex justify-between items-center">
               <div className="max-w-[70%] w-full flex justify-between items-center mb-5">
@@ -133,7 +133,7 @@ const Myproducts = () => {
                       </div>
                     </div>
                   </span>
-                    <span className="dropdown max-w-full mr-3" style={{width: "33%"}}>
+                    <span className="dropdown z-50 max-w-full mr-3" style={{width: "33%"}}>
                       <button tabIndex={0} className="p-1 border outline-none border-gray-300 rounded-sm mr-3 mb-5 cursor-pointer w-full text-start" >Assign Price Formula</button>
                       <div tabIndex={0} className="dropdown-content menu p-2 shadow-2xl bg-white rounded-sm w-full">
                         <label className="flex cursor-pointer mb-5">
@@ -161,7 +161,7 @@ const Myproducts = () => {
                   </span>
                   
               </div>
-              <button className="btn text-end btn-error btn-outline">Delete</button>
+              <button className="btn text-end btn-info btn-outline">Delete</button>
             </div>
             <div className='mb-5'>
               <table className="table w-full">
@@ -174,7 +174,7 @@ const Myproducts = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         {"ITEM COST(from)"}
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The Item Price which is paid to the supplier">
+                          <div className="tooltip z-0 relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The Item Price which is paid to the supplier">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>

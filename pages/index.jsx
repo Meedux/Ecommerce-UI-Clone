@@ -3,11 +3,12 @@ import Image from "next/image"
 import { GrMail } from 'react-icons/gr'
 import { RiBillFill } from 'react-icons/ri'
 import { FaHandshake, FaQuestionCircle } from 'react-icons/fa'
+import { IoInformation, IoInformationCircle } from 'react-icons/io5'
 
 export default function Home() {
   return (
     <>
-      <main className="p-2">
+      <main className="container p-2">
         {/* First Four Cards */}
           <span className="text-start font-bold mb-5">Dashboard</span>
           <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5">
@@ -85,7 +86,7 @@ export default function Home() {
               </div>
           </div>
 
-          <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5" style={{width: "90vw"}}>
+          <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5">
             <div className="grid col-span-3">
               <div className="card bg-white shadow-lg">
                 <div className="card-body">
@@ -116,9 +117,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5" style={{width: "90vw"}}>
+          <div className="grid md:grid-cols-6 grid-cols-3	gap-4 mb-5">
             <div className="col-span-4">
-              <div className="card bg-white shadow-lg">
+              <div className="card overflow-visible bg-white shadow-lg">
                 <div className="card-body">
                   <div className="w-full flex justify-between">
                     <span className=" text-sm font-semibold text-gray-500">RECENT ORDERS</span>
@@ -132,13 +133,71 @@ export default function Home() {
                   <div className="table w-full">
                     <thead>
                       <tr>
-                        <th>ID</th>
-                        <th>Order ID</th>
-                        <th>Deliver To</th>
-                        <th>Date</th>
-                        <th>Total</th>
-                        <th>QTY</th>
-                        <th>Status</th>
+                        <th className="bg-slate-200 relative">
+                          <div className="relative flex items-center">
+                            <span className="font-bold">
+
+                            ID
+                            </span>
+                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="AppScenic Platform ID">
+                                <i>
+                                    <IoInformationCircle size={25}/>
+                                </i>
+                            </div>
+                          </div> 
+                        </th>
+                        <th className="bg-slate-200 relative">
+                          <div className="relative flex items-center">
+                            <span className="font-bold">
+
+                            ORDER ID
+                            </span>
+                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Your integration order ID">
+                                <i>
+                                    <IoInformationCircle size={25}/>
+                                </i>
+                            </div>
+                          </div> 
+                        </th>
+                        <th className="bg-slate-200 relative">
+                            <span className="font-bold">
+                              
+                            Deliver To
+                            </span>
+                          </th>
+                        <th className="bg-slate-200 relative">
+                            <span className="font-bold">
+                              
+                            Date
+                            </span>
+                          </th>
+                        <th className="bg-slate-200 relative">
+                          <div className="relative flex items-center">
+                            <span className="font-bold">
+
+                            TOTAL
+                            </span>
+                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The sum of cost of item(s), shipping and fee">
+                                <i>
+                                    <IoInformationCircle size={25}/>
+                                </i>
+                            </div>
+                          </div> 
+                        </th>
+                        <th className="bg-slate-200 relative"><span className="font-bold">QTY</span></th>
+                        <th className="bg-slate-200 relative">
+                          <div className="relative flex items-center">
+                            <span className="font-bold">
+
+                            STATUS
+                            </span>
+                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The status of the order">
+                                <i>
+                                    <IoInformationCircle size={25}/>
+                                </i>
+                            </div>
+                          </div> 
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -184,7 +243,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-6 grid-cols-3	gap-4" style={{width: "90vw"}}>
+          <div className="grid md:grid-cols-6 grid-cols-3	gap-4">
             <div className="col-span-2">
               <div className="card bg-white shadow-lg">
                 <div className="card-body">

@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
       <Navbar open={open} setStatus={setStatus}/>
       <div className='flex'>
         <Sidebar open={open}/>
-        <main className='overflow-y-hidden flex justify-center ml-4 mt-16'>
+        <main className='overflow-y-hidden flex justify-center ml-4 mt-16 w-full'>
           {children}
         </main>
       </div>

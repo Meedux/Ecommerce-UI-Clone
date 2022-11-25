@@ -45,7 +45,7 @@ const Catalog = () => {
     {
       id: 1,
       img: "/img.jpg",
-      name: "Shoes!",
+      name: "Shoes 1",
       supplierID: "12345-67890",
       status: "In Stock",
       discountedPrice: "$7.00",
@@ -68,7 +68,7 @@ const Catalog = () => {
     {
       id: 2,
       img: "/img.jpg",
-      name: "Totally Legit Shoes",
+      name: "Shoes 2",
       supplierID: "12345-67890",
       status: "In Stock",
       discountedPrice: "$7.00",
@@ -91,7 +91,7 @@ const Catalog = () => {
     {
       id: 3,
       img: "/img.jpg",
-      name: "Very Expensive Shoe",
+      name: "Shoes 3",
       supplierID: "12345-67890",
       status: "In Stock",
       discountedPrice: "$99.9",
@@ -163,8 +163,8 @@ const Catalog = () => {
               </div>
 
               <div className='grid grid-cols-12 gap-4 items-center justify-items-center mb-1 w-full max-w-full' style={{width: '90vw'}}>
-                  <div className="col-span-2 dropdown max-w-full w-full  border border-slate-400 rounded-sm px-4 py-1">
-                    <label tabIndex={0} className="block text-md w-full text-gray-500 rounded-sm cursor-pointer">Select a Country</label>
+                  <div className="col-span-2 dropdown max-w-full w-full  border border-slate-400 rounded-sm px-2 py-1">
+                    <label tabIndex={0} className="text-md w-full text-gray-500 rounded-sm cursor-pointer flex items-center justify-between">Select a Country <VscTriangleDown /></label>
                     <ul className="dropdown-content menu w-full left-1 top-8 shadow rounded-sm bg-white" tabIndex={0} style={{width: '13rem'}}>
                       <li className='p-3'>
                         <input type="text" placeholder='Search Country' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
@@ -183,7 +183,7 @@ const Catalog = () => {
                   </div>
 
                   <div className="col-span-2 dropdown max-w-full w-full border border-slate-400 p-1 rounded-sm">
-                    <label tabIndex={0} className=" px-4 block text-md text-gray-500 rounded-sm max-w-full w-full cursor-pointer">Ships to</label>
+                    <label tabIndex={0} className=" px-2 flex items-center justify-between text-md text-gray-500 rounded-sm max-w-full w-full cursor-pointer">Ships to <VscTriangleDown /></label>
                     <ul className="dropdown-content menu p-2 top-8 shadow rounded-sm bg-white" tabIndex={0} style={{width: '13rem'}}>
                       <li className='p-3'>
                         <input type="text" placeholder='Search Country' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
@@ -206,7 +206,7 @@ const Catalog = () => {
                   </div>
 
                   <div className="col-span-2 max-w-full w-full dropdown border border-slate-400 p-1 rounded-sm">
-                    <label tabIndex={0} className="block px-4  text-md text-gray-500 rounded-lg w-full cursor-pointer">Supplier</label>
+                    <label tabIndex={0} className="flex items-center justify-between px-2  text-md text-gray-500 rounded-lg w-full cursor-pointer">Supplier <VscTriangleDown /></label>
                     <ul className="dropdown-content menu top-8 shadow rounded-sm w-full bg-white" tabIndex={0}>
                       <li className='p-3'>
                         <input type="text" placeholder='Search Supplier' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />

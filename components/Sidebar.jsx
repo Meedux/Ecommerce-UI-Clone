@@ -16,7 +16,7 @@ const Sidebar = ({ open }) => {
   const [hoverOne, setHoverOne] = useState(false)
   return (
     <>
-     <div className={`${open ? 'w-80' : ' w-[3.3rem]'} shadow-xl pt-2 flex flex-col justify-between bg-white smooth sticky top-[3.4rem] mt-14 z-40`} style={{height: "93.5vh"}}>
+     <div className={`${open ? ' w-[23rem]' : ' w-[3.3rem]'} shadow-xl pt-2 flex flex-col justify-between bg-white smooth sticky top-[3.4rem] mt-14 z-40`} style={{height: "96.5vh"}}>
         <div>
           <span className={`${open ? 'hidden' : ''} flex flex-col justify-between items-center`}>
             {/* Short Icons */}
