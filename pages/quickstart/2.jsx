@@ -10,13 +10,20 @@ const Two = () => {
 
   return (
     <>
-        <main className="p-5 flex flex-col justify-center items-center" style={{width: "96vw"}}>
+        <main className="p-5 container">
             <div className="mb-5 max-w-full w-full">
                 <p className="text-xl font-bold">
                     QUICK START
                 </p>
             </div>
-
+          <div className="card">
+          <div className="card-body p-5 max-w-full w-full">
+                    <ul className="steps">
+                        <li data-content="1" className="step step-primary font-extrabold">Connect Your Store</li>
+                        <li data-content="2" className="step step-primary text-primary font-extrabold">Select Plan</li>
+                        <li data-content="3" className="step font-extrabold">Shipping Details</li>
+                    </ul>
+                </div>
           <div className="grid grid-cols-6 gap-4 mb-5">
           <div className="col-span-2 card bg-primary shadow-lg">
             <div className="card-body">
@@ -202,15 +209,16 @@ const Two = () => {
                 </div>
               </div>
             </div>
+            
 
             <div className="w-full max-w-full flex justify-center">
               <button className='btn btn-outline' onClick={() => { setShow(!show) }}>{show ? "Show less" : "Show More"}</button>
             </div>
-
             <div className="w-full max-w-full flex justify-end">
               <Link href={'/quickstart/3'}>
                 <button className="btn btn-primary">Next</button>
               </Link>
+            </div>
             </div>
           </div>
         </div>

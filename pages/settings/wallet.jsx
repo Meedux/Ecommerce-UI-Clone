@@ -3,12 +3,12 @@ import React from 'react'
 const Wallet = () => {
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
           Shipping Settings
         </p>
 
-        <div className="card rounded-lg bg-white inline-flex shadow-lg mb-5" style={{width: "40vw"}}>
+        <div className="card rounded-lg bg-white inline-flex shadow-lg mb-5">
           <div className="w-full bg-primary p-10">
             <span className="text-center flex flex-col">
               <span className="text-4xl font-extrabold text-white mb-4">Wallet</span>
@@ -26,7 +26,7 @@ const Wallet = () => {
           </div>
         </div>
 
-        <div className="card bg-white shadow-lg rounded-lg mb-5" style={{width: "90vw"}}>
+        <div className="card bg-white shadow-lg rounded-lg mb-5">
           <div className="card-body">
             <span className="text-lg font-bold mb-5">Transactions</span>
             <div className="w-full max-w-full">
@@ -48,7 +48,7 @@ const Wallet = () => {
           </div>
         </div>
 
-        <div className="card bg-white shadow-lg rounded-lg" style={{width: "90vw"}}>
+        <div className="card bg-white shadow-lg rounded-lg">
           <div className="card-body">
             <span className="text-lg font-bold mb-5">Invoices</span>
             <div className="w-full max-w-full">

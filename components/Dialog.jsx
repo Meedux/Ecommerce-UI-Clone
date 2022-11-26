@@ -27,7 +27,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
         <input type="checkbox" ref={checkbox} id="my-modal" className="modal-toggle" />
         <div className="modal overflow-y-scroll">
 
-        <div className="modal-box overflow-visible bg-white max-w-full w-[60%] indicator block top-[6rem] absolute" style={{maxHeight: "none"}}>
+        <div className="modal-box overflow-visible bg-white max-w-full w-[80rem] indicator block top-[6rem] absolute" style={{maxHeight: "none"}}>
         <span className="indicator-item badge badge-primary rounded-full h-6 p-[10px] w-6 text-xs flex justify-center items-center cursor-pointer fixed" onClick={() => setOpen(false)}>X</span> 
             <div className="flex justify-between mb-5">
                 <span className="text-sm breadcrumbs">
@@ -41,28 +41,28 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                 {/* <span className="btn btn-primary btn-circle" htmlFor="modal" onClick={() => setOpen(false)}>X</span> */}
             </div>
             <div className='relative'>
-            <span className={`left-[13%] top-[3%] ${data.isPremium ? "" : 'hidden'} bg-yellow-500 p-1 px-3 flex rounded-box text-sm items-center absolute z-50`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-xs]'/ text-white">PREMIUM</h1></span>
-                <div className="grid grid-cols-4 h-[60%] gap-4">
-                    <div className="col-span-2 max-h-[40%] h-full grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-4 gap-4">
+                    <div className="col-span-2 max-h-[40%] relative h-full grid grid-cols-4 gap-4">
+                        <span className={`left-[25%] top-[20%] ${data.isPremium ? "" : 'hidden'} bg-yellow-500 p-1 px-3 flex rounded-box text-sm items-center absolute z-50`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-xs]'/ text-white">PREMIUM</h1></span>
                         <div className="col-span-1 flex flex-col justify-center items-stretch">
                             <a href="#img-1" className='mb-3'><img src="https://placeimg.com/400/225/arch" alt="Shoes" width={100} height={100}/></a> 
                             <a href="#img-2" className='mb-3'><img src="https://placeimg.com/400/225/arch" alt="Shoes" width={100} height={100}/></a> 
                             <a href="#img-3" className='mb-3'><img src="https://placeimg.com/400/225/arch" alt="Shoes" width={100} height={100}/></a> 
                             <a href="#img-4"><img src="/img.jpg" alt="Shoes" width={100} height={100}/></a>
                         </div>
-                        <div className="carousel mr-0 card   img-full col-span-3">
+                        <div className="carousel mr-0 card relative  img-full col-span-3">
                             <figure className='h-full mr-0 mb-3 rounded-lg carousel-item' id='img-1'><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                             <figure className='h-full mr-0 mb-3 rounded-lg carousel-item' id='img-2'><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                             <figure className='h-full mr-0 mb-3 rounded-lg carousel-item' id='img-3'><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
                             <figure className='h-full mr-0 mb-3 rounded-lg carousel-item' id='img-4'><img src="/img.jpg" alt="Shoes" /></figure>
                         </div>
                     </div>
-                    <div className="col-span-2">
+                    <div className="col-span-2 max-h-[40%] h-full">
                         <p className="text-xl font-bold mb-5">{data.name}</p>
                         <div className='flex justify-between mb-5'>
                             <span className='flex flex-col'>
                                 <span className="text-gray-400 text-sm">Supplier: </span>
-                                <span className="font-extrabold text-primary">US-2022-1405</span>
+                                <span className="font-bold text-primary">US-2022-1405</span>
                             </span>
 
                             <span className="flex">
@@ -97,8 +97,8 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                         <div className='mb-10 flex flex-col text-sm'>
                             <p>Shipping to <span className="font-extrabold">United States</span></p>
                             {/* <p>Shipping to {(data.shipsTo!== undefined) && (data["shipsTo"].length > 1) ? <><span className="font-extrabold">{(data.shipsTo[0]) && data.shipsTo[0]}</span> + <span className="text-primary">{(data["shipsTo"].length - 1)} other countries</span></> : <span className="font-extrabold">{(data.shipsTo[0] != undefined) && data.shipsTo[0]}</span>}</p> */}
-                            <p className='flex items-center'><FaShippingFast  className='mr-1'/>{" 1 - 4 days ($20.82 first item, $60.12 per additional item, free shipping available*)"}</p>
-                            <p className='flex items-center'><FaBoxOpen  className='mr-1'/>{"1 day avg. processing time"}</p>
+                            <p className='flex items-center'><FaShippingFast size={20}  className='mr-1'/>{" 1 - 4 days ($20.82 first item, $60.12 per additional item, free shipping available*)"}</p>
+                            <p className='flex items-center'><FaBoxOpen size={20}  className='mr-1'/>{"1 day avg. processing time"}</p>
                         </div>
 
                         <button className="btn btn-primary font-extrabold px-[5rem]">IMPORT NOW</button>
@@ -308,7 +308,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <th className=' bg-slate-200 relative'>
                                         <div className="relative flex items-center">
                                             DELIVERY TIME
-                                            <span className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Text">
+                                            <span className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Approximate time to deliver an order">
                                                     <IoInformationCircle size={25}/>
                                             </span>
                                         </div>
@@ -316,7 +316,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     <th className=' bg-slate-200 relative'>
                                         <div className="relative flex items-center">
                                             SHIPPING COST 
-                                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Text">
+                                            <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Shipping Cost is the base cost + additional costs">
                                                 <i>
                                                     <IoInformationCircle size={25}/>
                                                 </i>

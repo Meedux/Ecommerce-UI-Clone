@@ -3,12 +3,12 @@ import React from 'react'
 const details = () => {
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
           Details & Invoices
         </p>
 
-        <div className="grid grid-cols-6 gap-4 mb-5" style={{width: "90vw"}}>
+        <div className="grid grid-cols-6 gap-4 mb-5">
           <div className="col-span-3 card rounded-lg bg-white shadow-lg">
             <div className="card-body">
               <div className='mb-3'>
@@ -59,7 +59,7 @@ const details = () => {
           </div>
         </div>
 
-        <div className="card rounded-l shadow-lg bg-white" style={{width: '80vw'}}>
+        <div className="card rounded-l shadow-lg bg-white">
           <div className="card-body">
               <p className='text-lg font-bold mb-5'>
                 Billing Info

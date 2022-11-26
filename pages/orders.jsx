@@ -5,11 +5,11 @@ const Orders = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <span className="text-xl font-bold mb-12">
           My Orders
         </span>
-        <div className="card bg-white shadow-lg overflow-visible" style={{width: '90vw'}}>
+        <div className="card bg-white shadow-lg overflow-visible">
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}
@@ -25,7 +25,7 @@ const Orders = () => {
               <span className={`tab tab-bordered smooth font-bold ${tab === 10 && "tab-active text-primary"}`} onClick={() => setTab(10)}>Completed</span>
             </div>
 
-            <div className="max-w-full w-full grid grid-cols-12 gap-4 mb-5 items-center">
+            <div className="max-w-full w-full grid grid-cols-12 gap-4 mb-5 items-end">
               <span className="col-span-4">
                 <input type="text" className='p-1 border-gray-400 w-full outline-none border rounded-sm bg-white' placeholder='Search'/>
               </span>
@@ -100,7 +100,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         ORDER DETAILS
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Contains the order id, the date, and the time">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -111,7 +111,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         COST
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="The cost of the item(s) in the order">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -121,7 +121,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         FEE
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Appscenic Transaction fee">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -131,7 +131,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                     <div className="relative flex items-center">
                         TOTAL
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="The sum of cost of item(s)">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -141,7 +141,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                     <div className="relative flex items-center">
                         PROFIT
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Profit after all costs had been deducted">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -151,7 +151,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                      <div className="relative flex items-center">
                         PAYMENT
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Status of your Payment for the order">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -161,7 +161,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         TRACKING NO.
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Tracking number for the order provided by supplier">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -171,7 +171,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         STATUS
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Status of the Order">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>
@@ -181,7 +181,7 @@ const Orders = () => {
                     <th className="bg-navbg">
                       <div className="relative flex items-center">
                         INVOICES
-                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Text">
+                          <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 z-0" data-tip="Invoices from Suplier for this order">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
                               </i>

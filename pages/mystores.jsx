@@ -4,12 +4,12 @@ const Mystores = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <span className="text-xl font-bold mb-12">
           My Stores
         </span>
 
-        <div className="card bg-white shadow-lg overflow-visible" style={{width: '90vw'}}>
+        <div className="card bg-white shadow-lg overflow-visible">
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}

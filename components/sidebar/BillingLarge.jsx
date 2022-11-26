@@ -12,7 +12,7 @@ const BillingLarge = () => {
       <Menu>
         <Menu.Button className="cursor-pointer flex items-center justify-between p-7 max-w-full w-[95%]  text-[#626A92]  hover:bg-navbg py-2 rounded-r-2xl hover:text-primary" onClick={() => {setLocalOpen(!localOpen)}} style={{transition: "300ms"}}>
           <span className="flex items-center">
-              <VscGraphLine size={27.5} className="cursor-pointer text-secondary hover:text-primary mr-[16px]"/>
+              <VscGraphLine size={27.5} className="cursor-pointer text-secondary hover:text-primary mr-[10px]"/>
               <span className="text-start text-sm font-bold">Billings and Subscription</span>
           </span>
           {localOpen ? <IoMdArrowDropdown className="fill-current" /> : <IoMdArrowDropleft className='swap-on fill-current' />}

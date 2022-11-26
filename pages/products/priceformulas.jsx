@@ -4,15 +4,15 @@ const Priceformulas = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
-      <main className="p-5">
-        <div className='mb-5 flex justify-between items-center' style={{width: "90vw"}}>
+      <main className="container p-5">
+        <div className='mb-5 flex justify-between items-center'>
           <p className="text-xl text-start font-bold ">
             My Products/ Price Formulas
           </p>
           <button className="text-end btn btn-primary px-2 py-0 shadow-lg font-bold">NEW PRICE FORMULA</button>
         </div>
 
-        <div className="card bg-white shadow-lg overflow-visible" style={{width: '90vw'}}>
+        <div className="card bg-white shadow-lg overflow-visible">
           <div className="card-body">
             <div className='tabs mb-5'>
               {/* Tabs */}
@@ -22,7 +22,7 @@ const Priceformulas = () => {
              </div>
 
              <div className="mb-5">
-             <input type="text" className="p-1 outline-none border w-full max-w-full border-gray-400 rounded-lg" placeholder='search'/>
+             <input type="text" className="p-1 outline-none border w-full max-w-full border-gray-400 rounded-sm" placeholder='search'/>
              </div>
 
              <div className='overflow-x-scroll'>

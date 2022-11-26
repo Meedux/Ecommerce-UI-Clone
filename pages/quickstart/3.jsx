@@ -6,14 +6,14 @@ import { TbTruckDelivery } from 'react-icons/tb'
 const Three = () => {
   return (
     <>
-        <main className="p-5 flex flex-col justify-center items-center" style={{width: "96vw"}}>
+        <main className="p-5 container">
             <div className="mb-5 max-w-full w-full">
                 <p className="text-xl font-bold">
                     QUICK START
                 </p>
             </div>
 
-            <div className='card shadow-lg rounded-lg bg-white' style={{width: "90vw"}}>
+            <div className='card shadow-lg rounded-lg bg-white'>
                 <div className="card-body p-5 max-w-full w-full">
                     <ul className="steps">
                         <li data-content="2" className="step step-primary font-extrabold">Get Started</li>

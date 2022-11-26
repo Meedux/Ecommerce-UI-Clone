@@ -3,12 +3,12 @@ import React from 'react'
 const profile = () => {
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start mb-5 font-bold">
           Profile
         </p>
 
-        <div className="grid grid-cols-6 gap-4 mb-5" style={{width: "90vw"}}>
+        <div className="grid grid-cols-6 gap-4 mb-5">
           <div className="col-span-4 card bg-white shadow-lg rounded-lg">
             <div className="card-body">
               <span className="text-lg font-bold mb-4">

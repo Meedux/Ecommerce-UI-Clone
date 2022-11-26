@@ -5,14 +5,14 @@ import Link from 'next/link'
 const Four = () => {
   return (
     <>
-        <main className="p-5 flex flex-col justify-center items-center" style={{width: "96vw"}}>
+        <main className="p-5 container">
             <div className="mb-5 max-w-full w-full">
                 <p className="text-xl font-bold">
                     QUICK START
                 </p>
             </div>
 
-            <div className='card shadow-lg rounded-lg bg-white' style={{width: "90vw"}}>
+            <div className='card shadow-lg rounded-lg bg-white'>
                 <div className="card-body p-5 max-w-full w-full">
                     <ul className="steps">
                         <li data-content="3" className="step step-primary font-extrabold">Shipping Details</li>
@@ -29,10 +29,10 @@ const Four = () => {
 
                     <div className='mb-5' style={{width: "70%"}}>
                       <p className="mb-5 text-center" >This is your default pricing formula</p>
-                      <div className="flex justify-center max-w-full w-full">
-                        <input type="text" className="px-1 outline-none border max-w-full border-gray-400 rounded-lg py-0 w-[40%]" placeholder='Profit%'/>
+                      <div className="flex justify-center max-w-full items-center w-full">
+                        <input type="text" className="px-1 outline-none border max-w-full border-gray-400 rounded-sm py-0 w-[40%]" placeholder='Profit%'/>
                         <div className="divider divider-horizontal">+</div>
-                        <input type="text" className="px-1 outline-none border max-w-full border-gray-400 rounded-lg w-[40%]" placeholder='Fixed Price USD'/>
+                        <input type="text" className="px-1 outline-none border max-w-full border-gray-400 rounded-sm w-[40%]" placeholder='Fixed Price USD'/>
                       </div>
                     </div>
 

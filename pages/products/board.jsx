@@ -3,11 +3,11 @@ import React from 'react'
 const board = () => {
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
           Boards
         </p>
-        <div className="card shadow-lg rounded-lg bg-white" style={{width: "90vw"}}>
+        <div className="card shadow-lg rounded-lg bg-white">
           <div className="card-body">
             <div className="mb-5">
               <input type="text" className="p-1 outline-none border w-full max-w-full border-gray-400 rounded-lg" placeholder='search'/>

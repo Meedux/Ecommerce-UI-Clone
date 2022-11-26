@@ -8,12 +8,12 @@ const Subscription = () => {
   const [ show, setShow ] = useState(false)
   return (
     <>
-      <main className="p-5">
+      <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
           My Subscription
         </p>
 
-        <div className="grid grid-cols-6 gap-4 mb-5" style={{width: '75vw'}}>
+        <div className="grid grid-cols-6 gap-4 mb-5">
           <div className="col-span-2 card bg-primary shadow-lg">
             <div className="card-body">
               <div className="w-full max-w-full flex justify-between items-center mb-5">

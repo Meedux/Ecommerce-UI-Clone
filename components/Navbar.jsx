@@ -23,8 +23,8 @@ const Navbar = ({ open, setStatus }) => {
         </div>
 
         <div className="navbar-center flex flex-col">
-            <h1 className="text-lg text-white font-bold">Store Integration Progress</h1>
-            <progress className="progress progress-error w-56 h-[20px]" value={50} max={100}>1 out of 10</progress>
+            <h1 className="text-lg text-white font-bold ">Store Integration Progress</h1>
+            <progress className="progress progress-error w-56 h-[20px] pb-1" value={50} max={100}>1 out of 10</progress>
         </div>
 
 
@@ -47,11 +47,11 @@ const Navbar = ({ open, setStatus }) => {
                         { MenuOpen ? <GoTriangleUp  style={{color: 'white', transition: '300ms'}}/> : <GoTriangleDown  style={{color: 'white', transition: '300ms'}}/> }
                     </i>
                 </Menu.Button>
-                <Menu.Items as='div' className='absolute bg-white -bottom-20 w-1/6 text-center flex flex-col rounded-md shadow-xl'>
+                <Menu.Items as='div' className='absolute bg-white -bottom-20 w-[200px] text-center flex flex-col rounded-sm shadow-xl'>
                     <Menu.Item>
                         {({ active }) => (
                             <a
-                                className={`${active && 'bg-base-100'} p-2`}
+                                className={`${active && 'text-primary'} p-2`}
                             >
                                 <Link href={'/profile'} legacyBehavior>
                                     Profile
@@ -62,7 +62,7 @@ const Navbar = ({ open, setStatus }) => {
                         <Menu.Item>
                         {({ active }) => (
                             <a
-                                className={`${active && 'bg-base-100'} p-2`}
+                                className={`${active && 'text-primary'} p-2`}
                             >
                             Logout
                             </a>
