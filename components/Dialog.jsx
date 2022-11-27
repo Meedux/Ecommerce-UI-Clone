@@ -3,6 +3,7 @@ import { Dialog } from '@headlessui/react'
 import { FaFlagUsa, FaShippingFast, FaBoxOpen } from 'react-icons/fa'
 import { BsCheckLg, BsStarFill } from 'react-icons/bs'
 import { IoInformation, IoInformationCircle } from 'react-icons/io5'
+import EU from 'country-flag-icons/react/3x2/EU'
 
 const Dialogue = ({ items, id,  isOpen, setOpen }) => {
     const checkbox = useRef()
@@ -65,9 +66,9 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                 <span className="font-bold text-primary">US-2022-1405</span>
                             </span>
 
-                            <span className="flex">
+                            <span className="flex items-center">
                                 <span className="text-gray-400 text-sm mr-1">From: </span>
-                                <span className="font-extrabold text-primary"><FaFlagUsa size={20} /></span>
+                                <span className="font-extrabold text-primary"><EU className='mr-2 h-[30px] w-[50px]'/></span>
                             </span>
                         </div>
 
@@ -105,15 +106,15 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                     </div>
                 </div>
 
-                <div className='mt-[2rem]'>
+                <div className='mt-[-500px]'>
                     <div className='tabs mb-5 max-w-full justify-between w-full'>
                     {/* Tabs */}
-                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 1 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(1)}>Description</span>
-                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 2 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(2)}>Specifications</span>
-                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 3 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(3)}>Product Variants</span>
-                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 4 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(4)}>Return Policy</span>
-                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 5 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(5)}>Supplier Policy</span>
-                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 6 && "tab-active text-primary tab-bordered "}`} onClick={() => setTab(6)}>Shipping</span>
+                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 1 && "tab-active text-primary tab-bordered"}`} onClick={() => setTab(1)} >Description</span>
+                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 2 && "tab-active text-primary tab-bordered"}`} onClick={() => setTab(2)}>Specifications</span>
+                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 3 && "tab-active text-primary tab-bordered"}`} onClick={() => setTab(3)}>Product Variants</span>
+                        <span className={`tab  smooth font-bold text-lg border-b-info tooltip relative before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 ${tab === 4 && "tab-active text-primary tab-bordered"}`} onClick={() => setTab(4)} data-tip="Ensure you are following supplier return policy">Return Policy</span>
+                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 5 && "tab-active text-primary tab-bordered"}`} onClick={() => setTab(5)}>Supplier Policy</span>
+                        <span className={`tab  smooth font-bold text-lg border-b-info ${tab === 6 && "tab-active text-primary tab-bordered"}`} onClick={() => setTab(6)}>Shipping</span>
 
                     </div>
 
@@ -325,6 +326,23 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                     </th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                <tr>
+                                    <td className='bg-white'>
+                                        <span className="flex items-center">
+                                            {/* Flag Marker */}
+                                            <EU className='mr-2 h-[30px] w-[50px]'/>
+                                            EU
+                                        </span>
+                                    </td>
+                                    <td className='bg-white'>
+                                        1 - 5 days
+                                    </td>
+                                    <td className='bg-white'>
+                                        Free
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

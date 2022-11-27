@@ -1,4 +1,6 @@
+import Image from 'next/image'
 import React, { useState } from 'react'
+import { BsArrowRepeat } from 'react-icons/bs'
 
 const Mystores = () => {
   const [ tab, setTab ] = useState(1)
@@ -21,9 +23,9 @@ const Mystores = () => {
               <span className={`tab tab-bordered smooth font-bold ${tab === 6 && "tab-active text-primary"}`} onClick={() => setTab(6)}>Failed</span>
              </div>
 
-             <div className='overflow-x-scroll'>
+             <div className='overflow-auto'>
               {/* Table */}
-              <table className="table w-full">
+              <table className="table overflow-x-scroll">
                 <thead>
                   <tr>
                     <th className="bg-navbg">NAME</th>
@@ -36,11 +38,53 @@ const Mystores = () => {
                     <th className="bg-navbg">SYNC STATUS</th>
                     <th className="bg-navbg">AUTO-FUNDING</th>
                     <th className="bg-navbg">AUTO-PUSH</th>
+                    <th className="bg-navbg">AUTO-PUSH COLLECTIONS</th>
                     <th className="bg-navbg">ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>
-
+                  <tr>
+                    <td className="bg-white">
+                      <p className="font-bold">Store Name</p>
+                      <p>{"(Active Store)"}</p>
+                    </td>
+                    <td className='bg-white'>
+                      <Image src={'/shopify.png'} height={100} width={100} />
+                    </td>
+                    <td className='bg-white'>
+                      store.myshopify.com
+                    </td>
+                    <td className='bg-white'>
+                      <span className="p-2 rounded-md font-bold bg-slate-700 text-white">OFFLINE</span>
+                    </td>
+                    <td className='bg-white'>
+                      0
+                    </td>
+                    <td className='bg-white'>
+                      <div className="flex">
+                        HKD
+                        <BsArrowRepeat size={20} />
+                      </div>
+                    </td>
+                    <td className='bg-white'>
+                      $0.00
+                    </td>
+                    <td className="bg-white">
+                      <p>All Synced</p>
+                    </td>
+                    <td className="bg-white">
+                      No
+                    </td>
+                    <td className="bg-white">
+                      No 
+                    </td>
+                    <td className="bg-white">
+                      Yes 
+                    </td>
+                    <td className="bg-white">
+                      <button className="p-2 border border-gray-300 bg-white outline-none text-sm rounded-lg shadow-xl">ACTIONS</button>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>

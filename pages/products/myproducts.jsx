@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import { VscTriangleDown } from 'react-icons/vsc'
 import { IoInformation, IoInformationCircle } from 'react-icons/io5'
+import Image from 'next/image'
+import Link from 'next/link'
+import { BsEyeFill } from 'react-icons/bs'
+import { TfiAngleLeft, TfiAngleRight, TfiAngleDoubleLeft, TfiAngleDoubleRight } from 'react-icons/tfi'
 
 const Myproducts = () => {
   const [ tab, setTab ] = useState(1)
@@ -163,11 +167,15 @@ const Myproducts = () => {
               </div>
               <button className="btn text-end btn-info btn-outline">Delete</button>
             </div>
-            <div className='mb-5'>
-              <table className="table w-full">
+            <div className='overflow-x-auto mb-5'>
+              <table className="table overflow-scroll">
                 <thead>
                   <tr>
-                    <th className="bg-navbg flex items-center"> <input type="checkbox" className='checkbox mr-4'/> PRODUCTS</th>
+                    <th className="bg-navbg">
+                      <div className="flex items-center">
+                        <input type="checkbox" className='checkbox mr-4'/> PRODUCTS
+                      </div>
+                    </th>
                     <th className="bg-navbg">VARIANTS</th>
                     <th className="bg-navbg">STATUS</th>
                     <th className="bg-navbg">STOCK</th>
@@ -202,14 +210,61 @@ const Myproducts = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">PRICE FORMULA</th>
+                    <th className="bg-navbg">COLLECTIONS</th>
                     <th className="bg-navbg">BOARDS</th>
                     <th className="bg-navbg">SUPPLIER</th>
                   </tr>
                 </thead>
                 <tbody>
-
+                  <tr>
+                    <td className="bg-white mr-5">
+                      <div className="flex items-center mr-[6rem]">
+                        <input type="checkbox" className='checkbox mr-4'/>
+                        <Image src={'/img.jpg'} height={100} width={100} />
+                        <span className='mr-3'>Shoes</span>
+                        <Link href={'/products/editproduct'}>
+                          <BsEyeFill />
+                        </Link>
+                      </div>
+                    </td>
+                    <td className='bg-white'>
+                      1
+                    </td>
+                    <td className='bg-white'>
+                      <button className="btn btn-primary btn-outline">PUSH TO STORE</button>
+                    </td>
+                    <td className='bg-white'>0</td>
+                    <td className="bg-white">
+                      $141
+                    </td>
+                    <td className="bg-white">
+                      <p className="line-through">$482</p>
+                      <p>$241</p>
+                    </td>
+                    <td className="bg-white">
+                      <span className="font-bold text-green-400">$85</span>
+                    </td>
+                    <td className="bg-white">
+                      1%
+                    </td>
+                    <td className='bg-white'>
+                      Collection
+                    </td>
+                    <td className='bg-white'></td>
+                    <td className='bg-white'>US-2022-1409</td>
+                  </tr>
                 </tbody>
               </table>
+            </div>
+            <div className="p-2 flex justify-end items-center">
+              <span className="text-[#9F9F9F] mr-4">1-1 of 1</span>
+              <span className='flex items-center'>
+                <TfiAngleDoubleLeft size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+                <TfiAngleLeft size={15} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+                <span className="px-2 py-1 text-sm bg-primary rounded-md font-bold text-white mr-2">1</span>
+                <TfiAngleRight size={15} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+                <TfiAngleDoubleRight size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+              </span>
             </div>
           </div>
         </div>

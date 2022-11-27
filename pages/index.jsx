@@ -202,6 +202,32 @@ export default function Home() {
                     </thead>
                     <tbody>
                       {/* Table Data Goes Here */}
+                      <tr>
+                        <td>
+                          <a className=" text-gray-500 border border-b-gray-500">10616</a>
+                        </td>
+                        <td>
+                          1234567890
+                        </td>
+                        <td>
+                          <span className="flex">
+                            {/* Flag Marker */}
+                            <p>Test Test</p>
+                          </span>
+                        </td>
+                        <td>
+                          <p>2022-07-23 21:22</p>
+                        </td>
+                        <td>
+                          <p className="font-bold">
+                            $120.00
+                          </p>
+                        </td>
+                        <td>1</td>
+                        <td>
+                          <span className="p-2 rounded-md font-bold bg-slate-700 text-white">CANCELLED</span>
+                        </td>
+                      </tr>
                     </tbody>
                   </div>
                 </div>

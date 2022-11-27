@@ -11,6 +11,7 @@ const MyProducts = () => {
             <ul tabIndex={0} className=" dropdown-content left-[165%] top-[-20%] menu p-1 shadow bg-white rounded-sm  w-52">
                 <li><Link href={'/products/myproducts'} className="hover:text-primary hover:bg-white">View My Products</Link></li>
                 <li><Link href={'/products/board'} className="hover:text-primary hover:bg-white">Boards</Link></li>
+                <li><Link href={'/products/collections'} className="hover:text-primary hover:bg-white">Collections</Link></li>
                 <li><Link href={'/products/priceformulas'} className="hover:text-primary hover:bg-white">Price Formulas</Link></li>
             </ul>
         </div>

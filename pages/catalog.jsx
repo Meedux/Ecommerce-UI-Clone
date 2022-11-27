@@ -10,6 +10,7 @@ import { IoShirtOutline,  } from 'react-icons/io5'
 import { IoIosArrowForward } from 'react-icons/io'
 import { TbSofa } from 'react-icons/tb'
 import Dialogue from '../components/Dialog'
+import EU from 'country-flag-icons/react/3x2/EU'
 
 const Catalog = () => {
   const [ hover, setHover ] = useState(0)
@@ -366,7 +367,7 @@ const Catalog = () => {
                         </span>
                         <span className="flex items-center">
                           <span className="text-sm text-gray-400 mr-2">From: </span>
-                          <BsFillFlagFill size={25}/>
+                          <EU className='mr-2 h-[30px] w-[50px]'/>
                         </span>
                     </div>
                   </div>

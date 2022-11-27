@@ -13,3 +13,19 @@ body {
 .icon:hover {
     color: '#4560E9';
 }
+
+progress{
+    @apply h-[20px];
+}
+
+progress::-webkit-progress-bar{
+    @apply bg-white rounded-md;
+}
+
+progress::-webkit-progress-value {
+    @apply bg-blue-400 rounded-md;
+}
+
+.table th:first-child {
+    position: static;
+}

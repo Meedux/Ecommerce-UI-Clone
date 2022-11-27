@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
+import { GoCircleSlash } from 'react-icons/go'
 import { IoInformation, IoInformationCircle } from 'react-icons/io5'
+import { VscCircleSlash } from 'react-icons/vsc'
+import { TfiAngleLeft, TfiAngleRight, TfiAngleDoubleLeft, TfiAngleDoubleRight } from 'react-icons/tfi'
+import EU from 'country-flag-icons/react/3x2/EU'
+import Image from 'next/image'
 
 const Orders = () => {
   const [ tab, setTab ] = useState(1)
@@ -92,9 +97,9 @@ const Orders = () => {
               </span>
             </div> */}
 
-            <div className='overflow-visible'>
+            <div className='overflow-auto'>
               {/* Table */}
-              <table className="table w-full overflow-x-scroll ">
+              <table className="table overflow-x-scroll ">
                 <thead>
                   <tr>
                     <th className="bg-navbg">
@@ -192,9 +197,70 @@ const Orders = () => {
                   </tr>
                 </thead>
                 <tbody>
-
+                  <tr>
+                    <td className="bg-white">
+                      <div className="flex">
+                        <span className="mr-1">
+                          <p className="font-bold text-gray-900">ID: 10616</p>
+                          <p className="text-xs text-gray-900">2022 Jul 23</p>
+                          <p className='text-xs text-gray-900'>21:22</p>
+                        </span>
+                        <span>
+                          <p className="flex items-center">
+                            <EU className='mr-2 h-[20px] w-[40px]'/>
+                            Test Test
+                          </p>
+                          <p className="flex items-center">
+                            <Image src={'/shopify.svg'} height={20} width={30} className="mr-4"/>
+                            1234567890
+                          </p>
+                        </span>
+                      </div>
+                    </td>
+                    <td className='bg-white'>
+                      1
+                    </td>
+                    <td className="bg-white">
+                      <p>Items Cost: $114.00</p>
+                      <p>Shipping: $0.00</p>
+                    </td>
+                    <td className='bg-white'>
+                      <p>$6.84</p>
+                    </td>
+                    <td className="bg-white">
+                      <p className="font-bold">$120.92</p>
+                    </td>
+                    <td className="bg-white">
+                      <p className="font-bold text-green-400">$93.17</p>
+                    </td>
+                    <td className='bg-white'>
+                      <span className="p-2 text-sm font-bold bg-red-500 text-white rounded-md">FAILED</span>
+                    </td>
+                    <td className='bg-white'>
+                      <VscCircleSlash size={20} />
+                    </td>
+                    <td className='bg-white'>
+                      <span className="p-2 rounded-md font-bold bg-slate-700 text-white">CANCELLED</span>
+                    </td>
+                    <td className='bg-white'>
+                      <VscCircleSlash size={20} />
+                    </td>
+                    <td className="bg-white">
+                      <button className="p-2 border border-gray-300 bg-white outline-none text-sm rounded-lg shadow-xl">ACTIONS</button>
+                    </td>
+                  </tr>
                 </tbody>
               </table>
+            </div>
+            <div className="p-2 flex justify-end items-center">
+              <span className="text-[#9F9F9F] mr-4">1-1 of 1</span>
+              <span className='flex items-center'>
+                <TfiAngleDoubleLeft size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+                <TfiAngleLeft size={15} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+                <span className="px-2 py-1 text-sm bg-primary rounded-md font-bold text-white mr-2">1</span>
+                <TfiAngleRight size={15} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+                <TfiAngleDoubleRight size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+              </span>
             </div>
           </div>
         </div>

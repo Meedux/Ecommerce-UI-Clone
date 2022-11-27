@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BsCartFill } from 'react-icons/bs'
 
 const Priceformulas = () => {
   const [ tab, setTab ] = useState(1)
@@ -25,7 +26,7 @@ const Priceformulas = () => {
              <input type="text" className="p-1 outline-none border w-full max-w-full border-gray-400 rounded-sm" placeholder='search'/>
              </div>
 
-             <div className='overflow-x-scroll'>
+             <div className=''>
               {/* Table */}
               <table className="table w-full">
                 <thead>
@@ -38,7 +39,11 @@ const Priceformulas = () => {
                   </tr>
                 </thead>
                 <tbody>
-
+                  <td className='bg-white'>Default</td>
+                  <td className='bg-white'>Always</td>
+                  <td className="flex items-center bg-white"><BsCartFill size={20} className='mr-2' /> name</td>
+                  <td className='bg-white'><span className="p-2 text-sm font-bold text-white bg-green-400 rounded-md">ACTIVE</span></td>
+                  <td className='bg-white'><button className="p-2 border border-gray-300 bg-white outline-none text-sm rounded-lg shadow-xl">ACTIONS</button></td>
                 </tbody>
               </table>
             </div>

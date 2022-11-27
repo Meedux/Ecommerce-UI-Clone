@@ -19,19 +19,26 @@ const MyProductsLarge = () => {
         </Menu.Button>
         <Menu.Items as="div" className="max-w-full w-full ml-[4.1rem] flex flex-col" style={{transition: "300ms"}}>
           <Menu.Item className="mb-3">
-              <Link href={'/billings/details'}>
+              <Link href={'/products/myproducts'}>
                 <span className="mb-3 text-secondary text-start hover:text-primary">View My Products</span>
               </Link>
           </Menu.Item>
 
           <Menu.Item className="mb-3">
-              <Link href={'/billings/subscription'}>
+              <Link href={'/products/board'}>
                 <span className="mb-3 text-secondary hover:text-primary">Boards</span>
               </Link>
           </Menu.Item>
 
+          
           <Menu.Item className="mb-3">
-              <Link href={'/billings/subscription'}>
+              <Link href={'/products/collections'}>
+                <span className="mb-3 text-secondary hover:text-primary">Collections</span>
+              </Link>
+          </Menu.Item>
+
+          <Menu.Item className="mb-3">
+              <Link href={'/products/priceformulas'}>
                 <span className="mb-3 text-secondary hover:text-primary">Price Formulas</span>
               </Link>
           </Menu.Item>

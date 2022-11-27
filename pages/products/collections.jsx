@@ -1,12 +1,12 @@
 import React from 'react'
 import { TfiAngleLeft, TfiAngleRight, TfiAngleDoubleLeft, TfiAngleDoubleRight } from 'react-icons/tfi'
 
-const board = () => {
+const collections = () => {
   return (
     <>
       <main className="container p-5">
         <p className="text-xl text-start font-bold mb-5">
-          Boards
+            {"Collections (also known as product Categories)"}
         </p>
         <div className="card shadow-lg rounded-lg bg-white">
           <div className="card-body">
@@ -15,7 +15,7 @@ const board = () => {
             </div>
 
             <div className='w-full max-w-full flex justify-between mb-5'>
-              <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl">+ Add new Board</button>
+              <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl">+ Add new Collection</button>
 
               <span>
                 <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl mr-3">Delete</button>
@@ -27,7 +27,8 @@ const board = () => {
               <table className="table w-full">
                 <thead>
                   <tr>
-                    <th className="bg-navbg flex items-center"> <input type="checkbox" className='checkbox mr-4'/> BOARD NAME</th>
+                    <th className="bg-navbg flex items-center"> <input type="checkbox" className='checkbox mr-4'/>COLLECTION NAME</th>
+                    <th className="bg-navbg">COLLECTION DESCRIPTION</th>
                     <th className="bg-navbg">PRODUCTS</th>
                     <th className="bg-navbg">ACTIONS</th>
                   </tr>
@@ -36,8 +37,11 @@ const board = () => {
                   <td className="bg-white">
                     <div className="flex items-center">
                       <input type="checkbox" className='checkbox mr-4'/>
-                      <p className=" text-gray-900">Test</p>
+                      <p className=" text-gray-900">Slipcovers</p>
                     </div>
+                  </td>
+                  <td className="bg-white">
+                    <p className="text-[#626A92]">{"Home, Tools & Garden > Home Decor > Slipcovers"}</p>
                   </td>
                   <td className='bg-white'>
                     0
@@ -65,4 +69,4 @@ const board = () => {
   )
 }
 
-export default board
+export default collections

@@ -24,7 +24,10 @@ const Navbar = ({ open, setStatus }) => {
 
         <div className="navbar-center flex flex-col">
             <h1 className="text-lg text-white font-bold ">Store Integration Progress</h1>
-            <progress className="progress progress-error w-56 h-[20px] pb-1" value={50} max={100}>1 out of 10</progress>
+            <span className='relative'>
+                <progress className=" w-56" value={50} max={100}>1 out of 10</progress>
+                <p className="absolute bottom-[8px] z-50 text-sm left-[78px]">3 out of 6</p>
+            </span>
         </div>
 
 

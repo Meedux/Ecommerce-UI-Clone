@@ -41,7 +41,9 @@ const Wallet = () => {
                   </tr>
                 </thead>
                 <tbody>
-
+                <div className="px-4 py-1">
+                  <p className="text-lg font-bold">No Transactions</p>
+                </div>
                 </tbody>
               </table>
             </div>
@@ -65,7 +67,9 @@ const Wallet = () => {
                   </tr>
                 </thead>
                 <tbody>
-
+                  <div className="px-4 py-1">
+                    <p className="text-lg font-bold">No Invoices</p>
+                  </div>
                 </tbody>
               </table>
             </div>
