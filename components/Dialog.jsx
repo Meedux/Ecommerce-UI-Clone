@@ -77,7 +77,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                 <span className="text-white  font-extrabold text-sm">Best Price:</span>
                                 <span className="text-white text-3xl font-extrabold">-15%</span>
                             </span>
-                            <span className='p-2 bg-gray-300 flex items-center relative'>
+                            <span className='p-2 bg-gray-300 flex items-center relative tooltip before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100' data-tip={data.discountedPrice}>
                                 <span className="mr-4">From:</span>
                                 <span className="flex flex-col mr-[3rem]">
                                     <span className="text-xl font-extrabold">{data.discountedPrice}</span>
@@ -165,21 +165,26 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                         </div>
                                     </td>
                                     <td className='bg-white'>
-                                        <div className="flex flex-col items-end justify-center">
-                                            <h1 className="text-gray-400">Price:</h1>
-                                            <h1 className="text-lg font-bold">{data.discountedPrice}</h1>
+                                        <div className="flex items-end justify-center">
+                                            <h1 className="text-gray-400 mr-3">Price:</h1>
+                                            <h1 className="text-lg font-bold mr-3">{data.discountedPrice}</h1>
                                             <hi className="text-lg text-gray-300 line-through">{data.originalPrice}</hi>
                                         </div>
                                     </td>
 
                                     <td className="bg-white">
-                                        <div className="flex justify-end items-start">
-                                            <h1 className=" text-green-400 text-lg font-extrabold">In Stock</h1>
+                                        <p className="text-gray-400">Barcode/UPC/EAN: <span className="text-black">1234567890</span></p>
+                                    </td>
+
+                                    <td className="bg-white">
+                                        <div className="flex flex-col justify-start items-end">
+                                            <p className="text-gray-400">SKU: <span className="text-black">1234567890</span></p>
+                                            <h1 className=" text-green-600 text-lg font-bold">In Stock</h1>
                                         </div>
                                     </td>
                                 </tr>
 
-                                <tr> 
+                                {/* <tr> 
                                     <td className='bg-white'>
                                         <div className="flex justify-start">
                                             <img src="/img.jpg" width={120} height={120} className="mr-2"/>
@@ -221,7 +226,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
                                             <h1 className=" text-green-400 text-lg font-extrabold">In Stock</h1>
                                         </div>
                                     </td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
                     </div>

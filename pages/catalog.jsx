@@ -4,6 +4,7 @@ import { useState, Fragment } from 'react'
 import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
 import { FaShippingFast } from 'react-icons/fa'
 import { BsFillFlagFill, BsHouseDoor, BsStarFill, BsWatch } from 'react-icons/bs'
+import { TfiAngleLeft, TfiAngleRight, TfiAngleDoubleLeft, TfiAngleDoubleRight } from 'react-icons/tfi'
 import { AiFillEye } from 'react-icons/ai'
 import { VscTriangleDown } from 'react-icons/vsc'
 import { IoShirtOutline,  } from 'react-icons/io5'
@@ -46,7 +47,7 @@ const Catalog = () => {
     {
       id: 1,
       img: "/img.jpg",
-      name: "Shoes 1",
+      name: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit deleniti, aspernatur nihil quos earum cumque esse repellendus vitae pariatur, provident voluptate ex consectetur exercitationem facere enim nobis rem tempore itaque!",
       supplierID: "12345-67890",
       status: "In Stock",
       discountedPrice: "$7.00",
@@ -330,7 +331,7 @@ const Catalog = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-8 gap-4">
+          <div className="grid grid-cols-8 gap-4 mb-7">
               {items.map(item => (
                 <div key={item.id} htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact'>
                   <span className={`left-[50%] top-[20%] ${hover == item.id ? "" : 'hidden'} absolute`}><AiFillEye size={100} className="text-primary relative left-[-50%] top-[-20%]"/></span>
@@ -346,10 +347,10 @@ const Catalog = () => {
                   </figure>
                   
                   <div className="card-body bg-white z-30 ">
-                    
-                    <h2 className="card-title mb-3">{item.name}</h2>
+                     
+                    <h2 className="ellipsis text-lg font-bold mb-3">{item.name}</h2>
                     <div className='flex justify-between'>
-                        <span className='text-md text-gray-500'>{item.supplierID}</span>
+                        <span className='text-md text-gray-500'>Supplier: {item.supplierID}</span>
                         <div className="badge badge-success p-4 text-white">{item.status}</div>
                     </div>
                     <div className='flex flex-col justify-start mb-3'>
@@ -375,6 +376,16 @@ const Catalog = () => {
                   <div className={`bg-primary absolute z-10 max-w-full w-full smooth ${hover == item.id ? "top-[98%]" : "top-[65%]"} p-5 rounded-b-lg text-center font-bold text-white`}>IMPORT NOW</div>
                 </div>
               ))}
+          </div>
+          <div className="p-2 flex justify-end items-center">
+            <span className="text-[#9F9F9F] mr-4">1-1 of 1</span>
+            <span className='flex items-center'>
+              <TfiAngleDoubleLeft size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+              <TfiAngleLeft size={15} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+              <span className="px-2 py-1 text-sm bg-primary rounded-md font-bold text-white mr-2">1</span>
+              <TfiAngleRight size={15} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+              <TfiAngleDoubleRight size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
+            </span>
           </div>
 
           <Dialogue items={items} id={id} isOpen={open} setOpen={setOpen} />

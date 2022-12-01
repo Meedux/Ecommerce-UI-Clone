@@ -21,7 +21,11 @@ const Myproducts = () => {
               {/* Tabs */}
               <span className={`tab tab-bordered smooth font-bold ${tab === 1 && "tab-active border-b-info text-primary"}`} onClick={() => setTab(1)}>All</span>
               <span className={`tab tab-bordered smooth font-bold ${tab === 2 && "tab-active border-b-info text-primary"}`} onClick={() => setTab(2)}>In Store</span>
-              <span className={`tab tab-bordered smooth font-bold ${tab === 3 && "tab-active border-b-info text-primary"}`} onClick={() => setTab(3)}>Push to Store</span>
+              <span className={`tab tab-bordered smooth font-bold indicator ${tab === 3 && "tab-active border-b-info text-primary"}`} onClick={() => setTab(3)}>
+                <span className="indicator-item badge badge-info z-50 rounded-full h-4 p-[10px] w-5 text-xs flex justify-center items-center">1</span>
+                Push to Store
+              </span>
+              
              </div>
 
              <div className="mb-5">
@@ -167,20 +171,22 @@ const Myproducts = () => {
               </div>
               <button className="btn text-end btn-info btn-outline">Delete</button>
             </div>
-            <div className='overflow-x-auto mb-5'>
-              <table className="table overflow-scroll">
+            <div className='mb-5'>
+              <table className="table-auto overflow-visible w-full">
                 <thead>
                   <tr>
-                    <th className="bg-navbg">
-                      <div className="flex items-center">
+                    <th className="bg-navbg p-2">
+                      <div className="flex items-center text-xs">
                         <input type="checkbox" className='checkbox mr-4'/> PRODUCTS
                       </div>
                     </th>
-                    <th className="bg-navbg">VARIANTS</th>
-                    <th className="bg-navbg">STATUS</th>
-                    <th className="bg-navbg">STOCK</th>
+                    <th className="bg-navbg text-xs">
+                      <p className="text-xs">VARIANTS</p>
+                    </th>
+                    <th className="bg-navbg text-xs">STATUS</th>
+                    <th className="bg-navbg text-xs">STOCK</th>
                     <th className="bg-navbg">
-                      <div className="relative flex items-center">
+                      <div className="relative flex items-center justify-center text-xs">
                         {"ITEM COST(from)"}
                           <div className="tooltip z-0 relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The Item Price which is paid to the supplier">
                               <i>
@@ -190,7 +196,7 @@ const Myproducts = () => {
                       </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex items-center">
+                      <div className="relative flex items-center justify-center text-xs">
                           {"Price(from)"}
                             <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Price that will be pushed to your store">
                                 <i>
@@ -200,7 +206,7 @@ const Myproducts = () => {
                         </div>
                     </th>
                     <th className="bg-navbg">
-                      <div className="relative flex items-center">
+                      <div className="relative flex items-center justify-center text-xs">
                         {"ITEM COST(from)"}
                           <div className="tooltip relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Your Profit">
                               <i>
@@ -209,49 +215,49 @@ const Myproducts = () => {
                           </div>
                       </div>
                     </th>
-                    <th className="bg-navbg">PRICE FORMULA</th>
-                    <th className="bg-navbg">COLLECTIONS</th>
-                    <th className="bg-navbg">BOARDS</th>
-                    <th className="bg-navbg">SUPPLIER</th>
+                    <th className="bg-navbg text-xs">PRICE FORMULA</th>
+                    <th className="bg-navbg text-xs">COLLECTIONS</th>
+                    <th className="bg-navbg text-xs">BOARDS</th>
+                    <th className="bg-navbg text-xs">SUPPLIER</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="bg-white mr-5">
-                      <div className="flex items-center mr-[6rem]">
+                    <td className="bg-white">
+                      <div className="flex items-center">
                         <input type="checkbox" className='checkbox mr-4'/>
-                        <Image src={'/img.jpg'} height={100} width={100} />
+                        <Image src={'/img.jpg'} height={100} width={50} />
                         <span className='mr-3'>Shoes</span>
                         <Link href={'/products/editproduct'}>
                           <BsEyeFill />
                         </Link>
                       </div>
                     </td>
-                    <td className='bg-white'>
+                    <td className='bg-white ml-3 text-center'>
                       1
                     </td>
-                    <td className='bg-white'>
-                      <button className="btn btn-primary btn-outline">PUSH TO STORE</button>
+                    <td className='bg-white text-center'>
+                      <button className="h-[2rem] text-center min-h-0 btn btn-primary btn-outline px-2 text-xs">PUSH TO STORE</button>
                     </td>
-                    <td className='bg-white'>0</td>
-                    <td className="bg-white">
+                    <td className='bg-white text-center'>0</td>
+                    <td className="bg-white text-center">
                       $141
                     </td>
-                    <td className="bg-white">
+                    <td className="bg-white text-center">
                       <p className="line-through">$482</p>
                       <p>$241</p>
                     </td>
-                    <td className="bg-white">
+                    <td className="bg-white text-center">
                       <span className="font-bold text-green-400">$85</span>
                     </td>
-                    <td className="bg-white">
+                    <td className="bg-white text-center">
                       1%
                     </td>
-                    <td className='bg-white'>
+                    <td className='bg-white text-center'>
                       Collection
                     </td>
-                    <td className='bg-white'></td>
-                    <td className='bg-white'>US-2022-1409</td>
+                    <td className='bg-white text-center'></td>
+                    <td className='bg-white text-center'>US-2022-1409</td>
                   </tr>
                 </tbody>
               </table>

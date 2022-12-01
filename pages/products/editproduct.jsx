@@ -1,10 +1,15 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import US from 'country-flag-icons/react/1x1/US'
 import { IoInformation, IoInformationCircle } from 'react-icons/io5'
 import { BsPencilFill } from 'react-icons/bs'
+import ModifyPrice from '../../components/ModifyPrice'
+
+
+// TODO Tomorrow: Add an Edit state for this page CUNT!
 
 const editproduct = () => {
+  const [edit, setEdit] = useState(false)
   return (
     <>
       <main className="container p-5">
@@ -31,6 +36,10 @@ const editproduct = () => {
                 <p className="mb-7">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam explicabo saepe voluptatum libero maiores. Odit saepe ducimus ratione exercitationem error, iusto nesciunt consequuntur sint deserunt, inventore, autem cumque aliquam aperiam!
                 </p>
+              </div>
+
+              <div className="card-body hidden">
+                
               </div>
             </div>
 
@@ -192,7 +201,9 @@ const editproduct = () => {
                             <p className="line-through">$482</p>
                             <p>$241</p>
                           </span>
-                          <BsPencilFill size={20} className="mr-2"/>
+                          <span className="cursor-pointer" htmlFor="edit-price" onClick={() => setEdit(true)}>
+                            <BsPencilFill size={20} className="mr-2"/>
+                          </span>
                           <div className="tooltip relative before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Price Calculated by the Price Formula">
                               <i>
                                   <IoInformationCircle size={25} className="relative"/>
@@ -259,6 +270,8 @@ const editproduct = () => {
           </div>
         </div>
       </main>
+
+      <ModifyPrice edit={edit} setEdit={setEdit} />
     </>
   )
 }

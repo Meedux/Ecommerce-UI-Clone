@@ -4,6 +4,7 @@ import { GrMail } from 'react-icons/gr'
 import { RiBillFill } from 'react-icons/ri'
 import { FaHandshake, FaQuestionCircle } from 'react-icons/fa'
 import { IoInformation, IoInformationCircle } from 'react-icons/io5'
+import EU from 'country-flag-icons/react/3x2/EU'
 
 export default function Home() {
   return (
@@ -212,6 +213,7 @@ export default function Home() {
                         <td>
                           <span className="flex">
                             {/* Flag Marker */}
+                            <EU className='mr-1 h-[20px] w-[40px]'/>
                             <p>Test Test</p>
                           </span>
                         </td>

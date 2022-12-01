@@ -8,14 +8,14 @@ const board = () => {
         <p className="text-xl text-start font-bold mb-5">
           Boards
         </p>
-        <div className="card shadow-lg rounded-lg bg-white">
+        <div className="card overflow-visible shadow-lg rounded-lg bg-white">
           <div className="card-body">
             <div className="mb-5">
               <input type="text" className="p-1 outline-none border w-full max-w-full border-gray-400 rounded-md" placeholder='search'/>
             </div>
 
             <div className='w-full max-w-full flex justify-between mb-5'>
-              <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl">+ Add new Board</button>
+              <label htmlFor="modal" className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl cursor-pointer">+ Add new Board</label>
 
               <span>
                 <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl mr-3">Delete</button>
@@ -43,7 +43,14 @@ const board = () => {
                     0
                   </td>
                   <td className='bg-white'>
-                    <button className="p-2 border border-gray-300 bg-white outline-none text-sm rounded-lg shadow-xl">ACTIONS</button>
+                    <span className="dropdown dropdown-bottom">
+                      <button tabIndex={0} className="p-2 border border-gray-300 bg-white outline-none text-sm rounded-lg shadow-xl">ACTIONS</button>
+                      <ul tabIndex={0} className="dropdown-content bg-white menu p-2 shadow-2xl rounded-md w-52 ">
+                        <li className='hover:text-primary p-2 cursor-pointer'>Edit</li>
+                        <li className='hover:text-primary p-2 cursor-pointer'>Empty</li>
+                        <li className='hover:text-primary text-info p-2 cursor-pointer'>Delete</li>
+                      </ul>
+                    </span>
                   </td>
                 </tbody>
               </table>
@@ -61,6 +68,19 @@ const board = () => {
           </div>
         </div>
       </main>
+
+
+      <input type="checkbox" id="modal" className="modal-toggle" />
+      <div className="modal">
+        <div className="modal-box bg-white">
+          <input type="text" className="w-full p-2 rounded-md border border-gray-400 outline-none mb-5" placeholder='Board Name'/>
+          
+          <div className="p-1 flex justify-end items-center">
+              <label htmlFor="modal" className="bg-white border-none p-2 shadow-2xl rounded-lg cursor-pointer mr-3">Cancel</label>
+              <button className="bg-primary text-white font-bold border-none p-2 shadow-2xl rounded-lg">Save</button>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

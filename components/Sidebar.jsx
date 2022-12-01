@@ -77,7 +77,7 @@ const Sidebar = ({ open }) => {
                 </span>
               
             </Link>
-            <Link href={'/catalog'} className="w-[95%]">
+            <Link href={'/mystores'} className="w-[95%]">
               <span className="flex w-full items-center p-7 hover:bg-navbg text-[#626A92]  py-2 rounded-r-2xl hover:text-primary" style={{transition: "300ms"}}>
                 <FaStoreAlt size={28} className="cursor-pointer text-secondary hover:text-primary  mr-[16px]"/>
                 <span className="text-sm w-full text-start font-bold ">My Stores</span>
