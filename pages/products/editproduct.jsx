@@ -8,7 +8,7 @@ import ModifyPrice from '../../components/ModifyPrice'
 
 // TODO Tomorrow: Add an Edit state for this page CUNT!
 
-const editproduct = () => {
+const Editproduct = () => {
   const [edit, setEdit] = useState(false)
   return (
     <>
@@ -276,4 +276,4 @@ const editproduct = () => {
   )
 }
 
-export default editproduct
+export default Editproduct
