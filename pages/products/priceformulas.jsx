@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BsCartFill } from 'react-icons/bs'
+import Link from 'next/link'
 
 const Priceformulas = () => {
   const [ tab, setTab ] = useState(1)
@@ -10,7 +11,9 @@ const Priceformulas = () => {
           <p className="text-xl text-start font-bold ">
             My Products/ Price Formulas
           </p>
-          <button className="text-end btn btn-primary px-2 py-0 shadow-lg font-bold">NEW PRICE FORMULA</button>
+          <Link href={'/products/newformula'}>
+            <button className="text-end btn btn-primary px-2 py-0 shadow-lg font-bold">NEW PRICE FORMULA</button>
+          </Link>
         </div>
 
         <div className="card bg-white shadow-lg overflow-visible">

@@ -4,11 +4,15 @@ import US from 'country-flag-icons/react/1x1/US'
 import { IoInformation, IoInformationCircle } from 'react-icons/io5'
 import { BsPencilFill } from 'react-icons/bs'
 import ModifyPrice from '../../components/ModifyPrice'
-
+import { BiUndo, BiRedo } from 'react-icons/bi'
+import { AiOutlineBold, AiOutlineItalic, AiOutlineUnderline, AiOutlineStrikethrough } from 'react-icons/ai'
+import { TfiAngleDown } from 'react-icons/tfi'
+import { ImParagraphLeft, ImParagraphCenter, ImParagraphRight, ImParagraphJustify } from 'react-icons/im'
 
 // TODO Tomorrow: Add an Edit state for this page CUNT!
 
 const Editproduct = () => {
+  const [editState, setEditState] = useState(false)
   const [edit, setEdit] = useState(false)
   return (
     <>
@@ -18,9 +22,9 @@ const Editproduct = () => {
             My Products / Edit Products
           </span>
           <span className='flex items-center'>
-            <span className="text-sm">Edit</span>
+            <span className="text-sm cursor-pointer" onClick={() => setEditState(true)}>Edit</span>
             <span className="divider divider-horizontal mx-1">|</span>
-            <span className="text-sm">Back</span>
+            <span className="text-sm cursor-pointer" onClick={() => setEditState(false)}>Back</span>
           </span>
         </p>
 
@@ -30,12 +34,67 @@ const Editproduct = () => {
             <div className="card bg-white rounded-lg shadow-lg overflow-visible mb-5">
               <div className="card-body">
                 <h1 className="text-xl font-bold mb-3">Title</h1>
-                <p className='mb-7'>Shoes</p>
-
+                <p className={`mb-7 ${editState ? 'hidden' : ''}`}>Shoes</p>
+                <input type="text" className={`w-full p-2 outline-none border border-gray-300 rounded-md mb-7 ${editState ? '' : 'hidden'}`} />
+ 
                 <h1 className="text-xl font-bold mb-3">Description</h1>
-                <p className="mb-7">
+                <p className={`mb-7 ${editState ? 'hidden' : ''}`}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam explicabo saepe voluptatum libero maiores. Odit saepe ducimus ratione exercitationem error, iusto nesciunt consequuntur sint deserunt, inventore, autem cumque aliquam aperiam!
                 </p>
+
+                <div className={`mb-7 ${editState ? '' : 'hidden'}`}>
+                  <div className="p-2 border border-gray-300 flex justify-start items-center">
+                    <span className="mr-5">File</span>
+                    <span className="mr-5">Edit</span>
+                    <span className="mr-5">View</span>
+                    <span className="mr-5">Insert</span>
+                    <span className="mr-5">Format</span>
+                    <span className="mr-5">Tools</span>
+                    <span className="mr-5">Table</span>
+                    <span className="mr-3">Help</span>
+                  </div>
+
+                  <div className="border border-gray-300 border-t-0 flex">
+                    <span className="p-2 border border-y-0 border-l-0 border-r-gray-300 flex items-center">
+                      <BiUndo size={30} className="mr-3"/>
+                      <BiRedo size={30}/>
+                    </span>
+                    <span className="p-2 border border-y-0 border-l-0 border-r-gray-300 flex items-center">
+                      <AiOutlineBold size={28} className="mr-3" />
+                      <AiOutlineItalic size={28} className="mr-3" />
+                      <AiOutlineUnderline size={28} className="mr-3" />
+                      <AiOutlineStrikethrough size={28} className="mr-3" />
+                    </span>
+                    <span className="p-2 border border-y-0 border-l-0 border-r-gray-300 flex items-center">
+                      <span className="mr-3 flex items-center">
+                        <span className="mr-10">
+                          System Font
+                        </span>
+                        <TfiAngleDown size={15}/>
+                      </span>
+
+                      <span className="mr-3 flex items-center">
+                        <span className="mr-10">
+                          12pt
+                        </span>
+                        <TfiAngleDown size={15}/>
+                      </span>
+
+                      <span className="mr-3 flex items-center">
+                        <span className="mr-10">
+                          Paragraph
+                        </span>
+                        <TfiAngleDown size={15}/>
+                      </span>
+                    </span>
+                    <span className="p-5 border border-y-0 border-l-0 border-r-gray-300 flex items-center">
+                      <ImParagraphLeft size={20} className="mr-5" />
+                      <ImParagraphCenter size={20} className="mr-5" />
+                      <ImParagraphRight size={20} className="mr-5" />
+                      <ImParagraphJustify size={20} className="mr-3" />
+                    </span>
+                  </div>
+                </div>
               </div>
 
               <div className="card-body hidden">
