@@ -1,15 +1,21 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { BsArrowRepeat } from 'react-icons/bs'
+import Link from 'next/link'
 
 const Mystores = () => {
   const [ tab, setTab ] = useState(1)
   return (
     <>
       <main className="container p-5">
-        <span className="text-xl font-bold mb-12">
-          My Stores
-        </span>
+      <div className='mb-5 flex justify-between items-center'>
+          <p className="text-xl text-start font-bold ">
+            My Stores
+          </p>
+          <Link href={'/addstores'}>
+            <button className="text-end btn btn-primary px-2 py-0 shadow-lg font-bold">ADD NEW STORE</button>
+          </Link>
+        </div>
 
         <div className="card bg-white shadow-lg overflow-visible">
           <div className="card-body">
