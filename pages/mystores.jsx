@@ -25,64 +25,64 @@ const Mystores = () => {
 
              <div className='overflow-auto'>
               {/* Table */}
-              <table className="table overflow-x-scroll">
+              <table className="table-auto w-full overflow-x-scroll">
                 <thead>
                   <tr>
-                    <th className="bg-navbg">NAME</th>
-                    <th className="bg-navbg">PLATFORM</th>
-                    <th className="bg-navbg">STORE URL</th>
-                    <th className="bg-navbg">STATUS</th>
-                    <th className="bg-navbg">NO. OF PRODUCTS</th>
-                    <th className="bg-navbg">STORE CURRENCY</th>
-                    <th className="bg-navbg">WALLET BALANCE</th>
-                    <th className="bg-navbg">SYNC STATUS</th>
-                    <th className="bg-navbg">AUTO-FUNDING</th>
-                    <th className="bg-navbg">AUTO-PUSH</th>
-                    <th className="bg-navbg">AUTO-PUSH COLLECTIONS</th>
-                    <th className="bg-navbg">ACTIONS</th>
+                    <th className="bg-navbg text-xs p-4">NAME</th>
+                    <th className="bg-navbg text-xs p-4">PLATFORM</th>
+                    <th className="bg-navbg text-xs p-4">STORE URL</th>
+                    <th className="bg-navbg text-xs p-4">STATUS</th>
+                    <th className="bg-navbg text-xs p-4">NO. OF PRODUCTS</th>
+                    <th className="bg-navbg text-xs p-4">STORE CURRENCY</th>
+                    <th className="bg-navbg text-xs p-4">WALLET BALANCE</th>
+                    <th className="bg-navbg text-xs p-4">SYNC STATUS</th>
+                    <th className="bg-navbg text-xs p-4">AUTO-FUNDING</th>
+                    <th className="bg-navbg text-xs p-4">AUTO-PUSH</th>
+                    <th className="bg-navbg text-xs p-4">AUTO-PUSH COLLECTIONS</th>
+                    <th className="bg-navbg text-xs p-4">ACTIONS</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="bg-white">
+                    <td className="bg-white text-xs">
                       <p className="font-bold">Store Name</p>
                       <p>{"(Active Store)"}</p>
                     </td>
-                    <td className='bg-white'>
-                      <Image src={'/shopify.png'} height={100} width={100} />
+                    <td className='bg-white flex justify-center'>
+                      <Image src={'/shopify.png'} height={80} width={80} />
                     </td>
-                    <td className='bg-white'>
+                    <td className='bg-white text-xs'>
                       store.myshopify.com
                     </td>
-                    <td className='bg-white'>
-                      <span className="p-2 rounded-md font-bold bg-slate-700 text-white">OFFLINE</span>
+                    <td className='bg-white text-center'>
+                      <span className="p-2 rounded-md font-bold bg-slate-700 text-white text-xs">OFFLINE</span>
                     </td>
-                    <td className='bg-white'>
+                    <td className='bg-white text-xs text-center'>
                       0
                     </td>
                     <td className='bg-white'>
-                      <div className="flex">
-                        HKD
+                      <div className="flex text-xs items-center justify-center">
+                        <span className="mr-3">HKD</span>
                         <BsArrowRepeat size={20} />
                       </div>
                     </td>
-                    <td className='bg-white'>
+                    <td className='bg-white text-xs text-center'>
                       $0.00
                     </td>
                     <td className="bg-white">
-                      <p>All Synced</p>
+                      <p className='text-center text-xs'>All Synced</p>
                     </td>
-                    <td className="bg-white">
+                    <td className="bg-white text-xs text-center">
                       No
                     </td>
-                    <td className="bg-white">
+                    <td className="bg-white text-xs text-center">
                       No 
                     </td>
-                    <td className="bg-white">
+                    <td className="bg-white text-xs text-center">
                       Yes 
                     </td>
-                    <td className="bg-white">
-                      <button className="p-2 border border-gray-300 bg-white outline-none text-sm rounded-lg shadow-xl">ACTIONS</button>
+                    <td className="bg-white text-center">
+                      <button className="p-2 border border-gray-300 bg-white outline-none rounded-lg shadow-xl text-xs">ACTIONS</button>
                     </td>
                   </tr>
                 </tbody>

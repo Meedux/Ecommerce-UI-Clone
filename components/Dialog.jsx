@@ -26,7 +26,7 @@ const Dialogue = ({ items, id,  isOpen, setOpen }) => {
   return (
     <>
         <input type="checkbox" ref={checkbox} id="my-modal" className="modal-toggle" />
-        <div className="modal overflow-y-scroll">
+        <div className="modal overflow-y-scroll" onClick={() => setOpen(false)}>
 
         <div className="modal-box overflow-visible bg-white max-w-full w-[80rem] indicator block top-[6rem] absolute" style={{maxHeight: "none"}}>
         <span className="indicator-item badge badge-primary rounded-full h-6 p-[10px] w-6 text-xs flex justify-center items-center cursor-pointer fixed" onClick={() => setOpen(false)}>X</span> 

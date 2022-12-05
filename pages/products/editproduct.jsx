@@ -7,6 +7,7 @@ import ModifyPrice from '../../components/ModifyPrice'
 import { BiUndo, BiRedo } from 'react-icons/bi'
 import { AiOutlineBold, AiOutlineItalic, AiOutlineUnderline, AiOutlineStrikethrough } from 'react-icons/ai'
 import { TfiAngleDown } from 'react-icons/tfi'
+import { VscTriangleDown } from 'react-icons/vsc'
 import { ImParagraphLeft, ImParagraphCenter, ImParagraphRight, ImParagraphJustify } from 'react-icons/im'
 
 // TODO Tomorrow: Add an Edit state for this page CUNT!
@@ -95,10 +96,6 @@ const Editproduct = () => {
                     </span>
                   </div>
                 </div>
-              </div>
-
-              <div className="card-body hidden">
-                
               </div>
             </div>
 
@@ -297,7 +294,7 @@ const Editproduct = () => {
             </div>
 
             <div className="card bg-white rounded-lg shadow-lg overflow-visible mb-5">
-              <div className="card-body">
+              <div className={`card-body ${editState ? 'hidden' : ''}`}>
                 <h1 className="text-xl font-bold mb-5">Product Groups</h1>
 
                 <h1 className="text-lg font-bold mb-3">Tags</h1>
@@ -306,19 +303,60 @@ const Editproduct = () => {
                 <p className='mb-3'>Collection</p>
                 <h1 className="text-lg font-bold mb-3">Boards</h1>
               </div>
+
+
+              <div className={`card-body ${editState ? '' : 'hidden'}`}>
+                <h1 className="text-xl font-bold mb-5">Product Groups</h1>
+
+                <input type="text" placeholder='Tags' className="mb-3 p-2 rounded-md border border-gray-300 outline-none" />
+                <input type="text" placeholder='Brand' className="mb-3 p-2 rounded-md border border-gray-300 outline-none" />
+                <div className="max-w-full w-full dropdown border border-gray-300 p-2 rounded-md mb-3">
+                  <label tabIndex={0} className="text-md w-full text-gray-500 rounded-sm cursor-pointer flex items-center justify-between">Collections <VscTriangleDown /></label>
+                  <ul className="dropdown-content menu w-full left-1 top-[2.8rem] shadow rounded-sm bg-white" tabIndex={0} >
+                    <li className='p-3'>
+                      <input type="text" placeholder='Search' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                    </li>
+                  </ul>
+                </div>
+                <div className="max-w-full w-full dropdown border border-gray-300 p-2 rounded-md mb-3">
+                  <label tabIndex={0} className="text-md w-full text-gray-500 rounded-sm cursor-pointer flex items-center justify-between">Boards <VscTriangleDown /></label>
+                  <ul className="dropdown-content menu w-full left-1 top-[2.8rem] shadow rounded-sm bg-white" tabIndex={0} >
+                    <li className='p-3'>
+                      <input type="text" placeholder='Search' className="p-1 max-w-full outline-none rounded-md mb-5 w-full border border-gray-300" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
-            <div className="card bg-white rounded-lg shadow-lg overflow-visible mb-5">
+            <div className="card bg-white rounded-lg shadow-lg overflow-visible mb-5 ">
               <div className="card-body">
                 <h1 className="text-xl font-bold mb-5">Price Formula & Returns</h1>
 
-                <p>Price Formula</p>
-                <p className='mb-2'>1%</p>
+                <div className={`max-w-full w-full dropdown border border-gray-300 p-2 rounded-md mb-3 ${editState ? '' : 'hidden'}`}>
+                  <label tabIndex={0} className="text-md w-full text-gray-500 rounded-sm cursor-pointer flex items-center justify-between">Price Formula <VscTriangleDown /></label>
+                  <ul className="dropdown-content menu w-full left-1 top-[2.8rem] shadow rounded-sm bg-white z-50" tabIndex={0} >
+                    <li className='p-2 hover:bg-gray-200'>
+                      Default
+                    </li>
+                    <li className='p-2 hover:bg-gray-200'>
+                      300%
+                    </li>
+                    <li className='p-2 hover:bg-gray-200'>
+                      1%
+                    </li>
+                  </ul>
+                </div>
+
+                <span className={`flex ${editState ? 'hidden' : ''}`}>
+                  <p>Price Formula</p>
+                  <p className='mb-2'>1%</p>
+                </span>
 
                 <div className="flex items-center">
                   <p className=' text-sm'>Return Policy: </p>
                   <p className="text-[#6281BC] text-sm">30 Days Return Timeframe</p>
-                  <div className="tooltip relative ml-2 table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The Timeframe within which the supplier will...">
+                  <div className="tooltip relative ml-2 z-0 before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="The Timeframe within which the supplier will...">
                       <i>
                           <IoInformationCircle size={25} className="relative"/>
                       </i>

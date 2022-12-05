@@ -213,7 +213,9 @@ export default function Home() {
                         <td>
                           <span className="flex">
                             {/* Flag Marker */}
-                            <EU className='mr-1 h-[20px] w-[40px]'/>
+                            <span className="tooltip relativebefore:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 mr-3" data-tip="Europe">
+                              <EU className="mr-1 h-[20px] w-[40px]" />
+                            </span>
                             <p>Test Test</p>
                           </span>
                         </td>

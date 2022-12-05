@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { BsFillPencilFill } from 'react-icons/bs'
- 
+import { VscTriangleDown } from 'react-icons/vsc'
+
 const Wallet = () => {
   const [editState, setEditState] = useState(false)
   const [viewEdit, setViewEdit] = useState(false)
@@ -223,7 +224,7 @@ const Wallet = () => {
 
         </div>
         
-        <div className="card bg-white shadow-lg rounded-lg mb-5">
+        <div className={`card bg-white shadow-lg rounded-lg mb-5 ${(editState || viewEdit) ? "hidden" : ""}`}>
           <div className="card-body">
             <span className="text-lg font-bold mb-5">Transactions</span>
             <div className="w-full max-w-full">
@@ -247,7 +248,7 @@ const Wallet = () => {
           </div>
         </div>
 
-        <div className="card bg-white shadow-lg rounded-lg">
+        <div className={`card bg-white shadow-lg rounded-lg ${(editState || viewEdit) ? "hidden" : ""}`}>
           <div className="card-body">
             <span className="text-lg font-bold mb-5">Invoices</span>
             <div className="w-full max-w-full">
@@ -272,9 +273,66 @@ const Wallet = () => {
             </div>
           </div>
         </div>
+
+        <div className={`card bg-white shadow-lg rounded-lg mb-5 overflow-visible ${(editState || viewEdit) ? "" : "hidden"}`}>
+          <div className="card-body">
+            <div className="grid grid-cols-8 gap-4">
+              <div className="col-span-6">
+                <h1 className="text-lg font-bold mb-5">
+                  Order processing and payment automation
+                </h1>
+                <p className="mb-10">
+                  <span className='font-bold'>Note:</span> When an order is reaching AppScenic system, you can delay the payment of the order by a certain period of time. The order will remain unpaid and the Supplier will hold the stock.
+                </p>
+                <p>{"You can hold an order for up to 36 hours. Once the order reaches the specified time, it will be automatically paid from the Wallet funds (if the balance is enough)"}</p>
+              </div>
+
+              <div className="col-span-2 flex flex-col pt-5">
+                <div className="flex mb-5">
+                  <input type="checkbox" className="checkbox checkbox-primary mr-3" />
+                    On Hold TIme
+                </div>
+
+                <div className="max-w-full dropdown border border-gray-300 p-2 rounded-md mb-3 w-[40%]">
+                  <label tabIndex={0} className="text-md w-full text-gray-500 rounded-sm cursor-pointer flex items-center justify-between">On Hold Time <VscTriangleDown /></label>
+                  <ul className="dropdown-content menu w-full left-1 top-[2.8rem] shadow rounded-sm bg-white" tabIndex={0} >
+                    <li className='p-2 cursor-pointer hover:text-primary'>
+                        6h
+                    </li>
+                    <li className='p-2 cursor-pointer hover:text-primary'>
+                        12h
+                    </li>
+                    <li className='p-2 cursor-pointer hover:text-primary'>
+                        24h
+                    </li>
+                    <li className='p-2 cursor-pointer hover:text-primary'>
+                        36h
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex justify-end items-center">
+                  <button className="btn btn-primary ">UPDATE</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`card bg-white shadow-lg rounded-lg mb-5 ${(editState || viewEdit) ? "" : "hidden"}`}>
+          <div className="card-body">
+            <h1 className="text-lg font-bold mb-8">Auto Funding</h1>
+
+            <div className="flex mb-5">
+              <input type="checkbox" className="checkbox checkbox-primary mr-3" />
+              Auto Funding
+            </div>
+
+            <p className="text-gray-400 mb-8"><span className="text-black font-bold">Note: </span>Auto funding is disabled</p>
+            <button className="btn btn-primary w-[7%]">UPDATE</button>
+          </div>
+        </div>
       </main>
-
-
 
       <input type="checkbox" id="payment" className="modal-toggle" />
       <div className="modal">

@@ -227,7 +227,7 @@ const Myproducts = () => {
                       <div className="flex items-center">
                         <input type="checkbox" className='checkbox mr-4'/>
                         <Image src={'/img.jpg'} height={100} width={50} />
-                        <span className='mr-3'>Shoes</span>
+                        <span className="mr-3 tooltip relative before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100 hover:text-primary cursor-default" data-tip="Shoes">Shoes</span>
                         <Link href={'/products/editproduct'}>
                           <BsEyeFill />
                         </Link>
