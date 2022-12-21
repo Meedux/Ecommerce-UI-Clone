@@ -7,6 +7,7 @@ import { BsEyeFill } from 'react-icons/bs'
 import { TfiAngleLeft, TfiAngleRight, TfiAngleDoubleLeft, TfiAngleDoubleRight } from 'react-icons/tfi'
 
 const Myproducts = () => {
+  // For Tab Changes
   const [ tab, setTab ] = useState(1)
   return (
     <>
@@ -28,8 +29,13 @@ const Myproducts = () => {
               
              </div>
 
-             <div className="mb-5">
-             <input type="text" className="p-1 outline-none border w-full max-w-full border-gray-400 rounded-sm" placeholder='search'/>
+             <div className="mb-5 flex max-w-full items-center">
+              <input type="text" className="p-1 outline-none border w-[95%] border-gray-400 rounded-sm" placeholder='search'/>
+              <div className="tooltip z-0 relative ml-[10px] table-cell before:whitespace-pre before:content-[attr(data-tip)] tooltip-top opacity-100" data-tip="Use Quotes to search for exact words!">
+                  <i>
+                      <IoInformationCircle size={25} className="relative"/>
+                  </i>
+              </div>
              </div>
              <div className="mb-5 flex flex-wrap w-full max-w-full">
              <span className="dropdown max-w-full mr-3" style={{width: "23%"}}>

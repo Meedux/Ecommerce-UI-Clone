@@ -333,7 +333,7 @@ const Catalog = () => {
 
           <div className="grid grid-cols-8 gap-4 mb-7">
               {items.map(item => (
-                <div key={item.id} htmlFor="modal"  className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact' onMouseEnter={() => setHover(item.id)} onMouseLeave={() => setHover(0)} onClick={() => {setOpen(!open) 
+                <div key={item.id} className='col-span-2 card relative overflow-visible bg-white shadow-xl card-compact' onMouseEnter={() => setHover(item.id)} onMouseLeave={() => setHover(0)} onClick={() => {setOpen(!open) 
                   setId(item.id)}}>
                   <span className={`left-[50%] top-[20%] ${hover == item.id ? "" : 'hidden'} absolute`}><AiFillEye size={100} className="text-primary relative left-[-50%] top-[-20%]"/></span>
                   <span className={`left-[3%] top-[44%] ${item.isPremium ? "" : 'hidden'} absolute bg-yellow-500 p-1 text-xs px-3 flex rounded-box items-center`}><BsStarFill className='text-white mr-2'/><h1 className="font-bold text-white">PREMIUM</h1></span>
@@ -374,6 +374,11 @@ const Catalog = () => {
               ))}
           </div>
           <div className="p-2 flex justify-end items-center">
+            <div className="mr-4">
+                <select id="pages" className='p-1 border border-black'>
+                  <option value="1">1</option>
+                </select>
+            </div>
             <span className="text-[#9F9F9F] mr-4">1-1 of 1</span>
             <span className='flex items-center'>
               <TfiAngleDoubleLeft size={20} className="mr-2 text-[#9F9F9F] cursor-pointer" />
